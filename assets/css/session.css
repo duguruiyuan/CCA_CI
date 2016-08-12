@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+#session {
+	font-family:Microsoft YaHei;
+	
+	margin:100px auto;
+	position:relative;
+	width:360px;
+	left:50px;
+	border-top:solid 1px #EBEBEB;
+	
+	
+	}
+#session h1 {
+    display: block;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 48px;
+    left: -110px;
+    background-color: #1C90F3;
+}
+#session h1 a {
+	
+
+    height: 80px;
+    width: 80px;
+    text-indent: -900em;
+	background-repeat: no-repeat;
+    background-position: 60% 50%;
+    background-image: url(../img/search_btn.jpg);
+
+
+	}
+h2 {
+font-size: 1.7em;
+font-weight: 700;
+color: #39464E;
+margin-top: 10px; }
+	
+#session-form fieldset{
+	
+	margin-top:10px;
+	padding:15px 0 30px;
+    border-bottom: solid 1px #EBEBEB;
+    padding-bottom: 10px;
+    margin-bottom: 20px;	
+	
+	}
+#session-form p label{
+	
+	display:none;
+	
+	}
+#session-form p input[type=text] {
+	
+	width:332px;
+	padding:8px;
+	box-shadow: inset 0px 1px 1px #e0e4e9;
+	box-radius:3px;
+	border: solid 1px #c4c7cb;
+	background-color: #F9F9F9;
+	}
+.commonForm input[type=submit] {
+    border-radius: 3px;
+    padding: 10px 20px;
+    background: #1C90F3;
+    border: none;
+    color: #fff;
+    font-size: .9em;
+    font-weight: 700;
+    cursor: pointer;
+	margin:auto;
+}
+#session-form .errorlist{
+	
+	margin:0;
+	color: #f36e65;
+	font-size:.85em;
+	padding-left:5px;;
+	margin:auto;	
+	
+	}
+.errorlist li {
+	margin-bottom: 5px;
+	color: #f36e65; 
+}
+#session-form ul {
+	
+	list-style:none;
+	}

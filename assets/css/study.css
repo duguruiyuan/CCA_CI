@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+
+.g_left{ height:500px; width:200px; background-color:#F7F7F7; margin-left:150px;margin-top:20px; margin-bottom:30px; float:left}
+.g_left ul li{ line-height:40px; font-size:13px; margin-left:12px; }
+.g_right{ height:900px; width:750px; background-color:#F7F7F7; margin-left:50px;margin-top:20px; padding-bottom:30px;float:left}
+.guide{ padding-bottom:1000px;	}

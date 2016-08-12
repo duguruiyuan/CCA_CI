@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*  质控标准*/
+
+.title_zk{text-align:center; font-size:18px;}
+.zhikong{ text-align:left; margin-bottom:30px; line-height:30px;}
+.table_zk table{ margin:0 auto;}
+.table_zk table th{ margin:0 auto; text-align:left}

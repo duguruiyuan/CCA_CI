@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container{
+	color:#555;
+	width:100%;
+	max-width:900px;
+	margin: 0 auto;
+	font-family:microsoft YaHei;
+	
+	height:auto;
+	overflow:hidden;
+	padding:10px 50px;
+	line-height:30px;
+	margin:30px auto;
+	border-radius:4px;
+	
+	
+	}
+.container .title{
+	
+	font-size:18pt;
+	text-align:center;
+	line-height:50px;
+	color:#999999;
+	
+	}
+.title .date{
+	font-size:14px;
+	
+	}
+.container .img {
+	margin:0 auto;
+	display:block;
+	text-align:center;
+	
+	}
+.notice_4 tr td{
+	
+	line-height:20px;
+	padding:15px;
+	}
