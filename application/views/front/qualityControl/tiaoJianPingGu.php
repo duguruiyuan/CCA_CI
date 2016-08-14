@@ -11,22 +11,21 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/pinggu.css">
 <!-- <script src="/js/jquery.min.js"></script> -->
-<script src="/assets/js/jquery-1.11.3.min.js"></script>
+<script src="/assets/js/jquery-1.10.2.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" language="javascript" src="/assets/js/jquery.dropdownPlain.js"></script>
-<script src="/assets/js/md5.min.js"></script>
+<script type="text/javascript" src="/assets/pljs/plupload.full.min.js" ></script>
 <script type="text/javascript">
+$(function(){
 
-function $(id){return document.getElementById(id)}
-window.onload = function(){
- $("nav-left").onclick = function(e){
-  var src = e?e.target:event.srcElement;
-  if(src.tagName == "H4"){
-   var next = src.nextElementSibling || src.nextSibling;
-   next.style.display = (next.style.display =="block")?"none":"block";
-  }
- }
-}
+  $('#nav-left').on('click',function(e){
+      var src = e?e.target:event.srcElement;
+      if(src.tagName == "H4"){
+       var next = src.nextElementSibling || src.nextSibling;
+       next.style.display = (next.style.display =="block")?"none":"block";
+      }
+    });
+
+});
 </script>
 <style type="text/css">
 a:link {color: #FF0000} /* 未访问的链接 */
@@ -35,8 +34,8 @@ a:hover {color: #FF0000} /* 鼠标移动到链接上 FF00FF*/
 a:active {color: #0000FF} /* 选定的链接0000FF */
 </style>
 </head>
-<?php include('common/_header.php')?>
-<!--header <end-->
+<?php include('common/_header.php') ?>
+<!--header end-->
 <body>
 <div class="content_pgu">
   <div class="about-sidebar">
@@ -61,7 +60,7 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
           </div> 
           <div style="font-size:16px; line-height:25px; background-color:#9FF6A7">
           <p>目前贵单位参与的认证类型是：PCI版；目前中国胸痛中心认证支持两类认证：<a href="#">PCI版</a>和<a href="#">基层版</a>；</p>
-           <p>如果贵单位根据实际情况希望更改认证类型，<a href="#">请点击此处，重新选择认证类型！</a></p>
+           <p>如果贵单位根据实际情况希望更改认证类型，<a href="/home/chongxrz">请点击此处，重新选择认证类型！</a></p>
           </div> 
          
     </div>
@@ -73,6 +72,8 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
           <table class="table_pgu_first">
             <h5 style="margin-top:3px; margin-bottom:10px; margin-top:15px;"><strong>医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：</strong></h5>
             <tr>
+              <input type="hidden" value="" class="xiaojie_id">
+              <input type="hidden" class="xiaojie">
               <td >1.10 &nbsp;由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
               <td style="width:50px;"><label>
                   <input  name="Fruit" type="checkbox" value="" />
@@ -80,13 +81,20 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><input type="file" class="inputstyle"></td>
             </tr>
             <tr>
+
+              <input type="hidden" value="" class="xiaojie_id">
+              <input type="hidden" class="xiaojie">
               <td>1.11 &nbsp;胸痛中心成立并实际运作至少6个月以上才	能申请认证</td>
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
-              <td><input type="file" class="inputstyle"></td>
+              <!-- <td><input type="file" class="inputstyle"></td> -->
+              <td><a href="javascript:void(0)" class="zl_upload">上传资料</a></td>
             </tr>
             <tr>
+
+              <input type="hidden" value="" class="xiaojie_id">
+              <input type="hidden" class="xiaojie">
               <td>1.12 &nbsp;由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
@@ -94,6 +102,9 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><input type="file" class="inputstyle"></td>
             </tr>
             <tr>
+
+              <input type="hidden" value="" class="xiaojie_id">
+              <input type="hidden" class="xiaojie">
               <td>1.13 &nbsp;由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
@@ -101,8 +112,12 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><input type="file" class="inputstyle"></td>
             </tr>
             <tr>
+
+              <input type="hidden" value="" class="xiaojie_id">
+              <input type="hidden" class="xiaojie">
               <td><h5><strong>任命胸痛中心医疗总监,要求：</strong></h5>
                 <br>
+
                 1.14 &nbsp;医院正式任命一名具有心血管内科专业背景的高级职称医师担任胸痛中心医疗总监，且该医师应具备较强的组织协；</td>
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
@@ -110,6 +125,9 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><input type="file" class="inputstyle"></td>
             </tr>
             <tr>
+
+              <input type="hidden" value="" class="xiaojie_id">
+              <input type="hidden" class="xiaojie">
               <td>1.15 &nbsp;由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
@@ -117,6 +135,9 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><input type="file" class="inputstyle"></td>
             </tr>
             <tr>
+
+              <input type="hidden" value="" class="xiaojie_id">
+              <input type="hidden" class="xiaojie">
               <td><h5><strong>任命胸痛中心协调员，要求：</strong></h5>
                 <br>
                 1.16 &nbsp;指定一名具有急诊或心血管内科专业背景的医师担任胸痛中心协调员，协调员必须具备正确处理ACS及其它急性胸痛的能力</td>
@@ -126,50 +147,59 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><input type="file" class="inputstyle"></td>
             </tr>
             <tr>
-              <td> 1.17 &nbsp;书面文件明确协调员的具体工作职责</td>
+
+              <input type="hidden" value="" class="xiaojie_id">
+              <input type="hidden" class="xiaojie">
+              <td>
+               1.17 &nbsp;书面文件明确协调员的具体工作职责</td>
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
               <td><input type="file" class="inputstyle"></td>
             </tr>
             <tr>
+              <input type="hidden" value="" class="xiaojie_id">
+              <input type="hidden" class="xiaojie">
               <td>1.18 &nbsp;协调员每年至少参加ACS和胸痛中心相关的培训不少于10学时</td>
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
-              <td><input type="file" class="inputstyle"></td>
+                <td><a href="#" class="zl_upload">上传资料</a></td>
             </tr>
           </table>
         </fieldset>
+
+      <!-- 要素二 -->
         <table class="table_pgu_first">
           <h5 style="margin-top:3px; margin-bottom:10px; margin-top:15px;"><strong>医院对胸痛中心的支持与承诺</strong></h5>
           <tr>
+
             <td >由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
             <td style="width:50px;"><label>
                 <input  name="Fruit" type="checkbox" value="" />
                 满足 </label></td>
-            <td><input type="file" class="inputstyle"></td>
+              <td><a href="#" class="zl_upload">上传资料</a></td>
           </tr>
           <tr>
             <td>胸痛中心成立并实际运作至少6个月以上才	能申请认证</td>
             <td><label>
                 <input name="Fruit" type="checkbox" value="" />
                 满足 </label></td>
-            <td><input type="file" class="inputstyle"></td>
+             <td><a href="#" class="zl_upload">上传资料</a></td>
           </tr>
           <tr>
             <td>由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
             <td><label>
                 <input name="Fruit" type="checkbox" value="" />
                 满足 </label></td>
-            <td><input type="file" class="inputstyle"></td>
+             <td><a href="#" class="zl_upload">上传资料</a></td>
           </tr>
           <tr>
             <td>由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
             <td><label>
                 <input name="Fruit" type="checkbox" value="" />
                 满足 </label></td>
-            <td><input type="file" class="inputstyle"></td>
+              <td><a href="#" class="zl_upload">上传资料</a></td>
           </tr>
           <tr>
             <td><h5><strong>任命胸痛中心医疗总监,要求：</strong></h5>
@@ -178,14 +208,14 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
             <td><label>
                 <input name="Fruit" type="checkbox" value="" />
                 满足 </label></td>
-            <td><input type="file" class="inputstyle"></td>
+             <td><a href="#" class="zl_upload">上传资料</a></td>
           </tr>
           <tr>
             <td>由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
             <td><label>
                 <input name="Fruit" type="checkbox" value="" />
                 满足 </label></td>
-            <td><input type="file" class="inputstyle"></td>
+             <td><a href="#" class="zl_upload">上传资料</a></td>
           </tr>
           <tr>
             <td><h5><strong>任命胸痛中心协调员，要求：</strong></h5>
@@ -194,21 +224,21 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
             <td><label>
                 <input name="Fruit" type="checkbox" value="" />
                 满足 </label></td>
-            <td><input type="file" class="inputstyle"></td>
+              <td><a href="#" class="zl_upload">上传资料</a></td>
           </tr>
           <tr>
             <td>书面文件明确协调员的具体工作职责</td>
             <td><label>
                 <input name="Fruit" type="checkbox" value="" />
                 满足 </label></td>
-            <td><input type="file" class="inputstyle"></td>
+             <td><a href="#" class="zl_upload">上传资料</a></td>
           </tr>
           <tr>
             <td>协调员每年至少参加ACS和胸痛中心相关的培训不少于10学时</td>
             <td><label>
                 <input name="Fruit" type="checkbox" value="" />
                 满足 </label></td>
-            <td><input type="file" class="inputstyle"></td>
+              <td><a href="#" class="zl_upload">上传资料</a></td>
           </tr>
         </table>
         
@@ -307,4 +337,38 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
 </div>
 <?php include('common/_footer.php')?>
 </body>
+<script type="text/javascript">
+   
+  // 查找兄弟元素
+
+  // 当前点击的元素
+  // 弹出框框之前
+  $(function(){
+   $(".zl_upload").on('click',function(){
+    var xj_id = $(this).parent().parent().find('.xiaojie_id').val();
+     var xj =  $(this).parent().parent().find('.xiaojie').val();
+     $('.qj_id').val(xj_id);
+     $('.qj_xiaojie').val(xj);
+
+   });
+      
+  });
+
+  // 全局设置完毕，然后就开始显示提示框
+
+  // 框框点击上传的时候，需要做两件事情
+  // 1.组装account_id 目录名
+  // 2.组装小结的目录
+
+  var account_id = account+'_'+id;
+  // 小结目录
+  var xiaojie = $('.qj_xiaojie');
+
+
+  
+
+
+
+
+</script>
 </html>

@@ -35,9 +35,9 @@
         	<div class="home-title"><span class="redbox"></span>用户登录<span class="more"><a href="/home/xwsj" target="_parent">
             更多</a></span>
             </div>
-            <?php if(!empty($_SESSION['username'])){?>
+            <?php if($this->session->has_userdata('login_state') ){ ?>
 
-                Welcome :<?php echo $_SESSION['username']?>
+                Welcome :<?php echo $sessionData['account']?>
             <?php }else{ ?>
                 <div class="project-msg">
                        <form action="/login/login_check" class="form-horizontal" method="post">

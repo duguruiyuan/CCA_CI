@@ -3,15 +3,16 @@
 
 <div class="link_">
         <ul>
-        <li><a href="/home">首页</a></li>
-        <li><a href="">认证</a></li>
-        <li><a href="underConstruction.html">质控</a></li>
-        <li><a href="underConstruction.html">培训</a></li>
+        <li><a href="/home">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+        <li><a href="">认证指引</a></li>
+        <li><a href="underConstruction.html">培训信息</a></li>
+        <li><a href="underConstruction.html">质量控制</a></li>
         <li><a href="underConstruction.html">发展动态</a></li>
+        <li><a href="underConstruction.html">区域认证</a></li>
         <li><a href="underConstruction.html">示范中心</a></li>
         <li><a href="underConstruction.html">基层胸痛</a></li>
-        <li><a href="underConstruction.html">学习天地</a></li>
         <li><a href="underConstruction.html">星火计划</a></li>
+        <li><a href="underConstruction.html">胸痛学院</a></li>
         
         </ul>
         </div>

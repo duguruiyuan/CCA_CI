@@ -9,6 +9,10 @@ class Login extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('user_model');
+		// Load session library
+		$this->load->library('session');
+		// Load form validation library
+		$this->load->library('form_validation');
 		
 	}
 
@@ -80,7 +84,7 @@ class Login extends CI_Controller {
 			$re_id = $this->user_model->add($u_arr,TRUE);
 			if(!empty($re_id)){
 				die("<script>alert('您已经注册成功！');</script>");
-				$
+				
 			}
 			else {
 
@@ -93,10 +97,10 @@ class Login extends CI_Controller {
 
 	}
 
-	public function login_check(){
+	public function login_check( ) {
 
 		$post = $this->input->post();
-
+		
 		if (!empty($post)) {
 			
 			$user = $post['account'];
@@ -104,9 +108,22 @@ class Login extends CI_Controller {
 			
 			$_user = $this->user_model->get(array('account'=>$user));
 
-			if(!empty($_user)){
 
-				if($_user['pssd'] === md5($pssd) ){
+			if(!isset($_user)){	
+				
+
+				if( $_user['pssd'] === md5($pssd) ){
+
+					// $sessionData = array(
+
+					// 	'account'=>$post['account'],
+					// 	'pssd'=>$post['password']
+
+					// 	);
+					//var_dump("ok");
+
+					$this->session->set_userdata('login_state', TRUE);
+
 
 					die('<script>alert("登陆成功！");history.back(-1);</script>');
 
@@ -119,6 +136,9 @@ class Login extends CI_Controller {
 			}
 			
 			
+		}
+		else {
+			die('<script>alert("得不到数据！"; histroy.back(-1););</script>');
 		}
 	}
 	
