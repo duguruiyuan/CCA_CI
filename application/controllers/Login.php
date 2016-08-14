@@ -1,10 +1,7 @@
-		<?php
-
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
-
-class Login extends CI_Controller {
+class Login extends MY_Controller {
 
 	public function __construct(){
 		parent::__construct();
@@ -58,6 +55,7 @@ class Login extends CI_Controller {
 				'contPersonName' => $post['contPersonName'],
 				'contPhone' => $post['contPersonName'],
 				'type'=>$post['type']	
+				
 			);
 
 					break;
@@ -97,50 +95,34 @@ class Login extends CI_Controller {
 
 	}
 
-	public function login_check( ) {
+	public function login_check(){
 
-		$post = $this->input->post();
-		
-		if (!empty($post)) {
-			
-			$user = $post['account'];
-			$pssd = $post['password'];
-			
-			$_user = $this->user_model->get(array('account'=>$user));
+			$post = $this->input->post();
 
-
-			if(!isset($_user)){	
+			if (!empty($post)) {
 				
+				$user = $post['account'];
+				$pssd = $post['password'];
+				
+				$_user = $this->user_model->get(array('account'=>$user));
 
-				if( $_user['pssd'] === md5($pssd) ){
+				if(!empty($_user)){
 
-					// $sessionData = array(
-
-					// 	'account'=>$post['account'],
-					// 	'pssd'=>$post['password']
-
-					// 	);
-					//var_dump("ok");
-
-					$this->session->set_userdata('login_state', TRUE);
-
-
-					die('<script>alert("登陆成功！");history.back(-1);</script>');
+					if( $_user['pssd'] === md5($pssd) ){
+						$this->login($_user['account']);
+						redirect(base_url('/'));
+						/*die('<script>alert("登录成功！");window.location.href="/"</script>');*/
+					}else{
+						die('<script>alert("账户名或密码错误！");history.back(-1);</script>');
+					}
 
 				}else{
-					die('<script>alert("账户名或密码错误！");history.back(-1);</script>');
+					die('<script>alert("用户名或密码错误！"; histroy.back(-1););</script>');
 				}
-
-			}else{
-				die('<script>alert("用户名或密码错误！"; histroy.back(-1););</script>');
+				
+				
 			}
-			
-			
 		}
-		else {
-			die('<script>alert("得不到数据！"; histroy.back(-1););</script>');
-		}
-	}
 	
 	// public function ajax_login(){
 	// 	$data = array();

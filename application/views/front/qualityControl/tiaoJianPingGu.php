@@ -13,7 +13,8 @@
 <!-- <script src="/js/jquery.min.js"></script> -->
 <script src="/assets/js/jquery-1.10.2.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/assets/pljs/plupload.full.min.js" ></script>
+<script type="text/javascript" language="javascript" src="/assets/js/jquery.dropdownPlain.js"></script>
+<script type="text/javascript" src="/assets/pljs/plupload.full.min.js"></script>
 <script type="text/javascript">
 $(function(){
 
@@ -45,10 +46,14 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
       <li><a href="/home/verify_xize" target="content">中国胸痛中心认证评分细则</a></li>
       <li><a href="/home/cloud" target="content">中国胸痛中心认证数据管理云平台</a></li>
     </ul>
+     <h5>特刊推荐</h5>
+    <HR style="BORDER-RIGHT: #00686b 1px dotted; BORDER-TOP: #00686b 1px dotted; BORDER-LEFT: #00686b 1px dotted; BORDER-BOTTOM: #00686b 1px dotted" noShade SIZE=1>
+    <img src="../../../../assets/img/tk2.jpg"><p>规范化胸痛中心建设与STEMI救治</p>
+    <img src="../../../../assets/img/tk1.jpg"><p>2011首届中国胸痛中心高峰论坛</p>
   </div>
   <div class="pgu-right">
     <div class="title-wrap">
-      <div class="breadcrumb">您的位置：<a href="/home">主页</a> <a href="/home/rzxz">认证</a> </div>
+      <div class="breadcrumb">您的位置：<a href="/home">主页 </a> > <a href="/home/rzxz"> 认证</a> </div>
     </div>
     <div class="pgu_right_top">
       <p style="color:red; text-align:center; background-color:#E7EFF7; height:40px; padding-top:10px">认证资质基本条件评估（只有满足以下全部基本条件的胸痛中心，才能正式申请认证）</p>
@@ -64,6 +69,8 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
           </div> 
          
     </div>
+    <input type="hidden" value="" class="qj_id">
+    <input type="hidden" value="" class="qj_xiaojie">
     <div id="nav-left">
       <h4 class="yaosu_first">要素一 基本条件与资质</h4>
       <div>
@@ -78,7 +85,7 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td style="width:50px;"><label>
                   <input  name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
-              <td><input type="file" class="inputstyle"></td>
+              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
             </tr>
             <tr>
 
@@ -88,7 +95,7 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
-              <!-- <td><input type="file" class="inputstyle"></td> -->
+              <!-- <td><a href="javascript:" class="zl_upload">上传资料</a></td> -->
               <td><a href="javascript:void(0)" class="zl_upload">上传资料</a></td>
             </tr>
             <tr>
@@ -99,7 +106,7 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
-              <td><input type="file" class="inputstyle"></td>
+              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
             </tr>
             <tr>
 
@@ -109,7 +116,7 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
-              <td><input type="file" class="inputstyle"></td>
+              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
             </tr>
             <tr>
 
@@ -122,7 +129,7 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
-              <td><input type="file" class="inputstyle"></td>
+              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
             </tr>
             <tr>
 
@@ -132,7 +139,7 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
-              <td><input type="file" class="inputstyle"></td>
+              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
             </tr>
             <tr>
 
@@ -144,7 +151,7 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
-              <td><input type="file" class="inputstyle"></td>
+              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
             </tr>
             <tr>
 
@@ -155,7 +162,7 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <td><label>
                   <input name="Fruit" type="checkbox" value="" />
                   满足 </label></td>
-              <td><input type="file" class="inputstyle"></td>
+              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
             </tr>
             <tr>
               <input type="hidden" value="" class="xiaojie_id">
@@ -251,23 +258,23 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
               <li> 由医院院长或分管医疗的副院长担任胸痛中心委员会主建设和重大决策<span >
                 <label>
                   <input name="Fruit" type="checkbox" value="" />
-                  满足 </label> <input type="file" class="inputstyle">
+                  满足 </label> <a href="javascript:" class="zl_upload">上传资料</a>
                 </span> </li>
               <li>主持胸痛中心委员会的建设和重大院长担任胸痛中心委员会主任委员决策 <span >
 
                 <label>
                   <input name="Fruit" type="checkbox" value="" />
-                  满足 </label><input type="file" class="inputstyle">
+                  满足 </label><a href="javascript:" class="zl_upload">上传资料</a>
                 </span> </li>
               <li>明确胸痛中心委员会具有调动医院所有资源为胸痛中心建设和运行提供保障的权力 <span>
                 <label>
                   <input name="Fruit" type="checkbox" value="" />
-                  满足 </label><input type="file" class="inputstyle">
+                  满足 </label><a href="javascript:" class="zl_upload">上传资料</a>
                 </span> </li>
               <li>胸痛中心成立并实际运作至少6个月以上才能申请认证 <span >
                 <label>
                   <input name="Fruit" type="checkbox" value="" />
-                  满足 </label><input type="file" class="inputstyle"> 
+                  满足 </label><a href="javascript:" class="zl_upload">上传资料</a> 
                 </span> </li>
                 
             </ul>
@@ -335,7 +342,7 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
   </div>
 </div>
 </div>
-<?php include('common/_footer.php')?>
+<?php include('common/_footer.php') ?>
 </body>
 <script type="text/javascript">
    
@@ -343,26 +350,14 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
 
   // 当前点击的元素
   // 弹出框框之前
-  $(function(){
-   $(".zl_upload").on('click',function(){
-    var xj_id = $(this).parent().parent().find('.xiaojie_id').val();
-     var xj =  $(this).parent().parent().find('.xiaojie').val();
-     $('.qj_id').val(xj_id);
-     $('.qj_xiaojie').val(xj);
-
-   });
-      
-  });
-
+  
   // 全局设置完毕，然后就开始显示提示框
 
   // 框框点击上传的时候，需要做两件事情
   // 1.组装account_id 目录名
   // 2.组装小结的目录
 
-  var account_id = account+'_'+id;
   // 小结目录
-  var xiaojie = $('.qj_xiaojie');
 
 
   

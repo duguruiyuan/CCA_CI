@@ -36,11 +36,11 @@
   </div>
     <div class="pgu-right">
     <div class="title-wrap">
-        <div class="breadcrumb">您的位置：<a href="/home">主页</a> <a href="/home/rzxz">认证</a> </div>
+        <div class="breadcrumb">您的位置：<a href="/home">主页 </a> > <a href="/home/rzxz"> 认证</a> </div>
       </div>
-    <div style="width:100%;height:120px;background:#9ff6a7; font-size:16px; text-indent:2em; padding-top:30px;"> 如果贵院希望参与中国胸痛中心认证，请首先完成下面的自评；如果暂时还不具备申请认证的条件，请先行启用中国胸痛中心数据管理云平台，进行实时胸痛数据的填报，对胸痛患者进行管理，以引导贵院胸痛中心规范化建设。
+    <div style="width:100%;height:120px;background:#9ff6a7; font-size:16px; text-indent:2em; padding-top:30px; border-radius:3px;"> 如果贵院希望参与中国胸痛中心认证，请首先完成下面的自评；如果暂时还不具备申请认证的条件，请先行启用中国胸痛中心数据管理云平台，进行实时胸痛数据的填报，对胸痛患者进行管理，以引导贵院胸痛中心规范化建设。
         现在即刻登录中国胸痛中心数据管理云平台 --》 前往！ </div>
-    <div style="width:100%;padding:20px;text-align:left;background:#fbfbfb;height:200px;">
+    <div style="width:100%;padding:20px;text-align:left;background:#fbfbfb;height:200px; border-radius:5px;">
         <table>
         <tr style="line-height:20px;">
             <td style="width:300px;">机构名称</td>
@@ -120,8 +120,8 @@
             <tr style="line-height:20px;"> <br>
             <td >
                 <!-- <input type="submit" value="申请胸痛中心认证" class="submit1 btn btn-primary" /> -->
-                <button type="submit" value="申请胸痛中心认证" class="submit1 btn btn-primary" disabled="true">
-                申请基层认证
+                <input type="submit" value="申请胸痛中心认证" class="submit1 btn btn-primary" id="submit1">
+               
                 </td>
           </tr>
            <tr style="line-height:20px;">
@@ -138,10 +138,11 @@
           </tr>
                <tr style="line-height:20px;"> <br>
             <td >
-            <button type="submit" value="申请基层认证" class="submit2 btn btn-primary" disabled="true">
-              申请基层认证
-            </button>
-            <input type="submit" name="ss" id="ss" value="">
+            <input type="hidden" name="rz_type" id="rz_type" value="">
+            <input type="submit" value="申请基层认证" class="submit2 btn btn-primary" id="submit2">
+            
+        
+            
                 <!-- <button type="submit" value="申请基层认证" class="submit2 btn btn-primary" /> -->
 
             </td>
@@ -156,8 +157,45 @@
 
     $(function(){
 
-      $('#radio5').click(function(){
+      //初始化禁用按钮
 
+      $('#submit1').attr('disabled',true);  
+      $('#submit2').attr('disabled',true); 
+
+      $('#radio5').click(function(){
+        check();
+      });
+      $('#radio4').click(function(){
+        check();
+      });
+      $('#radio3').click(function(){
+        check();
+      });
+      $('#radio2').click(function(){
+        check();
+      });
+      $('#radio1').click(function(){
+        check();
+      });
+
+            $value6 = $('input[name=radio6]:checked').val();
+            $checkbox = [];
+            
+            //获取复选框选中的值
+            //submit 用input 
+
+            $checkbox_value = $('input[type=checkbox]:checked').each(function(){
+            $checkbox.push($(this).val());
+
+            if($value6 == 1 && !empty($checkbox)) {
+                $('.submit2').removeAttr('disabled');
+              
+            }
+
+            });
+
+      
+    function check(){
 
       $value1 = $('input[name=radio1]:checked').val();
      
@@ -168,40 +206,20 @@
       $value4 = $('input[name=radio4]:checked').val();
 
       $value5 = $('input[name=radio5]:checked').val();
-
+     
      
 
         if($value1 == 1 && $value2 == 1 && $value3 == 1 && $value4 == 1 && $value5 == 1 ) {
 
-          $('.submit1').removeAttr('disabled');
-
-      } else {
-
-        $('.submit1').attr('disabled','true');  
+          $('#submit1').removeAttr('disabled');
+          alert($value5);
+      } else if ($value5 == 0){
+        // 暂时不工作
+        alert('ok');
+        $('#submit1').attr('disabled',true);  
       }
-      });
 
-            $value6 = $('input[name=radio6]:checked').val();
-            $checkbox = [];
-            
-            //获取复选框选中的值
-            //submit 用input而不是button
-
-            $checkbox_value = $('input[type=checkbox]:checked').each(function(){
-            $checkbox.push($(this).val());
-
-            if($value6 == 1 && !empty($checkbox)) {
-
-              
-
-                $('.submit2').removeAttr('disabled');
-              
-            }
-
-            });
-
-      
-
+    }
 
     });
 

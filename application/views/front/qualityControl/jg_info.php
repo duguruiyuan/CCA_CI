@@ -55,12 +55,12 @@
   <div class="pgu-right">
     <div class="title-wrap">
 
-      <div class="breadcrumb">您的位置：<a href="/home">主页</a> <a href="/home/rzxz">认证</a> </div>
+      <div class="breadcrumb">您的位置：<a href="/home">主页 </a> > <a href="/home/rzxz">认证</a> </div>
       <center>
         <div style="background-color:">
           <h5>机构注册（以机构名义注册并审核通过后，并激活启用数据管理云平台后，才可以申请参与认证）</h5>
         </div>
-        <table   class="table_kcyl"  border = "3px" bordercolor = "0x4C96FF" >
+        <table   class="table_kcyl"  border = "3px" bordercolor = "0x4C96FF" style="margin-top:40px;">
           <thead>
             <tr>
               <td>机构名称:</td>
@@ -70,7 +70,7 @@
           <tbody >
             <tr>
               <td>地址:</td>
-              <td><?php ?></td>
+              <td><?php echo "未填写"; ?></td>
             </tr>
             <tr>
               <td >法人:</td>
@@ -78,7 +78,7 @@
             </tr>
             <tr>
               <td >相关信息:</td>
-              <td><?php ?></td>
+              <td><?php echo"未填写"; ?></td>
             </tr>
             <tr>
               <td >申请时间:</td>

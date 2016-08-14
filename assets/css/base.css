@@ -188,10 +188,10 @@ color:#fff;font-size:12px;line-height:20px;text-align:center}
 .project-new .img-banner{width:286px;height:89px;padding-top:36px;padding-bottom:38px}
 
 /* about-sidebar */
-.about-sidebar{float:left;width:252px;height:auto;padding-top:5px;overflow:hidden}
-.about-sidebar .menu{display:block;width:252px;height:auto;overflow:hidden}
-.about-sidebar .menu li{display:block;width:252px;height:37px;padding-left:30px;margin-bottom:10px;background:#29B452;color:#fff;font-size:16px;line-height:37px}
-.about-sidebar .menu li a,.about-sidebar .menu li a:hover{color:#fff}
+.about-sidebar{float:left;width:252px;height:auto;padding-top:5px;overflow:hidden; }
+.about-sidebar .menu{display:block;width:250px;height:auto;overflow:hidden}
+.about-sidebar .menu li{display:block;width:252px;height:37px;padding-left:30px;margin-bottom:10px;background:#A5CFD1;color:#fff;font-size:16px;line-height:37px}
+.about-sidebar .menu li a,.about-sidebar .menu li a:hover{color:#111}
 .about-right{float:left;width:727px;height:auto;padding-bottom:40px;margin-left:40px;border-bottom:#68EE68 1px solid;overflow:hidden}
 /* news-content */
 .news-content{width:700px;height:auto;padding-top:20px;overflow:hidden;line-height:26px}
@@ -208,7 +208,7 @@ color:#fff;font-size:12px;line-height:20px;text-align:center}
 #footer .link ul{display:block;width:606px;height:24px;margin:0 auto}
 #footer .link_ ul{display:block;width:900px;height:24px;margin:0 auto}
 
-#footer .link_ ul li{display:block;float:left;width:100px;height:24px;padding-right:2px;background:url(img/f_l_x.jpg) no-repeat right 6px}
+#footer .link_ ul li{display:block;float:left;width:90px;height:24px;padding-right:2px;background:url(img/f_l_x.jpg) no-repeat right 6px}
 #footer .link ul li{display:block;float:left;width:150px;height:24px;padding-right:2px;background:url(img/f_l_x.jpg) no-repeat right 2px}
 #footer .link ul .nobg{background:none}
 #footer .copyright{padding-top:20px}

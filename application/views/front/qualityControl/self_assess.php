@@ -40,10 +40,10 @@
   </div>
   <div class="pgu-right">
     <div class="title-wrap">
-      <div class="breadcrumb">您的位置：<a href="/home">主页</a> <a href="/home/rzxz">认证</a> </div>
+      <div class="breadcrumb">您的位置：<a href="/home">主页 </a> > <a href="/home/rzxz"> 认证</a> </div>
       <div>
-        <p style=" height:30px; width:700px;background-color:#85ABF9; margin:0 auto; text-align:center; font-size:15px">中国中证评分细则--自我评估</p>
-        <div style="font-size:16px; line-height:25px;">
+        <p style="height:40px; width:700px;background-color:#85ABF9; margin:0 auto; text-align:center; font-size:18px;text-align:center">中国中证评分细则--自我评估</p>
+        <div style="font-size:16px; line-height:40px;">
           <p>状态：新的提交</p>
           <hr/>
           <a href="#">中国胸痛中心认证标准(第五版)下载</a><br>
@@ -52,33 +52,33 @@
           <table   class="table_self"  border = "3px" bordercolor = "0x4C96FF" align = "center" >
             <tr>
               <td>医院名称</td>
-              <td>苏州金阊医院</td>
+              <td><?php echo $user['account'] ?></td>
               <td>地址</td>
-              <td>江苏省苏州市</td>
+              <td><?php echo $user['state']." ".$user['city']?></td>
             </tr>
             <tr>
               <td >评审编号</td>
-              <td >----</td>
+              <td ><?php echo "数据暂无"?></td>
               <td>认证类型</td>
-              <td>PCI版</td>
+              <td><?php echo"认证/用户数据库暂无"?></td>
             </tr>
             <tr>
               <td >申请时间</td>
-              <td>2016年07月29日</td>
+              <td><?php echo $user['appliedDate']; ?></td>
               <td>评审日期</td>
-              <td>2016年07月29日</td>
+              <td><?php echo"数据库信息暂无"?></td>
             </tr>
             <tr>
               <td >负责人</td>
-              <td>王仙</td>
-              <td>联系电话</td>
-              <td>12312312313</td>
+              <td><?php echo $user['respPerson']; ?></td>
+              <td>联系邮箱</td>
+              <td><?php echo $user['respEmail']; ?></td>
             </tr>
             <tr>
               <td >联系人</td>
-              <td>王仙</td>
-              <td>邮箱</td>
-              <td>12312@qq.com</td>
+              <td><?php echo $user['contPersonName']?></td>
+              <td>联系电话</td>
+              <td><?php echo $user['contPhone']; ?></td>
             </tr>
             <tr>
               <td 

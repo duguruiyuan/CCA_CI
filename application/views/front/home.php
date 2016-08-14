@@ -35,11 +35,9 @@
         	<div class="home-title"><span class="redbox"></span>用户登录<span class="more"><a href="/home/xwsj" target="_parent">
             更多</a></span>
             </div>
-            <?php if($this->session->has_userdata('login_state') ){ ?>
-
-                Welcome :<?php echo $sessionData['account']?>
-            <?php }else{ ?>
+            
                 <div class="project-msg">
+                    <?php if(empty($account)){?>
                        <form action="/login/login_check" class="form-horizontal" method="post">
                         <div class="form-group">
                         
@@ -59,9 +57,17 @@
                             <input type="submit" value="登陆" class="btn btn-primary btn-sm lg_submit" style="margin-left:50px;">
                             <a href="/login/reg" type="button" class="btn btn-sm btn-danger" >注册</a>
                     </form>
+                    <?php }else{ ?>
+                        <h3>欢迎，<i class="glyphicon glyphicon-user"></i> <?php echo $account ?> </h3>  
+                        
+                        <div><a href="/home/tiaoJianPingGu">进入 -->> 认证资质基本条件评估</a></div>
+                        <div><a href="/home/verify_xize">进入 -->> 认证评分细则自评</a></div>
+                        <div style="margin-left:150px;"><a href="/home/logout" type="button" class="btn btn-primary">退出登录</a></div>
+
+
+                    <?php } ?>
                 </div>
                 
-            <?php } ?>	
             <ul style="margin-top:60px;">
             	<li><img src="assets/img/qq.png" /><a href="underConstruction.html" target="_parent">认证指引</a></li>
                 <li><img src="assets/img/ww.png" /><a href="underConstruction.html" target="_parent">数据直报</a></li>

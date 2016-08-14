@@ -40,13 +40,13 @@
 
         <div style="border:1px solid #2076CF; width:600px; margin:0 auto;">
           <strong style=" font-size:16px; margin-left:20px">选择文件</strong>
-          <table style="text-align:center; line-height:50px; margin:0 auto; margin-top:30px "> 
+         <!--  <table style="text-align:center; line-height:50px; margin:0 auto; margin-top:30px "> 
             <tr style="background-color:#A9C3DE; line-height:30px"><th style="text-align:center; width:150px; font-size:25px; height:50px">文件名</th> <th style="text-align:center; width:100px; font-size:25px;">状态</th><th style="text-align:center; width:150px; font-size:25px">进度</th><th style="text-align:center; width:150px; font-size:25px">操作</th></tr>
             <tr ><td>文件名.doc</td> <td>成功</td><td>100%</td><td><button><input type="button" value="取消" style=" background-color:#6AA9E8; height:45px; width:60px; font-size:10px; color:#FCFEFF"></button></td></tr>
-            <!-- <tr><td>文件名.doc</td> <td>上传中</td><td>45%</td><td><button><input type="button" value="取消" style=" background-color:#6AA9E8; height:45px; width:60px; color:#FCFEFF"></td></tr>
-            <tr><td>文件名.doc</td> <td>队列中</td><td>0%</td><td><button><input type="button" value="取消" style=" background-color:#6AA9E8; height:45px; width:60px;color:#FCFEFF "></td></tr> -->
-        </table>
-        <div id="filelist" style="padding:auto; margin:auto;">Your browser doesn't have Flash, Silverlight or HTML5 support.</div>
+            <tr><td>文件名.doc</td> <td>上传中</td><td>45%</td><td><button><input type="button" value="取消" style=" background-color:#6AA9E8; height:45px; width:60px; color:#FCFEFF"></td></tr>
+            <tr><td>文件名.doc</td> <td>队列中</td><td>0%</td><td><button><input type="button" value="取消" style=" background-color:#6AA9E8; height:45px; width:60px;color:#FCFEFF "></td></tr>
+        </table> -->
+        <div id="filelist">Your browser doesn't have Flash, Silverlight or HTML5 support.</div>
         <div  style=" padding-top:100px; padding-left:300px">
         <!-- <button id="pickfiles" name="pickfiles" style=" background-color:#6aa9e8; height:30px; width:50px;color:#FCFEFF"> 选择</button>
         <button id="uploadfiles" name="uploadfiles" style=" background-color:#6aa9e8; height:30px; width:50px;color:#FCFEFF"> 上传</button> -->
@@ -112,7 +112,7 @@ var uploader = new plupload.Uploader({
 
     FilesAdded: function(up, files) {
       plupload.each(files, function(file) {
-        document.getElementById('filelist').innerHTML += '<tr id="' + file.id + '" style="background-color:#A9C3DE; line-height:30px">><th style="text-align:center; width:150px; font-size:25px; height:50px">'+ file.name +'</th><th style="text-align:center; width:100px; font-size:25px;"></th><th style="text-align:center; width:150px; font-size:25px"><b></b></th><th style="text-align:center; width:150px; font-size:25px"></th></tr>(' + plupload.formatSize(file.size) + ') </tr>';
+        document.getElementById('filelist').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
       });
     },
 

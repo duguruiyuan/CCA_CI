@@ -413,6 +413,7 @@ CREATE TABLE `user` (
   `login_ct` int(11) DEFAULT '0' COMMENT '登陆次数',
   `status` tinyint(1) DEFAULT '0' COMMENT '0：正常1：禁用不能登陆',
   `is_del` tinyint(1) DEFAULT '0' COMMENT '0：正常，1：已经删除',
+   'type' tinyint(1) COMMENT '0：机构会员, 1:个人会员',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 

@@ -1,10 +1,10 @@
-	<?php
+<?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-class Home extends CI_Controller {
+class Home extends MY_Controller {
 
 	public function __construct(){
 		parent::__construct();
@@ -61,8 +61,9 @@ class Home extends CI_Controller {
 
 
 	}
+	
 	public function index(){
-
+		// $this->session->sess_destroy();
 		// 最新通知
 		$_where = array(
 			// 实际排序已发布时间倒序publish_time
@@ -72,6 +73,12 @@ class Home extends CI_Controller {
 			// 未删除的文章
 			'is_del'=>'0'
 		);
+		//uac 是你想获取的数组的键值
+		$account = $this->session->userdata('uac');
+
+		if(empty($account)){
+			$account = '';
+		}
 
 		// 最新通知
 		$_where['type'] = 0;
@@ -96,7 +103,8 @@ class Home extends CI_Controller {
 			'zx'=>$zx,
 			'ds'=>$ds,
 			'hy'=>$hy,
-			'jy'=>$jy
+			'jy'=>$jy,
+			'account'=>$account
 			);
 		$this->load->view('front/home',$data);
 
@@ -316,9 +324,56 @@ public function jigou_info(){
 
 // 认证条件评估
 public function tiaoJianPingGu(){
-	// $this->load->view('front/qualityControl/tiaoJianPingGu');
-	$this->load->view('front/qualityControl/submit_form');
+	$this->load->view('front/qualityControl/tiaoJianPingGu');
+	// $this->load->view('front/qualityControl/submit_form');
 }
+
+public function old_upload($dir = 'E:/wamp/tmp/plupload'){
+
+	$file_list = array();
+	$data = array();
+
+	$d_dir = $this->input->post('dir');
+
+	$dir = 'E:/wamp/tmp/plupload/'.$d_dir;
+
+	$data['code'] = 1;
+	$data['msg'] = '';
+
+	if(is_dir($dir))
+	 {
+	     	if ($dh = opendir($dir)) 
+			{
+	        	while (($file = readdir($dh)) !== false)
+				{
+	     			if((is_dir($dir."/".$file)) && $file!="." && $file!="..")
+					{
+						$tmp = '<li><a href="E:/wamp/tmp/plupload/'.$file.'">'.$file.'</a><a href="#">删除</a></li>';
+						array_push($file_list,$tmp);
+	     				listDir($dir."/".$file."/");
+	     			}
+					else
+					{
+	         			if($file!="." && $file!="..")
+						{
+	         				$tmp = '<li><a href="E:/wamp/tmp/plupload/'.$file.'">'.$file.'</a><a href="#">删除</a></li>';
+	         				array_push($file_list,$tmp);
+	      				}
+	     			}
+	        	}
+	        	closedir($dh);
+	     	}
+	   	}
+	   	if(empty( $file_list)){
+	   		$data['msg'] = '<li>暂时没有上传文件</li>';
+	   	}else{
+	   		$data['msg'] = $file_list;
+	   	}
+
+	   	echo json_encode($data);exit;
+
+}
+
 public function sz_upload(){
 	/**
 	 * upload.php
@@ -355,9 +410,10 @@ public function sz_upload(){
 	// 5 minutes execution time
 	@set_time_limit(5 * 60);
 
-	$file = $this->input->get('file');
-	$tmp_arr = explode('_', $file);
-	$file = $tmp_arr[0].$tmp_arr[1].'/'.$tmp_arr[1].$tmp_arr[2];
+	$file = $this->input->get('file2');
+
+	// $tmp_arr = explode('_', $file);
+	// $file = $tmp_arr[0].$tmp_arr[1].'/'.$tmp_arr[1].$tmp_arr[2];
 
 
 	// Uncomment this one to fake upload time
@@ -366,7 +422,7 @@ public function sz_upload(){
 	// Settings
 	// 上传的路径，写绝对路径
 
-	$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload/".$file;
+	$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload/".'user_3_1_10';
 	//$targetDir = 'uploads';
 	$cleanupTargetDir = true; // Remove old files
 	$maxFileAge = 5 * 3600; // Temp file age in seconds
@@ -453,13 +509,21 @@ public function sz_upload(){
 	die('{"jsonrpc" : "2.0", "result" : null, "id" : "id"}');
 }
 //中国胸痛中心认证评分细则
+//应该从session带出来user 信息
+//array works $user does not work.
 public function verify_xize(){
-	$this->load->view('front/qualityControl/self_assess');
+
+
+	$user = $this->user_model->get(array('id'=>'1'));
+
+	$this->load->view('front/qualityControl/self_assess', array('user'=>$user));
 }
 
 
 //中国胸痛中心认证数据管理云平台
+//应该从session带出来user 信息
 public function chongxrz(){
+
 
 	$user = $this->user_model->get(array('id'=>'1'));
 
