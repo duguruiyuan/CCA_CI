@@ -110,7 +110,7 @@
                 <label class="select">否</label></td>
           </tr>
             <tr style="line-height:20px;">
-            <td style="text-align:left; padding-left:40px">3. 具备PPCI资质且年介入量不少于75例的医师大于等于2人（确保24小时行PPCI）？
+            <td style="text-align:left; padding-left:40px">3. 具备PCI资质且年介入量不少于75例的医师大于等于2人（确保24小时行PPCI）？
                 <input type="file" class="inputstyle"></td>
             <td style="text-align:left; padding-left:30px;"><input  type="radio"  name="radio5" value="1" id="radio5">
                 <label class="select">是</label>
@@ -212,8 +212,8 @@
         if($value1 == 1 && $value2 == 1 && $value3 == 1 && $value4 == 1 && $value5 == 1 ) {
 
           $('#submit1').removeAttr('disabled');
-          alert($value5);
-      } else if ($value5 == 0){
+         
+      } else if ($value5 == 0 || $value4 == 0){
         // 暂时不工作
         alert('ok');
         $('#submit1').attr('disabled',true);  

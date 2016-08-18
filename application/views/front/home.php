@@ -53,12 +53,12 @@
                         </div>
                         </div>
 
-                            <a href="#" style="font-size:12px; padding-left:30px;">忘记密码</a>
+                            <a href="/home/forget_pass" style="font-size:12px; padding-left:30px;">忘记密码</a>
                             <input type="submit" value="登陆" class="btn btn-primary btn-sm lg_submit" style="margin-left:50px;">
                             <a href="/login/reg" type="button" class="btn btn-sm btn-danger" >注册</a>
                     </form>
                     <?php }else{ ?>
-                        <h3>欢迎，<i class="glyphicon glyphicon-user"></i> <?php echo $account ?> </h3>  
+                        <h5>欢迎您：注册机构第<?php echo $_SESSION['uid']?>号用户<br/><br/><i class="glyphicon glyphicon-user"></i> <?php echo $account ?> </h5>  
                         
                         <div><a href="/home/tiaoJianPingGu">进入 -->> 认证资质基本条件评估</a></div>
                         <div><a href="/home/verify_xize">进入 -->> 认证评分细则自评</a></div>

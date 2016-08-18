@@ -15,24 +15,16 @@
 <script src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.dropdownPlain.js"></script>
 <script type="text/javascript" src="/assets/pljs/plupload.full.min.js"></script>
-<script type="text/javascript">
-$(function(){
 
-  $('#nav-left').on('click',function(e){
-      var src = e?e.target:event.srcElement;
-      if(src.tagName == "H4"){
-       var next = src.nextElementSibling || src.nextSibling;
-       next.style.display = (next.style.display =="block")?"none":"block";
-      }
-    });
-
-});
-</script>
 <style type="text/css">
-a:link {color: #FF0000} /* 未访问的链接 */
-a:visited {color: #0000FF} /* 已访问的链接00FF00 */
-a:hover {color: #FF0000} /* 鼠标移动到链接上 FF00FF*/
-a:active {color: #0000FF} /* 选定的链接0000FF */
+  a:link {color: #FF0000} /* 未访问的链接 */
+  a:visited {color: #0000FF} /* 已访问的链接00FF00 */
+  a:hover {color: #FF0000} /* 鼠标移动到链接上 FF00FF*/
+  a:active {color: #0000FF} /* 选定的链接0000FF */
+
+	table tr td{
+		font-size:14px;
+	}
 </style>
 </head>
 <?php include('common/_header.php') ?>
@@ -46,14 +38,10 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
       <li><a href="/home/verify_xize" target="content">中国胸痛中心认证评分细则</a></li>
       <li><a href="/home/cloud" target="content">中国胸痛中心认证数据管理云平台</a></li>
     </ul>
-     <h5>特刊推荐</h5>
-    <HR style="BORDER-RIGHT: #00686b 1px dotted; BORDER-TOP: #00686b 1px dotted; BORDER-LEFT: #00686b 1px dotted; BORDER-BOTTOM: #00686b 1px dotted" noShade SIZE=1>
-    <img src="../../../../assets/img/tk2.jpg"><p>规范化胸痛中心建设与STEMI救治</p>
-    <img src="../../../../assets/img/tk1.jpg"><p>2011首届中国胸痛中心高峰论坛</p>
   </div>
   <div class="pgu-right">
     <div class="title-wrap">
-      <div class="breadcrumb">您的位置：<a href="/home">主页 </a> > <a href="/home/rzxz"> 认证</a> </div>
+      <div class="breadcrumb">您的位置：<a href="/home">主页</a> <a href="/home/rzxz">认证</a> </div>
     </div>
     <div class="pgu_right_top">
       <p style="color:red; text-align:center; background-color:#E7EFF7; height:40px; padding-top:10px">认证资质基本条件评估（只有满足以下全部基本条件的胸痛中心，才能正式申请认证）</p>
@@ -72,298 +60,134 @@ a:active {color: #0000FF} /* 选定的链接0000FF */
     <input type="hidden" value="" class="qj_id">
     <input type="hidden" value="" class="qj_xiaojie">
     <div id="nav-left">
-      <h4 class="yaosu_first">要素一 基本条件与资质</h4>
-      <div>
-        <fieldset class="fieldset_pgu" >
-          <legend >胸痛中心的组织机构</legend>
-          <table class="table_pgu_first">
-            <h5 style="margin-top:3px; margin-bottom:10px; margin-top:15px;"><strong>医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：</strong></h5>
-            <tr>
-              <input type="hidden" value="" class="xiaojie_id">
-              <input type="hidden" class="xiaojie">
-              <td >1.10 &nbsp;由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
-              <td style="width:50px;"><label>
-                  <input  name="Fruit" type="checkbox" value="" />
-                  满足 </label></td>
-              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
-            </tr>
-            <tr>
 
-              <input type="hidden" value="" class="xiaojie_id">
-              <input type="hidden" class="xiaojie">
-              <td>1.11 &nbsp;胸痛中心成立并实际运作至少6个月以上才	能申请认证</td>
-              <td><label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label></td>
-              <!-- <td><a href="javascript:" class="zl_upload">上传资料</a></td> -->
-              <td><a href="javascript:void(0)" class="zl_upload">上传资料</a></td>
-            </tr>
-            <tr>
+      <?php 
 
-              <input type="hidden" value="" class="xiaojie_id">
-              <input type="hidden" class="xiaojie">
-              <td>1.12 &nbsp;由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
-              <td><label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label></td>
-              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
-            </tr>
-            <tr>
 
-              <input type="hidden" value="" class="xiaojie_id">
-              <input type="hidden" class="xiaojie">
-              <td>1.13 &nbsp;由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
-              <td><label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label></td>
-              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
-            </tr>
-            <tr>
 
-              <input type="hidden" value="" class="xiaojie_id">
-              <input type="hidden" class="xiaojie">
-              <td><h5><strong>任命胸痛中心医疗总监,要求：</strong></h5>
-                <br>
+      $ys = '1';$ys_ct = '0'; $t_id = '1';$t_ct = '0';$step = '';$ys_end = '';
+      foreach ($rz_cl as $k => $v) {
 
-                1.14 &nbsp;医院正式任命一名具有心血管内科专业背景的高级职称医师担任胸痛中心医疗总监，且该医师应具备较强的组织协；</td>
-              <td><label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label></td>
-              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
-            </tr>
-            <tr>
-
-              <input type="hidden" value="" class="xiaojie_id">
-              <input type="hidden" class="xiaojie">
-              <td>1.15 &nbsp;由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
-              <td><label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label></td>
-              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
-            </tr>
-            <tr>
-
-              <input type="hidden" value="" class="xiaojie_id">
-              <input type="hidden" class="xiaojie">
-              <td><h5><strong>任命胸痛中心协调员，要求：</strong></h5>
-                <br>
-                1.16 &nbsp;指定一名具有急诊或心血管内科专业背景的医师担任胸痛中心协调员，协调员必须具备正确处理ACS及其它急性胸痛的能力</td>
-              <td><label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label></td>
-              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
-            </tr>
-            <tr>
-
-              <input type="hidden" value="" class="xiaojie_id">
-              <input type="hidden" class="xiaojie">
-              <td>
-               1.17 &nbsp;书面文件明确协调员的具体工作职责</td>
-              <td><label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label></td>
-              <td><a href="javascript:" class="zl_upload">上传资料</a></td>
-            </tr>
-            <tr>
-              <input type="hidden" value="" class="xiaojie_id">
-              <input type="hidden" class="xiaojie">
-              <td>1.18 &nbsp;协调员每年至少参加ACS和胸痛中心相关的培训不少于10学时</td>
-              <td><label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label></td>
-                <td><a href="#" class="zl_upload">上传资料</a></td>
-            </tr>
-          </table>
-        </fieldset>
-
-      <!-- 要素二 -->
-        <table class="table_pgu_first">
-          <h5 style="margin-top:3px; margin-bottom:10px; margin-top:15px;"><strong>医院对胸痛中心的支持与承诺</strong></h5>
-          <tr>
-
-            <td >由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
-            <td style="width:50px;"><label>
-                <input  name="Fruit" type="checkbox" value="" />
-                满足 </label></td>
-              <td><a href="#" class="zl_upload">上传资料</a></td>
-          </tr>
-          <tr>
-            <td>胸痛中心成立并实际运作至少6个月以上才	能申请认证</td>
-            <td><label>
-                <input name="Fruit" type="checkbox" value="" />
-                满足 </label></td>
-             <td><a href="#" class="zl_upload">上传资料</a></td>
-          </tr>
-          <tr>
-            <td>由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
-            <td><label>
-                <input name="Fruit" type="checkbox" value="" />
-                满足 </label></td>
-             <td><a href="#" class="zl_upload">上传资料</a></td>
-          </tr>
-          <tr>
-            <td>由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
-            <td><label>
-                <input name="Fruit" type="checkbox" value="" />
-                满足 </label></td>
-              <td><a href="#" class="zl_upload">上传资料</a></td>
-          </tr>
-          <tr>
-            <td><h5><strong>任命胸痛中心医疗总监,要求：</strong></h5>
-              <br>
-              医院正式任命一名具有心血管内科专业背景的高级职称医师担任胸痛中心医疗总监，且该医师应具备较强的组织协；</td>
-            <td><label>
-                <input name="Fruit" type="checkbox" value="" />
-                满足 </label></td>
-             <td><a href="#" class="zl_upload">上传资料</a></td>
-          </tr>
-          <tr>
-            <td>由医院院长或分管医疗的副院长担任胸痛中员会主建设和重大决策</td>
-            <td><label>
-                <input name="Fruit" type="checkbox" value="" />
-                满足 </label></td>
-             <td><a href="#" class="zl_upload">上传资料</a></td>
-          </tr>
-          <tr>
-            <td><h5><strong>任命胸痛中心协调员，要求：</strong></h5>
-              <br>
-              指定一名具有急诊或心血管内科专业背景的医师担任胸痛中心协调员，协调员必须具备正确处理ACS及其它急性胸痛的能力</td>
-            <td><label>
-                <input name="Fruit" type="checkbox" value="" />
-                满足 </label></td>
-              <td><a href="#" class="zl_upload">上传资料</a></td>
-          </tr>
-          <tr>
-            <td>书面文件明确协调员的具体工作职责</td>
-            <td><label>
-                <input name="Fruit" type="checkbox" value="" />
-                满足 </label></td>
-             <td><a href="#" class="zl_upload">上传资料</a></td>
-          </tr>
-          <tr>
-            <td>协调员每年至少参加ACS和胸痛中心相关的培训不少于10学时</td>
-            <td><label>
-                <input name="Fruit" type="checkbox" value="" />
-                满足 </label></td>
-              <td><a href="#" class="zl_upload">上传资料</a></td>
-          </tr>
-        </table>
         
-        <!--<ul>
-          <li>  
-            <p style="margin-top:3px">医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：</p>
-            
-            <ul class="firstchildren">
-            
-              <li> 由医院院长或分管医疗的副院长担任胸痛中心委员会主建设和重大决策<span >
-                <label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label> <a href="javascript:" class="zl_upload">上传资料</a>
-                </span> </li>
-              <li>主持胸痛中心委员会的建设和重大院长担任胸痛中心委员会主任委员决策 <span >
+        switch ($v['step']) {
+          case '1':
+            $step = '要素一 基本条件与资质';
+            $ys_end = 'first';
+            break;
+          case '2':
+            $step = '要素二 对急性胸痛患者的评估及救治';
+            $ys_end = 'second';
+            break;
+          case '3':
+            $step = '要素三 院前急救系统与院内绿色通道的整合';
+            $ys_end = 'third';
+            break;
+          case '4':
+            $step = '要素四 培训与教育';
+            $ys_end = 'forth';
+            break;
+          case '5':
+            $step = '要素五 持续改进';
+            $ys_end = 'fifth';
+            break;
+        }
 
-                <label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label><a href="javascript:" class="zl_upload">上传资料</a>
-                </span> </li>
-              <li>明确胸痛中心委员会具有调动医院所有资源为胸痛中心建设和运行提供保障的权力 <span>
-                <label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label><a href="javascript:" class="zl_upload">上传资料</a>
-                </span> </li>
-              <li>胸痛中心成立并实际运作至少6个月以上才能申请认证 <span >
-                <label>
-                  <input name="Fruit" type="checkbox" value="" />
-                  满足 </label><a href="javascript:" class="zl_upload">上传资料</a> 
-                </span> </li>
-                
-            </ul>
-           
-          </li>
-         
-          
-          <li>医院对胸痛中心的支持与承</li>
-          <li>胸痛急救的配套功能区域设置及标识</li>
-          <li>人员资质及专科救治条件</li>
-          <li>胸痛诊断及鉴别诊断的基本支持条件</li>
-          <li>时钟统一方案及管理</li>
-          <li>数据库的填报与管理</li>
-        </ul>--> 
-      </div>
-      <h4 class="yaosu_second">要素二 对急性胸痛患者的评估及救治</h4>
-      <div>
-        <ul>
-          <li>胸痛中心的组织机构</li>
-          <li>医院对胸痛中心的支持与承</li>
-          <li>胸痛急救的配套功能区域设置及标识</li>
-          <li>人员资质及专科救治条件</li>
-          <li>胸痛诊断及鉴别诊断的基本支持条件</li>
-          <li>时钟统一方案及管理</li>
-          <li>数据库的填报与管理</li>
-        </ul>
-      </div>
-      <h4 class="yaosu_third">要素三 院前急救系统与院内绿色通道的整合</h4>
-      <div>
-        <ul>
-          <li>胸痛中心的组织机构</li>
-          <li>医院对胸痛中心的支持与承</li>
-          <li>胸痛急救的配套功能区域设置及标识</li>
-          <li>人员资质及专科救治条件</li>
-          <li>胸痛诊断及鉴别诊断的基本支持条件</li>
-          <li>时钟统一方案及管理</li>
-          <li>数据库的填报与管理</li>
-        </ul>
-      </div>
-      <h4 class="yaosu_forth">要素四 培训与教育</h4>
-      <div>
-        <ul>
-          <li>胸痛中心的组织机构</li>
-          <li>医院对胸痛中心的支持与承</li>
-          <li>胸痛急救的配套功能区域设置及标识</li>
-          <li>人员资质及专科救治条件</li>
-          <li>胸痛诊断及鉴别诊断的基本支持条件</li>
-          <li>时钟统一方案及管理</li>
-          <li>数据库的填报与管理</li>
-        </ul>
-      </div>
-      <h4 class="yaosu_fifth">要素五 持续改进</h4>
-      <div>
-        <ul>
-          <li>胸痛中心的组织机构</li>
-          <li>医院对胸痛中心的支持与承</li>
-          <li>胸痛急救的配套功能区域设置及标识</li>
-          <li>人员资质及专科救治条件</li>
-          <li>胸痛诊断及鉴别诊断的基本支持条件</li>
-          <li>时钟统一方案及管理</li>
-          <li>数据库的填报与管理</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+        if($v['step'] === $ys && $ys_ct==='0'){
+          $ys_ct = '1';
+          echo '<h4 class="yaosu_first">要素一 基本条件与资质</h4>';
+          echo '<table style="width:95%;" class="table_pgu_'.$ys_end.'">';
+          $t_ct = '1';
+          echo '<tr><h5 class="h5_'.$ys_end.'" style="margin-top:3px; margin-bottom:10px; margin-top:15px;"><strong>'.$v['title'].'</strong></h5></tr>';
+          if(!empty($v['is_up'])){
+            echo '<tr><input type="hidden" value="" class="xiaojie_id"><input type="hidden" class="xiaojie" value="'.$v['xiaojie'].'"><td style="width:85%;">'.$v['content'].'</td><td style="width:50px;"><label><input  name="Fruit" type="checkbox" value="" />满足</label></td><td><a href="javascript:" class="zl_upload">上传资料</a></td></tr>';
+          }else{
+            echo '<tr><input type="hidden" value="" class="xiaojie_id"><input type="hidden" class="xiaojie" value="'.$v['xiaojie'].'"><td style="width:85%;">'.$v['content'].'</td><td style="width:50px;"><label><input  name="Fruit" type="checkbox" value="" />满足</label></td><td></td></tr>';
+          }
+
+        }elseif($v['step'] === $ys){
+          if($v['title_id'] === $t_id && $t_ct=='0'){
+            // $t_ct = '1';
+            // echo '<tr><h5 style="margin-top:3px; margin-bottom:10px; margin-top:15px;"><strong>'.$v['title'].'</strong></h5></tr>';
+            // echo '<tr><input type="hidden" value="" class="xiaojie_id"><input type="hidden" class="xiaojie" value="'.$v['xiaojie'].'"><td >'.$v['content'].'</td><td style="width:50px;"><label><input  name="Fruit" type="checkbox" value="" />满足</label></td><td><a href="javascript:" class="zl_upload">上传资料</a></td></tr>';
+          }elseif($v['title_id'] === $t_id){
+             if(!empty($v['is_up'])){
+               echo '<tr><input type="hidden" value="" class="xiaojie_id"><input type="hidden" class="xiaojie" value="'.$v['xiaojie'].'"><td style="width:85%;">'.$v['content'].'</td><td style="width:50px;"><label><input  name="Fruit" type="checkbox" value="" />满足</label></td><td><a href="javascript:" class="zl_upload">上传资料</a></td></tr>';
+             }else{
+               echo '<tr><input type="hidden" value="" class="xiaojie_id"><input type="hidden" class="xiaojie" value="'.$v['xiaojie'].'"><td style="width:85%;">'.$v['content'].'</td><td style="width:50px;"><label><input  name="Fruit" type="checkbox" value="" />满足</label></td><td></td></tr>';
+             }
+          }else{
+            echo '</table>';
+             echo '<table style="width:95%;" class="table_pgu_'.$ys_end.'">';
+             if(!empty($v['title'])){
+                echo '<tr><h5 class="h5_'.$ys_end.'" style="margin-top:3px; margin-bottom:10px; margin-top:15px;"><strong>'.$v['title'].'</strong></h5></tr>';
+              }
+            if(!empty($v['is_up'])){
+              echo '<tr><input type="hidden" value="" class="xiaojie_id"><input type="hidden" class="xiaojie" value="'.$v['xiaojie'].'"><td style="width:85%;">'.$v['content'].'</td><td style="width:50px;"><label><input  name="Fruit" type="checkbox" value="" />满足</label></td><td><a href="javascript:" class="zl_upload">上传资料</a></td></tr>';
+            }else{
+              echo '<tr><input type="hidden" value="" class="xiaojie_id"><input type="hidden" class="xiaojie" value="'.$v['xiaojie'].'"><td style="width:85%;">'.$v['content'].'</td><td style="width:50px;"><label><input  name="Fruit" type="checkbox" value="" />满足</label></td><td></td></tr>';
+            }
+
+            $t_id = $v['title_id'];
+          }
+
+        }else{
+          echo '</table>';
+          echo '<h4 class="yaosu_'.$ys_end.'">'.$step.'</h4>';
+          echo '<table class="table_pgu_'.$ys_end.'">';
+          if(!empty($v['title'])){
+            echo '<tr><h5 class="h5_'.$ys_end.'" style="margin-top:3px; margin-bottom:10px; margin-top:15px;"><strong>'.$v['title'].'</strong></h5></tr>';
+            }
+          $ys = $v['step'];
+
+        }
+      }
+      echo '</table>';
+
+      ?>
+    </div></div>
+    <div style="clear:both;"></div>
+      <input type="hidden" class="first" value="none">
+      <input type="hidden" class="second" value="none">
+      <input type="hidden" class="third" value="none">
+      <input type="hidden" class="forth" value="none">
+      <input type="hidden" class="fifth" value="none">
+
 <?php include('common/_footer.php') ?>
 </body>
 <script type="text/javascript">
-   
-  // 查找兄弟元素
+$(function(){
+  $('.table_pgu_first').css('display','none');
+  $('.h5_first').css('display','none');
+  $('.table_pgu_second').css('display','none');
+  $('.h5_second').css('display','none');
+  $('.table_pgu_third').css('display','none');
+  $('.h5_third').css('display','none');
+  $('.table_pgu_forth').css('display','none');
+  $('.h5_forth').css('display','none');
+  $('.table_pgu_fifth').css('display','none');
+  $('.h5_fifth').css('display','none');
+});
 
-  // 当前点击的元素
-  // 弹出框框之前
-  
-  // 全局设置完毕，然后就开始显示提示框
+   $('h4').on('click',function(){
 
-  // 框框点击上传的时候，需要做两件事情
-  // 1.组装account_id 目录名
-  // 2.组装小结的目录
+    var cla = $(this).attr('class');
+    var cla_arr = cla.split('_');
 
-  // 小结目录
+    var dpl = $('.'+cla_arr[1]).val();
+    
+    if(dpl === 'block'){
+      $('.table_pgu_'+cla_arr[1]).css('display','none');
+      $('.h5_'+cla_arr[1]).css('display','none');
+      $('.'+cla_arr[1]).val('none');
+    }else if(dpl === 'none'){
+      $('.table_pgu_'+cla_arr[1]).css('display','block');
+      $('.h5_'+cla_arr[1]).css('display','block');
+      $('.'+cla_arr[1]).val('block');
+    }
 
-
-  
-
-
-
-
+    
+   });
 </script>
+
+
 </html>

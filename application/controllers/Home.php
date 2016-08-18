@@ -15,6 +15,13 @@ class Home extends MY_Controller {
 		
 			
 	}
+	// 忘记密码
+
+	public function forget_pass() {
+
+		$this->load->view('/front/registration');
+
+	}
 
 	
 
@@ -74,10 +81,9 @@ class Home extends MY_Controller {
 			'is_del'=>'0'
 		);
 		//uac 是你想获取的数组的键值
-		$account = $this->session->userdata('uac');
-
-		if(empty($account)){
-			$account = '';
+		$account = '';
+		if(isset($_SESSION['uac'])){
+			$account = $_SESSION['uac'];
 		}
 
 		// 最新通知
@@ -324,18 +330,18 @@ public function jigou_info(){
 
 // 认证条件评估
 public function tiaoJianPingGu(){
-	$this->load->view('front/qualityControl/tiaoJianPingGu');
-	// $this->load->view('front/qualityControl/submit_form');
+	$rz_cl = $this->renzheng_model->gets();
+	$this->load->view('front/qualityControl/tiaoJianPingGu',array('rz_cl'=>$rz_cl));
 }
 
-public function old_upload($dir = 'E:/wamp/tmp/plupload'){
+public function old_upload($dir = '/alidata/www/plupload/'){
 
 	$file_list = array();
 	$data = array();
 
 	$d_dir = $this->input->post('dir');
 
-	$dir = 'E:/wamp/tmp/plupload/'.$d_dir;
+	$dir = '/alidata/www/cpc/plupload/'.$d_dir;
 
 	$data['code'] = 1;
 	$data['msg'] = '';
@@ -348,7 +354,7 @@ public function old_upload($dir = 'E:/wamp/tmp/plupload'){
 				{
 	     			if((is_dir($dir."/".$file)) && $file!="." && $file!="..")
 					{
-						$tmp = '<li><a href="E:/wamp/tmp/plupload/'.$file.'">'.$file.'</a><a href="#">删除</a></li>';
+						$tmp = '<li><a href="/plupload/'.$d_dir.'/'.$file.'" target="_blank">'.$file.'</a><a href="#">删除</a></li>';
 						array_push($file_list,$tmp);
 	     				listDir($dir."/".$file."/");
 	     			}
@@ -356,7 +362,7 @@ public function old_upload($dir = 'E:/wamp/tmp/plupload'){
 					{
 	         			if($file!="." && $file!="..")
 						{
-	         				$tmp = '<li><a href="E:/wamp/tmp/plupload/'.$file.'">'.$file.'</a><a href="#">删除</a></li>';
+	         				$tmp = '<li><a href="/plupload/'.$d_dir.'/'.$file.'" target="_blank">'.$file.'</a><a href="#">删除</a></li>';
 	         				array_push($file_list,$tmp);
 	      				}
 	     			}
@@ -365,7 +371,7 @@ public function old_upload($dir = 'E:/wamp/tmp/plupload'){
 	     	}
 	   	}
 	   	if(empty( $file_list)){
-	   		$data['msg'] = '<li>暂时没有上传文件</li>';
+	   		$data['msg'] = '<li style="text-align:center;color:blue;">暂时没有上传文件</li>';
 	   	}else{
 	   		$data['msg'] = $file_list;
 	   	}
@@ -422,7 +428,10 @@ public function sz_upload(){
 	// Settings
 	// 上传的路径，写绝对路径
 
-	$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload/".'user_3_1_10';
+	//$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload/".$file;
+	
+	$targetDir = '/alidata/www/cpc/'."plupload/".$file;
+
 	//$targetDir = 'uploads';
 	$cleanupTargetDir = true; // Remove old files
 	$maxFileAge = 5 * 3600; // Temp file age in seconds

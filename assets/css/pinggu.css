@@ -11,5 +11,16 @@
 .pgu-right{float:right;width:727px;height:auto;padding-bottom:40px;margin-left:40px;border-bottom:#68EE68 1px solid;overflow:hidden}
 .content_pgu{width:1090px;height:auto;padding:35px 25px 58px 40px;margin:0 auto;background:#fff;overflow:hidden}
  .firstchildren li{border:1px dashed #334455}
-.table_pgu_first td{ font-size:6px; border:1px solid #4B83B0}
+/*.table_pgu_first,.table_pgu_second,.table_pgu_third,.table_pgu_forth,.table_pgu_fifth td{ font-size:6px; border:1px solid #4B83B0}*/
 .biaodan{ text-align:center ;}
+table {
+    display: table;
+    border-collapse: separate !important;
+    border-spacing: 2px !important;
+    border-color: grey !important;
+    font-size: 6px;
+    border: 1px solid #4B83B0 !important; 
+}
+table td{
+	font-size:6px;border: 1px solid #4B83B0;
+}

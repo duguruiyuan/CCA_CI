@@ -53,6 +53,7 @@
                      <li><a href="/home/rzsq">得到培训</a></li>
                      <li><a href="/home/jdcx">上报数据</a></li>
                      <li><a href="/home/zzcx">查询资料</a></li>
+                     <li><a href="/home/about">留言反馈</a></li>
   
                 </ul></li>
             <li><a href="/home/rzxz">认证指引</a>

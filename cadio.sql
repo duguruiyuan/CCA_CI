@@ -10,10 +10,27 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-08-11 20:27:16
+Date: 2016-08-14 20:21:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for admin_user
+-- ----------------------------
+DROP TABLE IF EXISTS `admin_user`;
+CREATE TABLE `admin_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL,
+  `passwd` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of admin_user
+-- ----------------------------
+INSERT INTO `admin_user` VALUES ('1', 'admin', '872be7378d2e5c4b747f2547144c6dc5', null);
 
 -- ----------------------------
 -- Table structure for article
@@ -40,7 +57,7 @@ CREATE TABLE `article` (
   `sh` tinyint(1) DEFAULT NULL,
   `update_time` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of article
@@ -60,6 +77,7 @@ INSERT INTO `article` VALUES ('20', '3', '上海交通大学医学院附属苏�
 INSERT INTO `article` VALUES ('21', '3', '郑州市第一人民医院胸痛中心', null, 'cardioval', '3', '0', '', '', '<p class=\"MsoNormal\" align=\"center\" style=\"text-align:center;\">\r\n	<br />\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	时间：<span>2014-11-10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</span>来源：中国胸痛中心网<span></span>\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:215.25pt;\">\r\n	&nbsp;\r\n</p>\r\n<p style=\"text-align:justify;text-indent:21.0pt;\">\r\n	郑州市第一人民医院于<span>2012</span>年<span>9</span>月以心内科、急诊科为基础开通了心脏绿色通道，在一定程度上加快了心血管急症的救治速度，急性心肌梗死<span>D-toB</span>时间徘徊在<span>120</span>分钟左右，与国际标准还有很大差距。为了进一步提高心血管急症救治效率于<span>2014</span>年<span>11</span>月份我们提出了建设胸痛中心的设想，立即得到医院领导和郑州市<span>120</span>指挥中心领导的大力支持，并列入郑州市<span>120</span>指挥中心<span>2015</span>年十大实事，医院在心脏绿色通道的的基础上整合心内科、急诊科、院前急救、检验科、影像科、消化科、呼吸科、心外科、皮肤科及医务科、外联办等多学科成立了胸痛中心，胸痛中心自成立开始就以“做实、做大、做好”真正造福广大心血管急症患者为目标。为此，我们成立了胸痛中心委员会，首先对核心人员进行了胸痛中心建设标准强化学习、讨论并三次赴广州陆总学习、观摩，制定出我院<span>14</span>个急性胸痛相关救治流程。在此基础上组织了<span>30</span>余场型式不同的培训会及急性胸痛规范化诊疗学习班，上至院长、书记，下至保洁工及网络医院全员进行了急性冠脉综合症、肺栓塞、主动脉夹层、心肺复苏、急性胸痛鉴别诊断及救治流程等培训、考试，达到了全员培训、全员参与的目的。针对日常工作中及培训过程中发现的问题多次进行演练，并拍摄了急性心肌梗死快速救治宣传片并在院内及多家媒体播放，向市民广泛宣传急性胸痛快速救治理念。多次召开质量分析会、联合例会和典型病例分析会，先后三次修订救治流程。通过各式各样的培训，提高了全员对胸痛中心建设的认识和救治流程的理解及参与度，为胸痛中心的建设打下了良好基础。<span></span>\r\n</p>\r\n<p style=\"text-align:justify;text-indent:21.0pt;\">\r\n	2014年<span>11</span>月启动胸痛中心建设以来，按照胸痛中心运行模式统一时钟概念、远程传输心电图，心内胸痛医师值班、加快导管室激活时间，绕行急诊科、<span>CCU </span>等措施后，目前<span>D-TO-B</span>时间平均控制在<span>70</span>分钟左右。大大提高了急性心肌梗死病人的抢救成功率。<span></span>\r\n</p>\r\n<p class=\"MsoNormal\">\r\n	<b>&nbsp;</b>\r\n</p>', '郑州市第一人民医院胸痛中心', '', '', '1470713944', '0', '0', '0', '1', '1470713944');
 INSERT INTO `article` VALUES ('22', '1', '中国胸痛中心自助认证工作正式启动', null, 'admin', '0', '0', '', '', '<p class=\"MsoNormal\" align=\"center\" style=\"text-align:center;\">\r\n	<b>中国胸痛中心自助认证工作正式启动<span></span></b>\r\n</p>\r\n<p class=\"MsoNormal\" align=\"center\" style=\"text-align:center;\">\r\n	2013年<span>9</span>月<span>14</span>日<span></span>\r\n</p>\r\n<p class=\"MsoNormal\" align=\"center\" style=\"text-align:center;\">\r\n	<br />\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:24.0pt;\">\r\n	2013年<span>9</span>月<span>14</span>日，在广州召开的第三届中国胸痛中心高峰论坛上，由中华医学会心血管病分会正式启动了中国胸痛中心认证体系，这是继美国和德国之后，第三个针对胸痛中心的认证体系。<span></span>\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:24.0pt;\">\r\n	中国胸痛中心的认证是在国家卫生与计划生育委员会授权下，由中华医学会心血管病分会主导实施的。中华医学会心血管病分会主任委员霍勇教授指出：“鉴于我国急性心肌梗死的救治很不规范的现状，在我国积极推进胸痛中心的建设是势在必行之事，而建立中国胸痛中心认证体系就是为了规范胸痛中心的建设。”<span></span>\r\n</p>\r\n<p class=\"MsoNormal\" style=\"text-indent:24.0pt;\">\r\n	中国胸痛中心认证体系的启动仪式由广州军区广州总医院向定成教授主持，中华医学会心血管病分会常委、上海胸科医院方唯一教授受学会委托在启动仪式上介绍了建立中国胸痛中心认证体系的背景，中华医学会急诊医学分会主任委员、首都医科大学朝阳医院李春盛教授代表急诊医学分会对积极推动胸痛中心建设和认证工作的重要意义给予了充分肯定，并希望急诊科和心血管内科两个学科紧密团结起来，共同为为推动这一重要事业做出贡献。<span></span>\r\n</p>\r\n<p class=\"MsoNormal\" align=\"center\" style=\"text-align:center;\">\r\n	<span>&nbsp;</span>\r\n</p>', '中国胸痛中心自助认证工作正式启动', '', '', '1470714872', '0', '0', '0', '1', '1470714872');
 INSERT INTO `article` VALUES ('23', '1', '中国胸痛中心认证工作委员会第一次执行委员会会议召开', null, 'admin', '2', '0', '', '', '<p class=\"MsoNormal\" style=\"text-align:center;margin-left:21.3pt;text-indent:-21.3pt;\">\r\n	<span class=\"Char\">中国胸痛中心认证工作委员会第一次执行委员会会议召开</span><b></b>\r\n</p>\r\n<p class=\"MsoNormal\" align=\"center\" style=\"text-align:center;\">\r\n	2014年<span>2</span>月<span>12</span>日\r\n</p>\r\n<p class=\"MsoNormal\">\r\n	<br />\r\n</p>\r\n<p style=\"text-align:justify;text-indent:21.25pt;\">\r\n	<span>2014</span>年<span>2</span>月<span>12</span>日，中国胸痛中心认证工作委员会第一次执行委员会会议在北京举行。根据去年<span>11</span>月<span>11</span>日中国胸痛中心认证工作委员会第一次全体会议的决议，中国胸痛中心认证工作办公室组织<span>12</span>位专家在<span>2</span>个月内完成了首批申请认证的四家医院的材料审查和现场核查工作。本次执行委员会会议的主要内容是对首次认证情况进行分析和总结、投票表决认证结果、讨论认证标准和流程的修订以及下一步的工作计划。<span></span>\r\n</p>\r\n<p style=\"text-align:justify;text-indent:21.25pt;\">\r\n	工作委员会主任委员霍勇教授和执行主任委员方唯一教授担任本次会议主席，会议由工作委员会副主任委员兼秘书长向定成教授主持。参与现场核查的<span>11</span>位专家霍勇、方唯一、向定成、陈纪言、王乐丰、陈韵岱、秦伟毅、刘健、曲新凯、伍贵富、李浪、心血管病学分会办公室宁田海主任、李冬梅主任、张岩主任及认证办公室易绍东主任和夏斌秘书出席了本次会议。会议重点讨论了以下问题：<span></span>\r\n</p>\r\n<p style=\"margin-left:-82.95pt;text-align:justify;text-indent:84.0pt;\">\r\n	<b>一、四家申请认证单位的评审情况总结：</b><b></b>\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	首先，认证办公室主任易绍东博士就以下内容做了详细汇报：一是认证网站的资料提交及审查流程、目前存在的问题以及改进措施，未来改进的目标是要使申请材料提交更规范、评审专家工作更方便；二是四家医院的审查和现场核查情况，包括各家医院的优势和存在的问题以及具体评分情况。汇总专家的评分后四家医院的得分情况为：烟台山医院94分、厦门市心脏中心88.14分、上海交通大学附属胸科医院93.25分、吉林大学第一医院98.3分。他指出目前各家胸痛中心存在的共性问题是：数据库的建立意识和原始记录资料的收集和保存意识不强，缺乏“没有记录就没有发生”的概念；缺乏流程改进工具和关系流程图；北京急救模式下的医院与120的深度合作存在困难。其中厦门心脏中心胸痛中心存在的主要问题是急诊科与心血管内科的合作存在困难，导致急性胸痛患者在急诊科延误时间过长以及各类诊疗流程没有得到落实。\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	与会专家按照流程对四家医院审查结果进行了无记名投票，按照少数服从多数的原则，决定：烟台山医院、上海交通大学附属胸科医院、吉林大学第一医院通过首批认证，厦门市心脏中心给予3～6个月的时间进行部分改进，再进行评估。\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	<b>二、关于认证标准和现场核查流程的修订</b><b></b>\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	根据各位专家在前期认证工作发现的实际问题，会议经过充分讨论后对认证标准提出了以下修改意见：一是要在标准中增加对数据库的明确要求，其中主要是ACS的数据库必须完整，同时要求尽可能建立包括主动脉夹层及肺动脉栓塞在内的全部胸痛患者的数据库；二是部分条款的调整：在要素一的部分条目中，突出了绕行急诊和绕行CCU的要求。在要素三中，调整了负荷试验及重复采集心电图、肌钙蛋白的要求。另外还删除了部分重复的条款。\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	关于现场核查流程，经过充分讨论后会议做出如下修订意见：一是将微服私访作为常规现场核查内容；二是将网上资料审查内容和需要现场核查的内容分开评分，由专家在不同阶段分别打分，以防错误；三是将现场核查的内容进一步简化归类以提高现场核查效率。\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	<b>三、中国胸痛中心认证标志</b><b></b>\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	张岩教授介绍了认证标识的几种设计方案，经过讨论初步确定了认证标识的基本式样。\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	<b>四、今年的工作计划</b><b></b>\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	向定成秘书长就今年的工作计划提出了初步建议，经过专家的讨论后大致确立了以下工作作为今年的主任工作计划：一是完成胸痛中心认证标准的修改和发布；二是完成两批认证单位的审查，原则上上下半年各一批，每批的数量可以根据申请的情况确定；三是举办两次胸痛中心规范化建设培训班，上半年在4月份的南方会期间举行，下半年在9月份第四届中国胸痛中心高峰论坛期间举办，同时要尽可能争取在国内其它大型学术会议期间亦举办胸痛中心建设专场学术活动，在积极普及、推广胸痛中心概念的同时为拟开展胸痛中心的单位提供人员和技术培训；四是加强中国胸痛中心专用网站建设，其中最重要的是要尽快完成在线申请和资料提交系统的升级，以确保方便认证专家工作。\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	最后霍勇教授和方唯一教授分别做了会议总结。霍勇教授指出中国胸痛中心的认证工作要坚持不懈的继续开展下去，首批认证工作组织得非常成功，从中我们可以很清晰地看到各家胸痛中心的优势与不足。根据首批四家申请单位的运作情况，我们可以梳理出目前在中国进行胸痛中心建设所能遇到的一些实际问题。比如数据库的建设就是目前普遍存在的共性问题。数据库的建立和规范运作有助于胸痛中心流程的持续改进，也是提供审查资料时最有说服力的证据。数据库的建立既不能好高骛远，也不能流于形式，要从各地的实际情况出发，逐步建立完善和全面的数据库，还应考虑逐渐与现有的数据库系统进行对接，方便管理和统计的需要。方唯一教授在总结中指出，在我国积极推进胸痛中心的建设是势在必行之事，而认证工作就是更好地促进各地胸痛中心建设的重要举措。此次认证工作时间短、效率高，各项工作均卓有成效，为下一步全面开展认证工作打下了良好的基础。认证结束后，认证办公室应与各申请单位加强沟通，指出优势与不足，促进各单位的进一步发展和改进。同时，还要大力推行胸痛中心的理念，与有意进行第二批认证的胸痛中心进行联系和培训，时机成熟时，积极启动第二次认证工作。\r\n</p>\r\n<p class=\"MsoNoSpacing\" style=\"text-indent:24.0pt;\">\r\n	&nbsp;\r\n</p>', '中国胸痛中心认证工作委员会第一次执行委员会会议召开', '', '', '1470714927', '0', '0', '0', '1', '1470714927');
+INSERT INTO `article` VALUES ('24', '0', 'test', null, '丽丽', '0', '0', '测试', '2016-08-14', '<p style=\"text-align:center;\">\r\n	<span style=\"line-height:1.5;\">这里是测试文章</span>\r\n</p>\r\n<p style=\"text-align:center;\">\r\n	<span style=\"line-height:1.5;\">顶顶顶</span>\r\n</p>\r\n<p style=\"text-align:center;\">\r\n	<br />\r\n</p>', 'dddd', 'dddd', '地对地导弹', '1471174226', '1', '0', '0', '1', '1471174226');
 
 -- ----------------------------
 -- Table structure for ly
@@ -75,7 +93,7 @@ CREATE TABLE `ly` (
   `reply_time` varchar(255) DEFAULT NULL,
   `is_del` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ly
@@ -86,6 +104,7 @@ INSERT INTO `ly` VALUES ('3', 'sadas', '418780414@qq.com', 'asdadsads', '1470536
 INSERT INTO `ly` VALUES ('4', 'sadas', '418780414@qq.com', 'asdadsads', '1470536881', '好的快点好', '1470667675', '0');
 INSERT INTO `ly` VALUES ('5', 'sadas', '418780414@qq.com', 'asdadsads', '1470536896', '这是回复的测试', '1470667638', '0');
 INSERT INTO `ly` VALUES ('6', '测试', '418780414@qq.com', '测试', '1470543684', '好的对对对', '1470661978', '0');
+INSERT INTO `ly` VALUES ('7', '丽丽', '278981500@qq.com', '你好，我这里', '1471174402', '我回复了你，你看看一下', '1471174440', '0');
 
 -- ----------------------------
 -- Table structure for recycle
@@ -98,11 +117,12 @@ CREATE TABLE `recycle` (
   `rec_id` int(11) DEFAULT NULL,
   `opt_user` varchar(65) DEFAULT NULL COMMENT '操作人',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of recycle
 -- ----------------------------
+INSERT INTO `recycle` VALUES ('2', '1', '1471174290', '24', null);
 
 -- ----------------------------
 -- Table structure for renzheng
@@ -120,253 +140,276 @@ CREATE TABLE `renzheng` (
   `zj_1` varchar(255) DEFAULT NULL COMMENT '专家意见',
   `zj_2` varchar(255) DEFAULT NULL,
   `zj_3` varchar(255) DEFAULT NULL,
-  `res` tinyint(1) DEFAULT '0' COMMENT '综合三位专家最总结果，0表示需要重新上传'
+  `res` tinyint(1) DEFAULT '0' COMMENT '综合三位专家最总结果，0表示需要重新上传',
+  `xiaojie` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of renzheng
 -- ----------------------------
-INSERT INTO `renzheng` VALUES ('11', '医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：', '1', '1.10由医院院长或分管医疗的副院长担任胸痛中心委员会主任委员，主持胸痛中心委员会的建设和重大决策', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('12', '医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：', '1', '1.11书面文件明确胸痛中心委员会的工作职责', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('13', '医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：', '1', '1.12明确胸痛中心委员会具有调动医院所有资源为胸痛中心建设和运行提供保障的权力', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('14', '医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：', '1', '1.13胸痛中心成立并实际运作至少6个月以上才能申请认证', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('15', '任命胸痛中心医疗总监,要求：', '2', '1.14医院正式任命一名具有心血管内科专业背景的高级职称医师担任胸痛中心医疗总监，且该医师应具备较强的组织协调能力，专业技能必须具备对急性冠状动脉综合征（ACS）、急性主动脉夹层、肺动脉栓塞等急性胸痛患者进行诊断、鉴别诊断及紧急救治能力；', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('16', '任命胸痛中心医疗总监,要求：', '2', '1.15书面文件正式明确胸痛中心医疗总监的职责', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('17', '任命胸痛中心协调员，要求：', '3', '1.16指定一名具有急诊或心血管内科专业背景的医师担任胸痛中心协调员，协调员必须具备正确处理ACS及其它急性胸痛的能力', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('18', '任命胸痛中心协调员，要求：', '3', '1.17书面文件明确协调员的具体工作职责', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('19', '任命胸痛中心协调员，要求：', '3', '1.18协调员每年至少参加ACS和胸痛中心相关的培训不少于10学时', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('20', '', '0', '1.19全力支持胸痛中心的建设与认证，承诺分配相应人力、设备和财政资源，并做好监察、考核、质量控制等工作，确保胸痛中心规范化运行', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('21', '', '0', '1.20对胸痛中心在优化诊疗流程过程中所涉及到的院内外标识与指引、急诊及抢救区域的布局等进行改造、对医院各部门的工作流程、管理制度进行相应的调整以适应胸痛中心流程优化需求，承诺在分诊、就诊、检验、收费、发药等环节实行急性胸痛优先原则，在急性胸痛患者就诊时首份心电图、肌钙蛋白等辅助检查、ACS的抗血小板药物、STEMI患者的抗凝、溶栓治疗环节等实行先救治后收费的原则，以适应优化诊疗流程、最大限度缩短救治时间的需要', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('22', '', '0', '1.21承诺与院前急救系统签署联合救治协议，以实现院前救治与院内救治的无缝连接', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('23', '', '0', '1.22承诺与基层转诊医院、社区医疗机构等签署联合救治ACS的协议', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('24', '', '0', '1.23承诺支持并协助胸痛中心实施各类培训计划', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('25', '', '0', '1.24承诺不能因无床位、人力紧张、患者无力支付医疗费用等原因将ACS转诊到其它医院，以防延误救治', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('26', '', '0', '1.25若救护车归属医院管理，承诺对救护车救治能力进行改造，包括人员培训及设备更新，以满足转运急性胸痛患者的需求\r\n', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('27', '急诊科、胸痛中心的标识与指引', '4', '1.26在医院周边地区的主要交通要道、医院门诊、急诊的入口处设置醒目的胸痛中心或急诊的指引和标志，旨在为不熟悉医院环境的急性胸痛患者能顺利找到急诊科或胸痛中心', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('28', '急诊科、胸痛中心的标识与指引', '4', '1.27在门诊大厅、医院内流动人群集中的地方均应有指引通往急诊科/胸痛中心的醒目标识，指引需要急救的患者快速进入急诊科/胸痛中心', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('29', '急诊科、胸痛中心的标识与指引', '4', '1.28急诊科分诊、挂号、诊室、收费、抽血、检验、药房等均应有急性胸痛优先标识', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('30', '胸痛急救的功能分区', '5', '1.29急诊分诊台：急诊分诊台应易于识别且靠近抢救区，方便步行患者进入时发现，并有醒目的标识指引急性胸痛患者得到优先分诊；对于夜间急诊量较小、不具备设置夜间急诊分诊条件的医院，必须建立替代机制以确保急性胸痛患者得到快速诊疗', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('31', '胸痛急救的功能分区', '5', '1.30急诊分诊台或功能替代区应配置电话及急救相关的联络系统，以便进行院内、外的沟通协调，其中应包括与院前救护车、向本院转诊的基层医院的联络机制', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('32', '胸痛急救的功能分区', '5', '1.31急诊分诊台应常备急性胸痛患者时间管理节点记录表，以及伴随时钟（如果需要），以便在首次医疗接触时开始进行前瞻性时间节点记录，或者能在分诊台开始启动填报胸痛数据库', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('33', '胸痛急救的功能分区', '5', '1.32分诊区有标准的胸痛分诊流程图，指引分诊护士在初步评估后将患者分流到胸痛诊室、急诊抢救室、胸痛留观室或直接送入导管室', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('34', '胸痛急救的功能分区', '5', '1.33急诊科入口处应根据急诊流量配备足够的轮椅和担架车，方便多个患者同时就诊时使用', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('35', '胸痛急救的功能分区', '5', '1.34急诊科应具备床旁心电图检查条件，确保在首次医疗接触后10分钟内完成首份12/或18导联（怀疑下壁和正后壁心肌梗死）心电图检查，并不受是否为正班时间的限制，对于急性胸痛患者首份心电图应实行先救治后收费原则', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('36', '胸痛急救的功能分区', '5', '1.35急诊科应具备床旁快速检测肌钙蛋白、D-二聚体的设备，确保抽血后20分钟获取检测结果', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('37', '胸痛急救的功能分区', '5', '1.36应建立胸痛诊室（专用或兼用）、急诊抢救室（或急诊监护室）、胸痛留观室（供暂时诊断不明确、需要留观的中、低危胸痛患者使用）等功能区域，上述功能区应配备急性胸痛诊疗和抢救所需要的相应设施（例如心电图机、供氧系统、监护仪、除颤器、呼吸机等急救器材和急救药品），上述抢救设备、面积、床位等配置应以能满足医院所承担的急诊任务为原则', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('38', '人员资质', '6', '1.37至少有2名接受过规范培训、具备急诊PCI能力的副高级职称的心血管专科医师，且每人年PCI手术量不低于75例', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('39', '人员资质', '6', '1.38至少具有3名经过专门介入辅助技术培训、熟悉导管室工作流程的导管室专职护士，且每年至少接受一次4学时以上的介入诊疗和ACS的新知识培训，并获得证书', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('40', '人员资质', '6', '1.39具有经过专门培训且获得大型放射设备上岗证书的放射技术人员', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('41', '心血管专科条件', '7', '1.40心血管内科在当地具有相对的区域优势，能为本地区其它医疗机构提供心血管急危重症抢救、复杂疑难病例诊治以及继续教育等服务和支持', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('42', '心血管专科条件', '7', '1.41配备不少于6张床位的冠心病监护室（CCU）', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('43', '心血管专科条件', '7', '1.42具备急诊PCI能力，导管室基本设备（状态良好的数字血管影像设备、监护设备——含无创和有创性血流动力学监护设备、呼吸机、除颤器、心脏临时起搏器、主动脉内球囊反搏仪等生命支持系统）能满足急诊PCI需求，且常备急诊PCI所需的各类耗材', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('44', '心血管专科条件', '7', '1.43导管室过去1年PCI手术量不少于200台，急诊PCI（包括PPCI及补救性PCI）不低于50例', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('45', '心血管专科条件', '7', '1.44导管室365天/24小时全天候开放能力', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('46', '心血管专科条件', '7', '1.45制订了确保导管室从启动到开放(最后一名介入人员到达导管室)时间小于等于30分钟的措施,如果当前不能达到，应有切实可行的改进措施，确保在通过认证后半年内达到', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('47', '心血管专科条件', '7', '1.46如果心导管室暂时不可用，应启动相应方案和程序。有时心导管室会出现设备故障、进行维护或有占台现象，此时需要制定相应备用计划，确保高危患者能立即治疗', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('48', '心血管专科条件', '7', '1.47有指引针对STEMI患者实施先救治、后收费（先手术、后补办住院手续）的专用流程图', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('49', '', '0', '1.48建立了包括以远程实时传输心电图、微信群、手机短信、传真等形式的信息共享平台，以及基于此平台的急性胸痛诊疗应急响应机制，以确保具有确诊能力的上级医师能及时为急诊一线提供全天候支持；该信息共享平台至少要与周边5家以上的非PCI医院实现信息共享，以便及时为非PCI医院的急性胸痛患者提供诊断支持，同时为实施转运PCI的STEMI患者绕行急诊科和CCU直达导管室提供条件', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('50', '', '0', '1.49急诊科医师应具备对急性胸痛的鉴别诊断能力，能够独立阅读心电图、诊断ACS，若当前不具备，应建立基于传输心电图的远程会诊或现场会诊机制，确保心血管内科医师能在10分钟内参与会诊、协助诊断', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('51', '', '0', '1.50在对急性胸痛进行鉴别诊断时，能得到其它相关学科的支持，例如呼吸科、胸外科、消化科、皮肤科等', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('52', '', '0', '1.51在对急性胸痛进行鉴别诊断时，能得到其它相关学科的支持，例如呼吸科、胸外科、消化科、皮肤科等\r\n', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('53', '', '0', '1.52具备多排螺旋CT增强扫描的条件，并能开展急诊主动脉、肺动脉CTA检查，从启动CT室到接受患者进行检查的时间在30分钟以内，如果目前无法达到，则应有具体的改进措施确保在通过认证后1年内达到', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('54', '', '0', '1.53运动心电图应在正常工作时间内随时可用于对低危胸痛患者的评估', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('55', '', '0', '1.54已建立时钟统一方案，以确保各关键诊疗环节的时间节点记录的准确性', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('56', '', '0', '1.55已制订了时钟统一管理制度，确保关键时间节点所涉及的各类时钟、诊疗设备内置系统时间、各类医疗文书记录时间的高度统一', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('57', '', '0', '1.56能提供落实时钟统一管理制度的客观记录，如时钟校对记录等', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('58', '', '0', '1.57已开始启用中国胸痛中心认证云平台数据库，并至少提供6个月的数据供认证时评估', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('59', '', '0', '1.58制定了数据库的管理规范、使用细则及监督管理制度，并有数据的审核制度，确保数据库的真实、客观、准确', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('60', '', '0', '1.59应有专职或兼职的数据管理员', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('61', '', '0', '1.60对相关人员进行了数据库使用方法和相关制度的培训', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('62', '', '0', '1.61急性胸痛患者的首次医疗接触的人员应及时在数据库中建档，若不能及时进行在线填报，应有纸质版的时间记录表格从首次医疗接触时开始伴随急性胸痛患者诊疗的全过程，进行时间节点的前瞻性记录，尽可能避免回顾性记录，以提高记录的准确性', '1', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('63', '数据库的完整性，应满足以下全部条件：', '8', '1.62所有进入医院的急性胸痛（明确的创伤性胸痛除外）患者的登记比例应不低于75%，应包括各类因急性胸痛就诊于门、急诊或入院患者的基本信息和最后诊断', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('64', '数据库的完整性，应满足以下全部条件：', '8', '1.63ACS患者的登记比例应达到100%', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('65', '数据库的完整性，应满足以下全部条件：', '8', '1.64STEMI患者的录入必须达到100%，且各项关键时间节点的填报应齐全，关键时间节点的缺失率不能高于10%，其中院内时间节点记录的有效率应达到100%。STEMI患者的关键时间节点详见云平台数据库', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('66', '数据库的完整性，应满足以下全部条件：', '8', '1.65数据资料的溯源性：确保STEMI患者的上述关键时间节点可以溯源，其中发病时间、呼叫120、到达医院等时间应能从急诊病历（电子病历或复印件）、入院病历、首次病程记录、心电图纸、检验报告、病情告知或知情同意书等原始记录中溯源，并要求尽可能精确到分钟', '1', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('67', '', '0', '2.10制订了急性胸痛分诊流程图', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('68', '', '0', '2.11所有负责分诊的人员及其他首次接诊急性胸痛患者的医护人员均熟悉上述分诊流程图', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('69', '', '0', '2.12制订了急性胸痛鉴别诊断流程图', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('70', '', '0', '2.13所有负责急性胸痛患者接诊的急诊医师熟悉上述诊疗流程图', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('71', '', '0', '2.14制订了相关流程图，指引首次医疗接触人员在接诊急性胸痛患者10分钟内完成12/18导联心电图检查', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('72', '', '0', '2.15确保在首份心电图完成后10分钟内由具备诊断能力的医师解读，若急诊医师不具备心电图诊断能力，心血管内科医师或心电图专职人员应在10分钟内到达现场进行确认，或通过远程12导联心电图监护系统或微信传输等方式远程确认心电图诊断', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('73', '', '0', '2.16所有急性高危胸痛患者应在首次医疗接触（分诊台或挂号）后10分钟内由首诊医师接诊', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('74', '', '0', '2.17急诊科护士或医师或其它急诊检验人员熟练掌握了床旁快速检测肌钙蛋白的方法，确保能在20分钟内获得检测结果', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('75', '', '0', '2.18制订了ACS诊治总流程图，当心电图提示为ACS时，该流程图能指引一线医师进行后续的诊疗过程', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('76', '', '0', '2.19所有急性胸痛患者均应录入认证云平台数据库', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('77', '', '0', '2.20以最新的STEMI诊治指南为依据，结合本院实际情况制订STEMI再灌注治疗策略的总流程图', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('78', '', '0', '2.21制订了各种不同来院途径的STEMI再灌注治疗的关系流程图，以明确参与救治过程的各环节的具体工作内容和时间限定', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('79', '', '0', '2.22制订了本院STEMI患者的药物治疗方案，包括发病后早期用药及长期二级预防方案', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('80', '', '0', '2.23制订了明确的PPCI治疗的适应症和禁忌症', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('81', '', '0', '2.24制订了相应的流程，使经本地120救护车入院的STEMI患者绕行急诊和CCU直达导管室', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('82', '', '0', '2.25制订了相应流程，使自行来院STEMI患者绕行CCU从急诊科直达导管室，急诊科及心内科相关人员必须熟悉流程和联络机制', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('83', '', '0', '2.26制订了相应的流程，使从非PCI医院首诊、实施转运PCI（包括直接转运PPCI和补救性PCI）的STEMI患者能在到达医院前确认诊断、启动导管室，并实施绕行急诊和CCU直达导管室。并至少与5家以上的非PCI医院实施了上述流程', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('84', '', '0', '2.27建立并落实了PPCI手术的先救治后收费机制', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('85', '', '0', '2.28有标准版本的急诊PCI知情同意书，其中签字时间应精确到分钟', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('86', '', '0', '2.29建立了旨在缩短知情同意时间的有效方法', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('87', '', '0', '2.30制订了将STEMI患者从急诊科转移到导管室的转送流程图，在确保患者安全的前提下尽快到达导管室，此流程图应明确负责转运的人员、设备、联络机制、途中安全措施、交接对象及内容等', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('88', '', '0', '2.31有规范的溶栓筛查表，其中包括STEMI的确诊条件、溶栓适应症、禁忌症\r\n', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('89', '', '0', '2.32有规范、制式的溶栓治疗知情同意书，医患双方签字时间应精确到分钟\r\n', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('90', '', '0', '2.33制订了溶栓治疗方案，包括溶栓前准备、溶栓药物选择及剂量、用法、监测指标及时机、结果判断、并发症处理预案、溶栓后抗凝治疗方案等\r\n', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('91', '', '0', '2.34制订了溶栓治疗标准操作流程图，指引一线医师进行溶栓治疗\r\n', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('92', '', '0', '2.35建立流程优化机制，确保自行来院或经120入院的STEMI患者能在首次医疗接触到开始溶栓时间 (FMC-to-N) 小于等于30分钟\r\n', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('93', '', '0', '2.36急诊科、心内科、导管室以及具有转诊关系的基层医院等相关人员熟悉上述STEMI再灌注治疗的流程及联络机制', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('94', '', '0', '2.37制订了对NSTEMI/UA患者进行初步评估及再次评估的流程图，其中必须明确评估内容、危险分层工具及再次评估时间\r\nNSTEMI/UA初始评估和再次评估流程图必须符合当前指南精神\r\n流程图应有首次、再次评估的具体内容\r\n应有公认的危险分层工具，包括缺血和出血评分工具\r\n流程图中应明确根据情况确定心电图和肌钙蛋白复查的时间和再次评估的间隔时间，以便根据临床情况的变化调整相应的再灌注治疗策略，必须满足以下三项\r\n初始心电图和/或持续 ST 段监护结果为阴性时，按规定的时间定期复查心电图，确保症状复发或恶化时，应在15-30 分钟的间隔内重新采集心电图；无持续或复发性症状且临床情况稳定的患者应在不超过4小时内复查心电图\r\n确定心肌生化标志物诊断NSTEMI的标准界値，生化标志物中必须包含肌钙蛋白，有条件时应开展超敏肌钙蛋白检测，以满足快速评估和早期诊断的需要，应确保能在抽血后20分钟获得肌钙蛋白检测结果\r\n若首次肌钙蛋白为阴性，则应在入院后6小时内复查，若采用高敏肌钙蛋白，则应根据当前指南确定复查时间\r\n流程图中应明确首次或再次评估为极高危、高危和中危的患者能在指南规定的时间内实施PCI治疗，低危患者应进行运动负荷试验等进一步评估后确定后续治疗策略', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('95', '', '0', '2.38制订了各种不同来院途径的NSTEMI/UA从确诊到完成关键诊疗过程的关系流程图，以明确参与救治过程的各环节的具体工作内容和时间限定', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('96', '', '0', '2.39各类相关人员熟悉NSTEMI/UA的初始及再次评估、危险分层、再灌注治疗原则', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('97', '', '0', '2.40上述评估过程和临床实际工作中应尽可能避免医疗资源的浪费，防止过度检查和治疗', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('98', '', '0', '2.41依据指南制订了NSTEMI/UA患者的药物治疗规范，包括早期药物治疗及长期二级预防方案', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('99', '', '0', '2.42对ACS患者进行详细的出院指导。出院指导中应明确说明诊断、预后、随访检查时间和注意事项等，并向患者说明ACS体征和症状以及一旦发生紧急情况时呼叫急救系统或到急诊科就诊的重要性', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('100', '', '0', '2.43为患者提供冠心病急救、预防的知识性宣教小册', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('101', '', '0', '2.44在胸痛鉴别诊断的流程图中应尽可能全面考虑其他非心源性疾病', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('102', '', '0', '2.45对于初步诊断考虑ACS但诊断不明确、暂时无急性心肌缺血证据的急性胸痛患者，应制订根据不同临床症状复查心电图、肌钙蛋白的时间间隔，确保病情变化或加重时能被及时评估，又避免医疗资源的浪费', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('103', '', '0', '2.46对于症状提示为非心源性胸痛可能性大的患者，急性胸痛鉴别诊断流程图应能指引一线医师根据临床判断进行相应的辅助检查，以便尽快明确或排除可能的诊断，同时尽可能避免医疗资源浪费', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('104', '', '0', '2.47低危胸痛的评估流程中应包含心电图运动试验作为首选的心脏负荷试验，并满足以下要求：\r\n应制订运动心电图的适应症、禁忌症、标准操作规程、结果判断标准、并发症的处理措施\r\n规范运动负荷试验，包括检查时间、人员配备、设备要求，必须配备除颤仪以及常用急救药品\r\n建立运动试验中突发紧急事件的应急处理流程，确保在运动心电图试验中发生急性心肌梗死或心脏骤停等急性事件时能得到及时正确的处理\r\n建立对负荷试验异常患者进行后续评估和处理的流程\r\n确保正班时间能够随时接受胸痛患者进行心电图运动试验', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('105', '', '0', '2.48除开展运动心电图外，尚应开展至少一项以上其它心脏负荷试验，以便对不能进行运动试验的患者作为次选心脏负荷试验。应明确该项心脏负荷试验的基本条件，包括但不限于适应症、禁忌症、试验方法和流程图、结果判断标准、发生紧急事件或不良反应的处理流程等\r\n', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('106', '', '0', '2.49对于完成基本评估从急诊直接出院的低危胸痛患者，医师应根据病情制订后续诊疗和随访计划，并进行冠心病的知识宣传教育', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('107', '', '0', '2.50对于未完成全部评估流程而提前离院的急性胸痛患者，急诊医师应告知潜在的风险、再次症状复发时的紧急处理、预防措施等注意事项，签署并保存相关的知情文件', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('108', '', '0', '2.51制订院内发生ACS时的救治流程图，该流程图应包括从明确诊断到实施关键救治的全部过程，明确患者所在科室的现场处理要点、会诊机制及紧急求助电话', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('109', '', '0', '2.52通过培训、教育、演练、发放口袋卡片、墙上流程图等形式使全院各科室人员均能熟悉ACS现场救治的基本流程和会诊机制，熟练掌握心肺复苏的基本技能，熟悉紧急联系电话', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('110', '', '0', '2.53经临床初步评估高度怀疑主动脉夹层或急性肺动脉栓塞的患者，能在30分钟内（从通知到患者开始扫描）进行“增强CT扫描”', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('111', '', '0', '2.54怀疑A型夹层、急性心包炎者能在30分钟内完成心脏超声检查\r\n', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('112', '', '0', '2.55制订了主动脉夹层的早期紧急治疗方案，若无禁忌症，在明确诊断后能尽快实施以B-受体阻滞剂和静脉药物为主的降压和镇痛治疗方案，以降低主动脉夹层破裂的风险，为后续治疗赢得时间', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('113', '', '0', '2.56制订了针对不同类型主动脉夹层的诊治流程图', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('114', '', '0', '2.57制订了急性肺动脉栓塞的诊断筛查流程图', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('115', '', '0', '2.58制订了急性肺动脉栓塞的标准治疗方案', '2', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('116', '', '0', '2.59急诊接诊医师熟悉急性主动脉夹层、肺动脉栓塞的临床表现、诊断方法和治疗手段', '2', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('117', '', '0', '3.10医院应围绕急性胸痛救治与本地区120签署正式的合作协议', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('118', '胸痛中心制订了针对急性胸痛的急救常识、高危患者的识别、ACS及心肺复苏指南等对120相关人员进行培训的计划，并有实施记录；申请认证时应提交：', '1', '3.11培训计划', '3', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('119', '胸痛中心制订了针对急性胸痛的急救常识、高危患者的识别、ACS及心肺复苏指南等对120相关人员进行培训的计划，并有实施记录；申请认证时应提交：', '1', '3.12讲稿', '3', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('120', '胸痛中心制订了针对急性胸痛的急救常识、高危患者的识别、ACS及心肺复苏指南等对120相关人员进行培训的计划，并有实施记录；申请认证时应提交：', '1', '3.13签到表', '3', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('121', '胸痛中心制订了针对急性胸痛的急救常识、高危患者的识别、ACS及心肺复苏指南等对120相关人员进行培训的计划，并有实施记录；申请认证时应提交：', '1', '3.14培训现场照片或视频资料', '3', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('122', '胸痛中心与120共同制订从胸痛呼救到从发病现场将急性胸痛患者转送至胸痛中心的急救预案、流程图以及联络机制，并进行联合演练；申请认证时应提交：', '2', '3.15演练方案', '3', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('123', '胸痛中心与120共同制订从胸痛呼救到从发病现场将急性胸痛患者转送至胸痛中心的急救预案、流程图以及联络机制，并进行联合演练；申请认证时应提交：', '2', '3.16演练现场照片或视频资料', '3', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('124', '院前急救人员参与胸痛中心的联合例会和典型病例讨论会，至少每半年参加一次上述会议，共同分析实际工作中存在的问题、制订改进措施；申请认证时应提交：', '3', '3.17会议记录', '3', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('125', '院前急救人员参与胸痛中心的联合例会和典型病例讨论会，至少每半年参加一次上述会议，共同分析实际工作中存在的问题、制订改进措施；申请认证时应提交：', '3', '3.18签到表', '3', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('126', '院前急救人员参与胸痛中心的联合例会和典型病例讨论会，至少每半年参加一次上述会议，共同分析实际工作中存在的问题、制订改进措施；申请认证时应提交：', '3', '3.19现场照片或视频资料', '3', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('127', '', '0', '3.20转运急性胸痛患者的院前救护车应具备基本的监护和抢救条件，必备设备包括心电图机、多功能（心电、血压、血氧饱和度等）监护仪、便携式除颤器、移动式供氧装置、人工气道建立设备和各类急救药品等，有条件时尽可能配备便携式呼吸机、吸引器、具有远程实时传输功能的监护设备、心脏临时起搏器、心肺复苏机', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('128', '', '0', '3.21120调度人员能够熟练掌握胸痛急救常识，能优先调度急性胸痛救护并指导呼救者进行正确的现场自救', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('129', '', '0', '3.22从接受120指令到出车时间不超过3分钟', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('130', '', '0', '3.23院前急救人员能在首次医疗接触后10分钟内完成12导联（怀疑右室、后壁心肌梗死患者18导联）心电图记录', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('131', '', '0', '3.24院前急救人员能识别ST段抬高心肌梗死的典型心电图表现', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('132', '', '0', '3.25院前急救人员熟悉胸痛中心院内绿色通道及一键启动电话，能在完成首份心电图后10分钟内将心电图传输到胸痛中心信息共享平台（远程实施传输系统或微信平台），并通知具有决策能力的值班医生；对于从首次医疗接触到进入医院大门时间大于15分钟的急性胸痛患者，传输院前心电图的比例不低于50%', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('133', '', '0', '3.26院前急救人员熟练掌握了高危急性胸痛患者的识别要点', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('134', '', '0', '3.27院前急救人员熟练掌握了初级心肺复苏技能', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('135', '', '0', '3.28对于急性胸痛的救治，120与胸痛中心采用相同的时间节点定义，院前急救人员熟悉各个时间节点定义', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('136', '', '0', '3.29对于急性胸痛患者，实现了从救护车首次医疗接触时开始记录时间管理表或开始填报云平台数据库', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('137', '', '0', '3.30对于首份心电图诊断为STEMI的患者，院前急救系统能实施绕行急诊将患者直接送到导管室，且绕行急诊的比例不低于30%，如果当前无法达到，则应制订确实可行的措施确保在通过认证后6个月内达到', '3', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('138', '针对医院领导、医疗管理、行政管理人员的培训，应在胸痛中心成立之前或最晚成立之后1个月以内至少进行一次。培训内容应包括：区域协同救治体系胸痛中心的基本概念、在胸痛中心建设和流程优化过程中需要医院解决的主要问题等。申请时应提交：', '1', '4.10培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('139', '针对医院领导、医疗管理、行政管理人员的培训，应在胸痛中心成立之前或最晚成立之后1个月以内至少进行一次。培训内容应包括：区域协同救治体系胸痛中心的基本概念、在胸痛中心建设和流程优化过程中需要医院解决的主要问题等。申请时应提交：', '1', '4.11讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('140', '针对医院领导、医疗管理、行政管理人员的培训，应在胸痛中心成立之前或最晚成立之后1个月以内至少进行一次。培训内容应包括：区域协同救治体系胸痛中心的基本概念、在胸痛中心建设和流程优化过程中需要医院解决的主要问题等。申请时应提交：', '1', '4.12培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('141', '针对医院领导、医疗管理、行政管理人员的培训，应在胸痛中心成立之前或最晚成立之后1个月以内至少进行一次。培训内容应包括：区域协同救治体系胸痛中心的基本概念、在胸痛中心建设和流程优化过程中需要医院解决的主要问题等。申请时应提交：', '1', '4.13签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('142', '针对医院领导、医疗管理、行政管理人员的培训，应在胸痛中心成立之前或最晚成立之后1个月以内至少进行一次。培训内容应包括：区域协同救治体系胸痛中心的基本概念、在胸痛中心建设和流程优化过程中需要医院解决的主要问题等。申请时应提交：', '1', '4.14能显示授课时间、包括授课人及第一张幻灯片在内的照片以及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('143', '针对胸痛中心核心科室专业医师和护士的培训，必须满足以下全部项目： 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '2', '4.15培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('144', '针对胸痛中心核心科室专业医师和护士的培训，必须满足以下全部项目： 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '2', '4.16讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('145', '针对胸痛中心核心科室专业医师和护士的培训，必须满足以下全部项目： 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '2', '4.17培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('146', '针对胸痛中心核心科室专业医师和护士的培训，必须满足以下全部项目： 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '2', '4.18签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('147', '针对胸痛中心核心科室专业医师和护士的培训，必须满足以下全部项目： 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '2', '4.19能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('148', '胸痛中心的时钟统一、时间节点的定义及时间节点管理要求，申请时应提交：', '3', '4.20培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('149', '胸痛中心的时钟统一、时间节点的定义及时间节点管理要求，申请时应提交：', '3', '4.21讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('150', '胸痛中心的时钟统一、时间节点的定义及时间节点管理要求，申请时应提交：', '3', '4.22培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('151', '胸痛中心的时钟统一、时间节点的定义及时间节点管理要求，申请时应提交：', '3', '4.23签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('152', '胸痛中心的时钟统一、时间节点的定义及时间节点管理要求，申请时应提交：', '3', '4.24能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('153', '各项管理制度，申请时应提交：', '4', '4.25培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('154', '各项管理制度，申请时应提交：', '4', '4.26讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('155', '各项管理制度，申请时应提交：', '4', '4.27培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('156', '各项管理制度，申请时应提交：', '4', '4.28签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('157', '各项管理制度，申请时应提交：', '4', '4.29能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('158', 'ACS发病机制、临床表现、最新的STEMI、NSTEMI/UA诊治指南；急性主动脉夹层、肺动脉栓塞的诊断及治疗指南，申请时应提交：', '5', '满足 4.30培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('159', 'ACS发病机制、临床表现、最新的STEMI、NSTEMI/UA诊治指南；急性主动脉夹层、肺动脉栓塞的诊断及治疗指南，申请时应提交：', '5', '4.31讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('160', 'ACS发病机制、临床表现、最新的STEMI、NSTEMI/UA诊治指南；急性主动脉夹层、肺动脉栓塞的诊断及治疗指南，申请时应提交：', '5', '4.32培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('161', 'ACS发病机制、临床表现、最新的STEMI、NSTEMI/UA诊治指南；急性主动脉夹层、肺动脉栓塞的诊断及治疗指南，申请时应提交：', '5', '4.33签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('162', 'ACS发病机制、临床表现、最新的STEMI、NSTEMI/UA诊治指南；急性主动脉夹层、肺动脉栓塞的诊断及治疗指南，申请时应提交：', '5', '4.34能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('163', '本院胸痛中心的救治流程图，其中分诊流程、急性胸痛的诊断与鉴别诊断流程、STEMI从首次医疗接触至球囊扩张/溶栓、NSTEMI/UA的危险分层及治疗流程图是重点。申请时应提交：', '6', '4.35培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('164', '本院胸痛中心的救治流程图，其中分诊流程、急性胸痛的诊断与鉴别诊断流程、STEMI从首次医疗接触至球囊扩张/溶栓、NSTEMI/UA的危险分层及治疗流程图是重点。申请时应提交：', '6', '4.36讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('165', '本院胸痛中心的救治流程图，其中分诊流程、急性胸痛的诊断与鉴别诊断流程、STEMI从首次医疗接触至球囊扩张/溶栓、NSTEMI/UA的危险分层及治疗流程图是重点。申请时应提交：', '6', '4.37培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('166', '本院胸痛中心的救治流程图，其中分诊流程、急性胸痛的诊断与鉴别诊断流程、STEMI从首次医疗接触至球囊扩张/溶栓、NSTEMI/UA的危险分层及治疗流程图是重点。申请时应提交：', '6', '4.38签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('167', '本院胸痛中心的救治流程图，其中分诊流程、急性胸痛的诊断与鉴别诊断流程、STEMI从首次医疗接触至球囊扩张/溶栓、NSTEMI/UA的危险分层及治疗流程图是重点。申请时应提交：', '6', '4.39能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('168', '若本院的再灌注流程图中包括了溶栓治疗，则培训计划中必须包括溶栓治疗的标准操作规程（筛查表、溶栓流程图、结果判断、并发症处理）及转运至PCI医院的联络机制，申请时应提交：', '7', '4.40培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('169', '若本院的再灌注流程图中包括了溶栓治疗，则培训计划中必须包括溶栓治疗的标准操作规程（筛查表、溶栓流程图、结果判断、并发症处理）及转运至PCI医院的联络机制，申请时应提交：', '7', '4.41讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('170', '若本院的再灌注流程图中包括了溶栓治疗，则培训计划中必须包括溶栓治疗的标准操作规程（筛查表、溶栓流程图、结果判断、并发症处理）及转运至PCI医院的联络机制，申请时应提交：', '7', '4.42培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('171', '若本院的再灌注流程图中包括了溶栓治疗，则培训计划中必须包括溶栓治疗的标准操作规程（筛查表、溶栓流程图、结果判断、并发症处理）及转运至PCI医院的联络机制，申请时应提交：', '7', '4.43签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('172', '若本院的再灌注流程图中包括了溶栓治疗，则培训计划中必须包括溶栓治疗的标准操作规程（筛查表、溶栓流程图、结果判断、并发症处理）及转运至PCI医院的联络机制，申请时应提交：', '7', '4.44能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('173', '急性心肌梗死、常见心律失常的心电图诊断，申请时应提交：', '8', '4.45培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('174', '急性心肌梗死、常见心律失常的心电图诊断，申请时应提交：', '8', '4.46讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('175', '急性心肌梗死、常见心律失常的心电图诊断，申请时应提交：', '8', '4.47培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('176', '急性心肌梗死、常见心律失常的心电图诊断，申请时应提交：', '8', '4.48签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('177', '急性心肌梗死、常见心律失常的心电图诊断，申请时应提交：', '8', '4.49能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('178', '心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '9', '4.50培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('179', '心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '9', '4.51讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('180', '心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '9', '4.52培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('181', '心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '9', '4.53签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('182', '心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '9', '4.54能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('183', '胸痛诊疗过程中的数据采集及胸痛中心认证云平台数据库填报，申请时应提交：', '10', '4.55培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('184', '胸痛诊疗过程中的数据采集及胸痛中心认证云平台数据库填报，申请时应提交：', '10', '4.56讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('185', '胸痛诊疗过程中的数据采集及胸痛中心认证云平台数据库填报，申请时应提交：', '10', '4.57培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('186', '胸痛诊疗过程中的数据采集及胸痛中心认证云平台数据库填报，申请时应提交：', '10', '4.58签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('187', '胸痛诊疗过程中的数据采集及胸痛中心认证云平台数据库填报，申请时应提交：', '10', '4.59能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('188', '全院医、药、护、技人员培训 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '11', '4.60培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('189', '全院医、药、护、技人员培训 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '11', '4.61讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('190', '全院医、药、护、技人员培训 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '11', '4.62培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('191', '全院医、药、护、技人员培训 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '11', '4.63签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('192', '全院医、药、护、技人员培训 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '11', '4.64能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('193', '胸痛中心的时间节点管理要求，申请时应提交：', '12', '4.65培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('194', '胸痛中心的时间节点管理要求，申请时应提交：', '12', '4.66讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('195', '胸痛中心的时间节点管理要求，申请时应提交：', '12', '4.67培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('196', '胸痛中心的时间节点管理要求，申请时应提交：', '12', '4.68签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('197', '胸痛中心的时间节点管理要求，申请时应提交：', '12', '4.69能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('198', '院内发生ACS或心脏骤停的处理流程，申请时应提交：', '13', '4.70培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('199', '院内发生ACS或心脏骤停的处理流程，申请时应提交：', '13', '4.71讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('200', '院内发生ACS或心脏骤停的处理流程，申请时应提交：', '13', '4.72培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('201', '院内发生ACS或心脏骤停的处理流程，申请时应提交：', '13', '4.73签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('202', '院内发生ACS或心脏骤停的处理流程，申请时应提交：', '13', '4.74能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('203', '初级心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '14', '4.75培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('204', '初级心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '14', '4.76讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('205', '初级心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '14', '4.77培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('206', '初级心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '14', '4.78签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('207', '初级心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '14', '4.79能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('208', '全院医疗辅助人员及后勤管理人员的培训 已制定针对医疗辅助人员和后勤管理人员的培训计划，该计划必须包括以下内容：胸痛中心的基本概念、院内紧急呼救电话、心脏按压的基本要领，且应在成立胸痛中心后1个月内完成培训，以后每年进行一轮以确保新增人员得到及时培训。申请时应提交：', '15', '4.80培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('209', '全院医疗辅助人员及后勤管理人员的培训 已制定针对医疗辅助人员和后勤管理人员的培训计划，该计划必须包括以下内容：胸痛中心的基本概念、院内紧急呼救电话、心脏按压的基本要领，且应在成立胸痛中心后1个月内完成培训，以后每年进行一轮以确保新增人员得到及时培训。申请时应提交：', '15', '4.81讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('210', '全院医疗辅助人员及后勤管理人员的培训 已制定针对医疗辅助人员和后勤管理人员的培训计划，该计划必须包括以下内容：胸痛中心的基本概念、院内紧急呼救电话、心脏按压的基本要领，且应在成立胸痛中心后1个月内完成培训，以后每年进行一轮以确保新增人员得到及时培训。申请时应提交：', '15', '4.82培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('211', '全院医疗辅助人员及后勤管理人员的培训 已制定针对医疗辅助人员和后勤管理人员的培训计划，该计划必须包括以下内容：胸痛中心的基本概念、院内紧急呼救电话、心脏按压的基本要领，且应在成立胸痛中心后1个月内完成培训，以后每年进行一轮以确保新增人员得到及时培训。申请时应提交：', '15', '4.83签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('212', '全院医疗辅助人员及后勤管理人员的培训 已制定针对医疗辅助人员和后勤管理人员的培训计划，该计划必须包括以下内容：胸痛中心的基本概念、院内紧急呼救电话、心脏按压的基本要领，且应在成立胸痛中心后1个月内完成培训，以后每年进行一轮以确保新增人员得到及时培训。申请时应提交：', '15', '4.84能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('213', '全员培训效果检验', '16', '4.85急诊及心血管专业人员访谈', '4', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('214', '全员培训效果检验', '16', '4.86非急诊及心血管专业的医护人员', '4', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('215', '全员培训效果检验', '16', '4.87医疗辅助人员', '4', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('216', '已制定针对其它基层医疗机构的培训计划，该计划必须包括以下内容：基于区域协同救治体系胸痛中心的基本概念、急性胸痛快速转诊机制及联络方式、高危急性胸痛及ACS早期症状识别、急性心肌梗死和常见心律失常的心电图诊断、初级心肺复苏技能，应在成立胸痛中心后2个月内完成上述全部培训计划，以后每年进行一轮。申请时应提交：', '17', '4.88培训计划：包括预计授课时间、内容、授课人、课时等', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('217', '已制定针对其它基层医疗机构的培训计划，该计划必须包括以下内容：基于区域协同救治体系胸痛中心的基本概念、急性胸痛快速转诊机制及联络方式、高危急性胸痛及ACS早期症状识别、急性心肌梗死和常见心律失常的心电图诊断、初级心肺复苏技能，应在成立胸痛中心后2个月内完成上述全部培训计划，以后每年进行一轮。申请时应提交：', '17', '4.89讲稿', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('218', '已经在至少5家以上的本地区其它基层医疗机构实施上述培训计划，申请认证时应提交实施上述培训计划的客观依据，包括但不限于：培训记录、签到表、能显示时间和内容的培训现场照片、培训后考核试卷及考试成绩表； 第一家', '18', '4.900培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('219', '已经在至少5家以上的本地区其它基层医疗机构实施上述培训计划，申请认证时应提交实施上述培训计划的客观依据，包括但不限于：培训记录、签到表、能显示时间和内容的培训现场照片、培训后考核试卷及考试成绩表； 第一家', '18', '4.901签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('220', '已经在至少5家以上的本地区其它基层医疗机构实施上述培训计划，申请认证时应提交实施上述培训计划的客观依据，包括但不限于：培训记录、签到表、能显示时间和内容的培训现场照片、培训后考核试卷及考试成绩表； 第一家', '18', '4.902照片', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('221', '已经在至少5家以上的本地区其它基层医疗机构实施上述培训计划，申请认证时应提交实施上述培训计划的客观依据，包括但不限于：培训记录、签到表、能显示时间和内容的培训现场照片、培训后考核试卷及考试成绩表； 第一家', '18', '4.903试卷及成绩表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('222', '第二家', '19', '4.904培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('223', '第二家', '19', '4.905签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('224', '第二家', '19', '4.906照片', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('225', '第二家', '19', '4.907试卷及成绩表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('226', '第三家', '20', '4.908培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('227', '第三家', '20', '4.909签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('228', '第三家', '20', '4.910照片', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('229', '第三家', '20', '4.911试卷及成绩表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('230', '第四家', '21', '4.912培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('231', '第四家', '21', '4.913签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('232', '第四家', '21', '4.914照片', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('233', '第四家', '21', '4.915试卷及成绩表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('234', '第五家', '22', '4.916培训记录', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('235', '第五家', '22', '4.917签到表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('236', '第五家', '22', '4.918照片', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('237', '第五家', '22', '4.919试卷及成绩表', '4', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('238', '', '0', '4.920其它基层医疗机构熟悉区域协同救治体系的概念及与胸痛中心的联络机制', '4', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('239', '', '0', '5.10胸痛中心应根据当前的实际情况确定本中心关键监控指标及质量改进计划', '5', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('240', '', '0', '5.11制订了流程改进流程图', '5', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('241', '', '0', '5.12关键流程图的改进记录，至少提交三个以上改进前后的关键流程图及改进说明', '5', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('242', '制订了促进胸痛中心质量改进的重要管理制度并付诸实施，主要包括：', '1', '5.13联合例会制度', '5', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('243', '制订了促进胸痛中心质量改进的重要管理制度并付诸实施，主要包括：', '1', '5.14质量分析会制度', '5', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('244', '制订了促进胸痛中心质量改进的重要管理制度并付诸实施，主要包括：', '1', '5.15典型病例讨论会制度', '5', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('245', '制订了促进胸痛中心质量改进的重要管理制度并付诸实施，主要包括：', '1', '5.16其他制度', '5', '1', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('246', '', '0', '5.17对于自行来院或拨打本地120经救护车入院的所有急性胸痛患者，缩短了从首次医疗接触到首份心电图时间，且要求月平均小于10分钟', '5', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('247', '', '0', '5.18对于STEMI患者，缩短了从首份心电图至确诊的时间，且要求月平均小于10分钟', '5', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('248', '', '0', '5.19经救护车（包括呼叫本地120入院及由非PCI医院转诊患者）入院的STEMI患者，从急救现场或救护车远程传输心电图至胸痛中心（实时传输或微信等形式传输，但必须在云平台有客观记录）的比例不低于30%且在过去6个月内呈现增加趋势', '5', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('249', '', '0', '5.20建立了床旁快速检测肌钙蛋白方法，从抽血到获取报告时间不超过20分钟', '5', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('250', '', '0', '5.21对于接受PPCI治疗的STEMI患者，月平均门-球时间不超过90分钟，且达标率不低于75%；若当前无法达到，则应呈现改进趋势，且应制订促进持续改进的措施，确保在通过认证后1年内逐步达到上述要求', '5', '0', '0', null, null, null, null, '0');
-INSERT INTO `renzheng` VALUES ('251', '', '0', '5.22导管室激活时间小于30分钟', '5', '0', '0', null, null, null, null, '0');
+INSERT INTO `renzheng` VALUES ('11', '医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：', '1', '1.10由医院院长或分管医疗的副院长担任胸痛中心委员会主任委员，主持胸痛中心委员会的建设和重大决策', '1', '1', '0', null, null, null, null, '0', '1_10');
+INSERT INTO `renzheng` VALUES ('12', '医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：', '1', '1.11书面文件明确胸痛中心委员会的工作职责', '1', '1', '0', null, null, null, null, '0', '1_11');
+INSERT INTO `renzheng` VALUES ('13', '医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：', '1', '1.12明确胸痛中心委员会具有调动医院所有资源为胸痛中心建设和运行提供保障的权力', '1', '1', '0', null, null, null, null, '0', '1_12');
+INSERT INTO `renzheng` VALUES ('14', '医院发布正式文件成立胸痛中心及胸痛中心委员会，要求：', '1', '1.13胸痛中心成立并实际运作至少6个月以上才能申请认证', '1', '1', '0', null, null, null, null, '0', '1_13');
+INSERT INTO `renzheng` VALUES ('15', '任命胸痛中心医疗总监,要求：', '2', '1.14医院正式任命一名具有心血管内科专业背景的高级职称医师担任胸痛中心医疗总监，且该医师应具备较强的组织协调能力，专业技能必须具备对急性冠状动脉综合征（ACS）、急性主动脉夹层、肺动脉栓塞等急性胸痛患者进行诊断、鉴别诊断及紧急救治能力；', '1', '1', '0', null, null, null, null, '0', '1_14');
+INSERT INTO `renzheng` VALUES ('16', '任命胸痛中心医疗总监,要求：', '2', '1.15书面文件正式明确胸痛中心医疗总监的职责', '1', '1', '0', null, null, null, null, '0', '1_15');
+INSERT INTO `renzheng` VALUES ('17', '任命胸痛中心协调员，要求：', '3', '1.16指定一名具有急诊或心血管内科专业背景的医师担任胸痛中心协调员，协调员必须具备正确处理ACS及其它急性胸痛的能力', '1', '1', '0', null, null, null, null, '0', '1_16');
+INSERT INTO `renzheng` VALUES ('18', '任命胸痛中心协调员，要求：', '3', '1.17书面文件明确协调员的具体工作职责', '1', '1', '0', null, null, null, null, '0', '1_17');
+INSERT INTO `renzheng` VALUES ('19', '任命胸痛中心协调员，要求：', '3', '1.18协调员每年至少参加ACS和胸痛中心相关的培训不少于10学时', '1', '1', '0', null, null, null, null, '0', '1_18');
+INSERT INTO `renzheng` VALUES ('20', '医院对胸痛中心的支持与承诺', '0', '1.19全力支持胸痛中心的建设与认证，承诺分配相应人力、设备和财政资源，并做好监察、考核、质量控制等工作，确保胸痛中心规范化运行', '1', '1', '0', null, null, null, null, '0', '1_19');
+INSERT INTO `renzheng` VALUES ('21', '医院对胸痛中心的支持与承诺', '0', '1.20对胸痛中心在优化诊疗流程过程中所涉及到的院内外标识与指引、急诊及抢救区域的布局等进行改造、对医院各部门的工作流程、管理制度进行相应的调整以适应胸痛中心流程优化需求，承诺在分诊、就诊、检验、收费、发药等环节实行急性胸痛优先原则，在急性胸痛患者就诊时首份心电图、肌钙蛋白等辅助检查、ACS的抗血小板药物、STEMI患者的抗凝、溶栓治疗环节等实行先救治后收费的原则，以适应优化诊疗流程、最大限度缩短救治时间的需要', '1', '1', '0', null, null, null, null, '0', '1_20');
+INSERT INTO `renzheng` VALUES ('22', '医院对胸痛中心的支持与承诺', '0', '1.21承诺与院前急救系统签署联合救治协议，以实现院前救治与院内救治的无缝连接', '1', '1', '0', null, null, null, null, '0', '1_21');
+INSERT INTO `renzheng` VALUES ('23', '医院对胸痛中心的支持与承诺', '0', '1.22承诺与基层转诊医院、社区医疗机构等签署联合救治ACS的协议', '1', '1', '0', null, null, null, null, '0', '1_22');
+INSERT INTO `renzheng` VALUES ('24', '医院对胸痛中心的支持与承诺', '0', '1.23承诺支持并协助胸痛中心实施各类培训计划', '1', '1', '0', null, null, null, null, '0', '1_23');
+INSERT INTO `renzheng` VALUES ('25', '医院对胸痛中心的支持与承诺', '0', '1.24承诺不能因无床位、人力紧张、患者无力支付医疗费用等原因将ACS转诊到其它医院，以防延误救治', '1', '1', '0', null, null, null, null, '0', '1_24');
+INSERT INTO `renzheng` VALUES ('26', '医院对胸痛中心的支持与承诺', '0', '1.25若救护车归属医院管理，承诺对救护车救治能力进行改造，包括人员培训及设备更新，以满足转运急性胸痛患者的需求\r\n', '1', '1', '0', null, null, null, null, '0', '1_25');
+INSERT INTO `renzheng` VALUES ('27', '急诊科、胸痛中心的标识与指引', '4', '1.26在医院周边地区的主要交通要道、医院门诊、急诊的入口处设置醒目的胸痛中心或急诊的指引和标志，旨在为不熟悉医院环境的急性胸痛患者能顺利找到急诊科或胸痛中心', '1', '0', '0', null, null, null, null, '0', '1_26');
+INSERT INTO `renzheng` VALUES ('28', '急诊科、胸痛中心的标识与指引', '4', '1.27在门诊大厅、医院内流动人群集中的地方均应有指引通往急诊科/胸痛中心的醒目标识，指引需要急救的患者快速进入急诊科/胸痛中心', '1', '0', '0', null, null, null, null, '0', '1_27');
+INSERT INTO `renzheng` VALUES ('29', '急诊科、胸痛中心的标识与指引', '4', '1.28急诊科分诊、挂号、诊室、收费、抽血、检验、药房等均应有急性胸痛优先标识', '1', '0', '0', null, null, null, null, '0', '1_28');
+INSERT INTO `renzheng` VALUES ('30', '胸痛急救的功能分区', '5', '1.29急诊分诊台：急诊分诊台应易于识别且靠近抢救区，方便步行患者进入时发现，并有醒目的标识指引急性胸痛患者得到优先分诊；对于夜间急诊量较小、不具备设置夜间急诊分诊条件的医院，必须建立替代机制以确保急性胸痛患者得到快速诊疗', '1', '0', '0', null, null, null, null, '0', '1_29');
+INSERT INTO `renzheng` VALUES ('31', '胸痛急救的功能分区', '5', '1.30急诊分诊台或功能替代区应配置电话及急救相关的联络系统，以便进行院内、外的沟通协调，其中应包括与院前救护车、向本院转诊的基层医院的联络机制', '1', '0', '0', null, null, null, null, '0', '1_30');
+INSERT INTO `renzheng` VALUES ('32', '胸痛急救的功能分区', '5', '1.31急诊分诊台应常备急性胸痛患者时间管理节点记录表，以及伴随时钟（如果需要），以便在首次医疗接触时开始进行前瞻性时间节点记录，或者能在分诊台开始启动填报胸痛数据库', '1', '0', '0', null, null, null, null, '0', '1_31');
+INSERT INTO `renzheng` VALUES ('33', '胸痛急救的功能分区', '5', '1.32分诊区有标准的胸痛分诊流程图，指引分诊护士在初步评估后将患者分流到胸痛诊室、急诊抢救室、胸痛留观室或直接送入导管室', '1', '0', '0', null, null, null, null, '0', '1_32');
+INSERT INTO `renzheng` VALUES ('34', '胸痛急救的功能分区', '5', '1.33急诊科入口处应根据急诊流量配备足够的轮椅和担架车，方便多个患者同时就诊时使用', '1', '0', '0', null, null, null, null, '0', '1_33');
+INSERT INTO `renzheng` VALUES ('35', '胸痛急救的功能分区', '5', '1.34急诊科应具备床旁心电图检查条件，确保在首次医疗接触后10分钟内完成首份12/或18导联（怀疑下壁和正后壁心肌梗死）心电图检查，并不受是否为正班时间的限制，对于急性胸痛患者首份心电图应实行先救治后收费原则', '1', '0', '0', null, null, null, null, '0', '1_34');
+INSERT INTO `renzheng` VALUES ('36', '胸痛急救的功能分区', '5', '1.35急诊科应具备床旁快速检测肌钙蛋白、D-二聚体的设备，确保抽血后20分钟获取检测结果', '1', '0', '0', null, null, null, null, '0', '1_35');
+INSERT INTO `renzheng` VALUES ('37', '胸痛急救的功能分区', '5', '1.36应建立胸痛诊室（专用或兼用）、急诊抢救室（或急诊监护室）、胸痛留观室（供暂时诊断不明确、需要留观的中、低危胸痛患者使用）等功能区域，上述功能区应配备急性胸痛诊疗和抢救所需要的相应设施（例如心电图机、供氧系统、监护仪、除颤器、呼吸机等急救器材和急救药品），上述抢救设备、面积、床位等配置应以能满足医院所承担的急诊任务为原则', '1', '0', '0', null, null, null, null, '0', '1_36');
+INSERT INTO `renzheng` VALUES ('38', '人员资质', '6', '1.37至少有2名接受过规范培训、具备急诊PCI能力的副高级职称的心血管专科医师，且每人年PCI手术量不低于75例', '1', '1', '0', null, null, null, null, '0', '1_37');
+INSERT INTO `renzheng` VALUES ('39', '人员资质', '6', '1.38至少具有3名经过专门介入辅助技术培训、熟悉导管室工作流程的导管室专职护士，且每年至少接受一次4学时以上的介入诊疗和ACS的新知识培训，并获得证书', '1', '1', '0', null, null, null, null, '0', '1_38');
+INSERT INTO `renzheng` VALUES ('40', '人员资质', '6', '1.39具有经过专门培训且获得大型放射设备上岗证书的放射技术人员', '1', '1', '0', null, null, null, null, '0', '1_39');
+INSERT INTO `renzheng` VALUES ('41', '心血管专科条件', '7', '1.40心血管内科在当地具有相对的区域优势，能为本地区其它医疗机构提供心血管急危重症抢救、复杂疑难病例诊治以及继续教育等服务和支持', '1', '1', '0', null, null, null, null, '0', '1_40');
+INSERT INTO `renzheng` VALUES ('42', '心血管专科条件', '7', '1.41配备不少于6张床位的冠心病监护室（CCU）', '1', '0', '0', null, null, null, null, '0', '1_41');
+INSERT INTO `renzheng` VALUES ('43', '心血管专科条件', '7', '1.42具备急诊PCI能力，导管室基本设备（状态良好的数字血管影像设备、监护设备——含无创和有创性血流动力学监护设备、呼吸机、除颤器、心脏临时起搏器、主动脉内球囊反搏仪等生命支持系统）能满足急诊PCI需求，且常备急诊PCI所需的各类耗材', '1', '0', '0', null, null, null, null, '0', '1_42');
+INSERT INTO `renzheng` VALUES ('44', '心血管专科条件', '7', '1.43导管室过去1年PCI手术量不少于200台，急诊PCI（包括PPCI及补救性PCI）不低于50例', '1', '1', '0', null, null, null, null, '0', '1_43');
+INSERT INTO `renzheng` VALUES ('45', '心血管专科条件', '7', '1.44导管室365天/24小时全天候开放能力', '1', '0', '0', null, null, null, null, '0', '1_44');
+INSERT INTO `renzheng` VALUES ('46', '心血管专科条件', '7', '1.45制订了确保导管室从启动到开放(最后一名介入人员到达导管室)时间小于等于30分钟的措施,如果当前不能达到，应有切实可行的改进措施，确保在通过认证后半年内达到', '1', '1', '0', null, null, null, null, '0', '1_45');
+INSERT INTO `renzheng` VALUES ('47', '心血管专科条件', '7', '1.46如果心导管室暂时不可用，应启动相应方案和程序。有时心导管室会出现设备故障、进行维护或有占台现象，此时需要制定相应备用计划，确保高危患者能立即治疗', '1', '1', '0', null, null, null, null, '0', '1_46');
+INSERT INTO `renzheng` VALUES ('48', '心血管专科条件', '7', '1.47有指引针对STEMI患者实施先救治、后收费（先手术、后补办住院手续）的专用流程图', '1', '1', '0', null, null, null, null, '0', '1_47');
+INSERT INTO `renzheng` VALUES ('49', '', '0', '1.48建立了包括以远程实时传输心电图、微信群、手机短信、传真等形式的信息共享平台，以及基于此平台的急性胸痛诊疗应急响应机制，以确保具有确诊能力的上级医师能及时为急诊一线提供全天候支持；该信息共享平台至少要与周边5家以上的非PCI医院实现信息共享，以便及时为非PCI医院的急性胸痛患者提供诊断支持，同时为实施转运PCI的STEMI患者绕行急诊科和CCU直达导管室提供条件', '1', '1', '0', null, null, null, null, '0', '1_48');
+INSERT INTO `renzheng` VALUES ('50', '', '0', '1.49急诊科医师应具备对急性胸痛的鉴别诊断能力，能够独立阅读心电图、诊断ACS，若当前不具备，应建立基于传输心电图的远程会诊或现场会诊机制，确保心血管内科医师能在10分钟内参与会诊、协助诊断', '1', '1', '0', null, null, null, null, '0', '1_49');
+INSERT INTO `renzheng` VALUES ('51', '', '0', '1.50在对急性胸痛进行鉴别诊断时，能得到其它相关学科的支持，例如呼吸科、胸外科、消化科、皮肤科等', '1', '1', '0', null, null, null, null, '0', '1_50');
+INSERT INTO `renzheng` VALUES ('52', '', '0', '1.51在对急性胸痛进行鉴别诊断时，能得到其它相关学科的支持，例如呼吸科、胸外科、消化科、皮肤科等\r\n', '1', '1', '0', null, null, null, null, '0', '1_51');
+INSERT INTO `renzheng` VALUES ('53', '', '0', '1.52具备多排螺旋CT增强扫描的条件，并能开展急诊主动脉、肺动脉CTA检查，从启动CT室到接受患者进行检查的时间在30分钟以内，如果目前无法达到，则应有具体的改进措施确保在通过认证后1年内达到', '1', '1', '0', null, null, null, null, '0', '1_52');
+INSERT INTO `renzheng` VALUES ('54', '', '0', '1.53运动心电图应在正常工作时间内随时可用于对低危胸痛患者的评估', '1', '1', '0', null, null, null, null, '0', '1_54');
+INSERT INTO `renzheng` VALUES ('55', '', '0', '1.54已建立时钟统一方案，以确保各关键诊疗环节的时间节点记录的准确性', '1', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('56', '', '0', '1.55已制订了时钟统一管理制度，确保关键时间节点所涉及的各类时钟、诊疗设备内置系统时间、各类医疗文书记录时间的高度统一', '1', '1', '0', null, null, null, null, '0', '1_55');
+INSERT INTO `renzheng` VALUES ('57', '', '0', '1.56能提供落实时钟统一管理制度的客观记录，如时钟校对记录等', '1', '1', '0', null, null, null, null, '0', '1_56');
+INSERT INTO `renzheng` VALUES ('58', '', '0', '1.57已开始启用中国胸痛中心认证云平台数据库，并至少提供6个月的数据供认证时评估', '1', '1', '0', null, null, null, null, '0', '1_57');
+INSERT INTO `renzheng` VALUES ('59', '', '0', '1.58制定了数据库的管理规范、使用细则及监督管理制度，并有数据的审核制度，确保数据库的真实、客观、准确', '1', '1', '0', null, null, null, null, '0', '1_58');
+INSERT INTO `renzheng` VALUES ('60', '', '0', '1.59应有专职或兼职的数据管理员', '1', '1', '0', null, null, null, null, '0', '1_59');
+INSERT INTO `renzheng` VALUES ('61', '', '0', '1.60对相关人员进行了数据库使用方法和相关制度的培训', '1', '1', '0', null, null, null, null, '0', '1_60');
+INSERT INTO `renzheng` VALUES ('62', '', '0', '1.61急性胸痛患者的首次医疗接触的人员应及时在数据库中建档，若不能及时进行在线填报，应有纸质版的时间记录表格从首次医疗接触时开始伴随急性胸痛患者诊疗的全过程，进行时间节点的前瞻性记录，尽可能避免回顾性记录，以提高记录的准确性', '1', '1', '0', null, null, null, null, '0', '1_61');
+INSERT INTO `renzheng` VALUES ('63', '数据库的完整性，应满足以下全部条件：', '8', '1.62所有进入医院的急性胸痛（明确的创伤性胸痛除外）患者的登记比例应不低于75%，应包括各类因急性胸痛就诊于门、急诊或入院患者的基本信息和最后诊断', '1', '0', '0', null, null, null, null, '0', '1_62');
+INSERT INTO `renzheng` VALUES ('64', '数据库的完整性，应满足以下全部条件：', '8', '1.63ACS患者的登记比例应达到100%', '1', '0', '0', null, null, null, null, '0', '1_63');
+INSERT INTO `renzheng` VALUES ('65', '数据库的完整性，应满足以下全部条件：', '8', '1.64STEMI患者的录入必须达到100%，且各项关键时间节点的填报应齐全，关键时间节点的缺失率不能高于10%，其中院内时间节点记录的有效率应达到100%。STEMI患者的关键时间节点详见云平台数据库', '1', '0', '0', null, null, null, null, '0', '1_64');
+INSERT INTO `renzheng` VALUES ('66', '数据库的完整性，应满足以下全部条件：', '8', '1.65数据资料的溯源性：确保STEMI患者的上述关键时间节点可以溯源，其中发病时间、呼叫120、到达医院等时间应能从急诊病历（电子病历或复印件）、入院病历、首次病程记录、心电图纸、检验报告、病情告知或知情同意书等原始记录中溯源，并要求尽可能精确到分钟', '1', '0', '0', null, null, null, null, '0', '1_65');
+INSERT INTO `renzheng` VALUES ('67', '', '0', '2.10制订了急性胸痛分诊流程图', '2', '1', '0', null, null, null, null, '0', '2_10');
+INSERT INTO `renzheng` VALUES ('68', '', '0', '2.11所有负责分诊的人员及其他首次接诊急性胸痛患者的医护人员均熟悉上述分诊流程图', '2', '0', '0', null, null, null, null, '0', '2_11');
+INSERT INTO `renzheng` VALUES ('69', '', '0', '2.12制订了急性胸痛鉴别诊断流程图', '2', '1', '0', null, null, null, null, '0', '2_12');
+INSERT INTO `renzheng` VALUES ('70', '', '0', '2.13所有负责急性胸痛患者接诊的急诊医师熟悉上述诊疗流程图', '2', '0', '0', null, null, null, null, '0', '2_13');
+INSERT INTO `renzheng` VALUES ('71', '', '0', '2.14制订了相关流程图，指引首次医疗接触人员在接诊急性胸痛患者10分钟内完成12/18导联心电图检查', '2', '0', '0', null, null, null, null, '0', '2_14');
+INSERT INTO `renzheng` VALUES ('72', '', '0', '2.15确保在首份心电图完成后10分钟内由具备诊断能力的医师解读，若急诊医师不具备心电图诊断能力，心血管内科医师或心电图专职人员应在10分钟内到达现场进行确认，或通过远程12导联心电图监护系统或微信传输等方式远程确认心电图诊断', '2', '0', '0', null, null, null, null, '0', '2_15');
+INSERT INTO `renzheng` VALUES ('73', '', '0', '2.16所有急性高危胸痛患者应在首次医疗接触（分诊台或挂号）后10分钟内由首诊医师接诊', '2', '0', '0', null, null, null, null, '0', '2_16');
+INSERT INTO `renzheng` VALUES ('74', '', '0', '2.17急诊科护士或医师或其它急诊检验人员熟练掌握了床旁快速检测肌钙蛋白的方法，确保能在20分钟内获得检测结果', '2', '0', '0', null, null, null, null, '0', '2_17');
+INSERT INTO `renzheng` VALUES ('75', '', '0', '2.18制订了ACS诊治总流程图，当心电图提示为ACS时，该流程图能指引一线医师进行后续的诊疗过程', '2', '1', '0', null, null, null, null, '0', '2_18');
+INSERT INTO `renzheng` VALUES ('76', '', '0', '2.19所有急性胸痛患者均应录入认证云平台数据库', '2', '0', '0', null, null, null, null, '0', '2_19');
+INSERT INTO `renzheng` VALUES ('77', '', '0', '2.20以最新的STEMI诊治指南为依据，结合本院实际情况制订STEMI再灌注治疗策略的总流程图', '2', '1', '0', null, null, null, null, '0', '2_20');
+INSERT INTO `renzheng` VALUES ('78', '', '0', '2.21制订了各种不同来院途径的STEMI再灌注治疗的关系流程图，以明确参与救治过程的各环节的具体工作内容和时间限定', '2', '1', '0', null, null, null, null, '0', '2_21');
+INSERT INTO `renzheng` VALUES ('79', '', '0', '2.22制订了本院STEMI患者的药物治疗方案，包括发病后早期用药及长期二级预防方案', '2', '1', '0', null, null, null, null, '0', '2_22');
+INSERT INTO `renzheng` VALUES ('80', '', '0', '2.23制订了明确的PPCI治疗的适应症和禁忌症', '2', '1', '0', null, null, null, null, '0', '2_23');
+INSERT INTO `renzheng` VALUES ('81', '', '0', '2.24制订了相应的流程，使经本地120救护车入院的STEMI患者绕行急诊和CCU直达导管室', '2', '1', '0', null, null, null, null, '0', '2_24');
+INSERT INTO `renzheng` VALUES ('82', '', '0', '2.25制订了相应流程，使自行来院STEMI患者绕行CCU从急诊科直达导管室，急诊科及心内科相关人员必须熟悉流程和联络机制', '2', '1', '0', null, null, null, null, '0', '2_25');
+INSERT INTO `renzheng` VALUES ('83', '', '0', '2.26制订了相应的流程，使从非PCI医院首诊、实施转运PCI（包括直接转运PPCI和补救性PCI）的STEMI患者能在到达医院前确认诊断、启动导管室，并实施绕行急诊和CCU直达导管室。并至少与5家以上的非PCI医院实施了上述流程', '2', '1', '0', null, null, null, null, '0', '2_26');
+INSERT INTO `renzheng` VALUES ('84', '', '0', '2.27建立并落实了PPCI手术的先救治后收费机制', '2', '1', '0', null, null, null, null, '0', '2_27');
+INSERT INTO `renzheng` VALUES ('85', '', '0', '2.28有标准版本的急诊PCI知情同意书，其中签字时间应精确到分钟', '2', '1', '0', null, null, null, null, '0', '2_28');
+INSERT INTO `renzheng` VALUES ('86', '', '0', '2.29建立了旨在缩短知情同意时间的有效方法', '2', '1', '0', null, null, null, null, '0', '2_29');
+INSERT INTO `renzheng` VALUES ('87', '', '0', '2.30制订了将STEMI患者从急诊科转移到导管室的转送流程图，在确保患者安全的前提下尽快到达导管室，此流程图应明确负责转运的人员、设备、联络机制、途中安全措施、交接对象及内容等', '2', '1', '0', null, null, null, null, '0', '2_30');
+INSERT INTO `renzheng` VALUES ('88', '', '0', '2.31有规范的溶栓筛查表，其中包括STEMI的确诊条件、溶栓适应症、禁忌症\r\n', '2', '1', '0', null, null, null, null, '0', '2_31');
+INSERT INTO `renzheng` VALUES ('89', '', '0', '2.32有规范、制式的溶栓治疗知情同意书，医患双方签字时间应精确到分钟\r\n', '2', '1', '0', null, null, null, null, '0', '2_32');
+INSERT INTO `renzheng` VALUES ('90', '', '0', '2.33制订了溶栓治疗方案，包括溶栓前准备、溶栓药物选择及剂量、用法、监测指标及时机、结果判断、并发症处理预案、溶栓后抗凝治疗方案等\r\n', '2', '1', '0', null, null, null, null, '0', '2_33');
+INSERT INTO `renzheng` VALUES ('91', '', '0', '2.34制订了溶栓治疗标准操作流程图，指引一线医师进行溶栓治疗\r\n', '2', '1', '0', null, null, null, null, '0', '2_34');
+INSERT INTO `renzheng` VALUES ('92', '', '0', '2.35建立流程优化机制，确保自行来院或经120入院的STEMI患者能在首次医疗接触到开始溶栓时间 (FMC-to-N) 小于等于30分钟\r\n', '2', '1', '0', null, null, null, null, '0', '2_35');
+INSERT INTO `renzheng` VALUES ('93', '', '0', '2.36急诊科、心内科、导管室以及具有转诊关系的基层医院等相关人员熟悉上述STEMI再灌注治疗的流程及联络机制', '2', '0', '0', null, null, null, null, '0', '2_36');
+INSERT INTO `renzheng` VALUES ('94', '', '0', '2.37制订了对NSTEMI/UA患者进行初步评估及再次评估的流程图，其中必须明确评估内容、危险分层工具及再次评估时间\r\nNSTEMI/UA初始评估和再次评估流程图必须符合当前指南精神\r\n流程图应有首次、再次评估的具体内容\r\n应有公认的危险分层工具，包括缺血和出血评分工具\r\n流程图中应明确根据情况确定心电图和肌钙蛋白复查的时间和再次评估的间隔时间，以便根据临床情况的变化调整相应的再灌注治疗策略，必须满足以下三项\r\n初始心电图和/或持续 ST 段监护结果为阴性时，按规定的时间定期复查心电图，确保症状复发或恶化时，应在15-30 分钟的间隔内重新采集心电图；无持续或复发性症状且临床情况稳定的患者应在不超过4小时内复查心电图\r\n确定心肌生化标志物诊断NSTEMI的标准界値，生化标志物中必须包含肌钙蛋白，有条件时应开展超敏肌钙蛋白检测，以满足快速评估和早期诊断的需要，应确保能在抽血后20分钟获得肌钙蛋白检测结果\r\n若首次肌钙蛋白为阴性，则应在入院后6小时内复查，若采用高敏肌钙蛋白，则应根据当前指南确定复查时间\r\n流程图中应明确首次或再次评估为极高危、高危和中危的患者能在指南规定的时间内实施PCI治疗，低危患者应进行运动负荷试验等进一步评估后确定后续治疗策略', '2', '1', '0', null, null, null, null, '0', '2_37');
+INSERT INTO `renzheng` VALUES ('95', '', '0', '2.38制订了各种不同来院途径的NSTEMI/UA从确诊到完成关键诊疗过程的关系流程图，以明确参与救治过程的各环节的具体工作内容和时间限定', '2', '1', '0', null, null, null, null, '0', '2_38');
+INSERT INTO `renzheng` VALUES ('96', '', '0', '2.39各类相关人员熟悉NSTEMI/UA的初始及再次评估、危险分层、再灌注治疗原则', '2', '0', '0', null, null, null, null, '0', '2_39');
+INSERT INTO `renzheng` VALUES ('97', '', '0', '2.40上述评估过程和临床实际工作中应尽可能避免医疗资源的浪费，防止过度检查和治疗', '2', '0', '0', null, null, null, null, '0', '2_40');
+INSERT INTO `renzheng` VALUES ('98', '', '0', '2.41依据指南制订了NSTEMI/UA患者的药物治疗规范，包括早期药物治疗及长期二级预防方案', '2', '1', '0', null, null, null, null, '0', '2_41');
+INSERT INTO `renzheng` VALUES ('99', '', '0', '2.42对ACS患者进行详细的出院指导。出院指导中应明确说明诊断、预后、随访检查时间和注意事项等，并向患者说明ACS体征和症状以及一旦发生紧急情况时呼叫急救系统或到急诊科就诊的重要性', '2', '1', '0', null, null, null, null, '0', '2_42');
+INSERT INTO `renzheng` VALUES ('100', '', '0', '2.43为患者提供冠心病急救、预防的知识性宣教小册', '2', '1', '0', null, null, null, null, '0', '2_43');
+INSERT INTO `renzheng` VALUES ('101', '', '0', '2.44在胸痛鉴别诊断的流程图中应尽可能全面考虑其他非心源性疾病', '2', '1', '0', null, null, null, null, '0', '2_44');
+INSERT INTO `renzheng` VALUES ('102', '', '0', '2.45对于初步诊断考虑ACS但诊断不明确、暂时无急性心肌缺血证据的急性胸痛患者，应制订根据不同临床症状复查心电图、肌钙蛋白的时间间隔，确保病情变化或加重时能被及时评估，又避免医疗资源的浪费', '2', '0', '0', null, null, null, null, '0', '2_45');
+INSERT INTO `renzheng` VALUES ('103', '', '0', '2.46对于症状提示为非心源性胸痛可能性大的患者，急性胸痛鉴别诊断流程图应能指引一线医师根据临床判断进行相应的辅助检查，以便尽快明确或排除可能的诊断，同时尽可能避免医疗资源浪费', '2', '1', '0', null, null, null, null, '0', '2_46');
+INSERT INTO `renzheng` VALUES ('104', '', '0', '2.47低危胸痛的评估流程中应包含心电图运动试验作为首选的心脏负荷试验，并满足以下要求：\r\n应制订运动心电图的适应症、禁忌症、标准操作规程、结果判断标准、并发症的处理措施\r\n规范运动负荷试验，包括检查时间、人员配备、设备要求，必须配备除颤仪以及常用急救药品\r\n建立运动试验中突发紧急事件的应急处理流程，确保在运动心电图试验中发生急性心肌梗死或心脏骤停等急性事件时能得到及时正确的处理\r\n建立对负荷试验异常患者进行后续评估和处理的流程\r\n确保正班时间能够随时接受胸痛患者进行心电图运动试验', '2', '1', '0', null, null, null, null, '0', '2_47');
+INSERT INTO `renzheng` VALUES ('105', '', '0', '2.48除开展运动心电图外，尚应开展至少一项以上其它心脏负荷试验，以便对不能进行运动试验的患者作为次选心脏负荷试验。应明确该项心脏负荷试验的基本条件，包括但不限于适应症、禁忌症、试验方法和流程图、结果判断标准、发生紧急事件或不良反应的处理流程等\r\n', '2', '1', '0', null, null, null, null, '0', '2_48');
+INSERT INTO `renzheng` VALUES ('106', '', '0', '2.49对于完成基本评估从急诊直接出院的低危胸痛患者，医师应根据病情制订后续诊疗和随访计划，并进行冠心病的知识宣传教育', '2', '1', '0', null, null, null, null, '0', '2_49');
+INSERT INTO `renzheng` VALUES ('107', '', '0', '2.50对于未完成全部评估流程而提前离院的急性胸痛患者，急诊医师应告知潜在的风险、再次症状复发时的紧急处理、预防措施等注意事项，签署并保存相关的知情文件', '2', '1', '0', null, null, null, null, '0', '2_50');
+INSERT INTO `renzheng` VALUES ('108', '', '0', '2.51制订院内发生ACS时的救治流程图，该流程图应包括从明确诊断到实施关键救治的全部过程，明确患者所在科室的现场处理要点、会诊机制及紧急求助电话', '2', '1', '0', null, null, null, null, '0', '2_51');
+INSERT INTO `renzheng` VALUES ('109', '', '0', '2.52通过培训、教育、演练、发放口袋卡片、墙上流程图等形式使全院各科室人员均能熟悉ACS现场救治的基本流程和会诊机制，熟练掌握心肺复苏的基本技能，熟悉紧急联系电话', '2', '0', '0', null, null, null, null, '0', '2_52');
+INSERT INTO `renzheng` VALUES ('110', '', '0', '2.53经临床初步评估高度怀疑主动脉夹层或急性肺动脉栓塞的患者，能在30分钟内（从通知到患者开始扫描）进行“增强CT扫描”', '2', '1', '0', null, null, null, null, '0', '2_53');
+INSERT INTO `renzheng` VALUES ('111', '', '0', '2.54怀疑A型夹层、急性心包炎者能在30分钟内完成心脏超声检查\r\n', '2', '1', '0', null, null, null, null, '0', '2_54');
+INSERT INTO `renzheng` VALUES ('112', '', '0', '2.55制订了主动脉夹层的早期紧急治疗方案，若无禁忌症，在明确诊断后能尽快实施以B-受体阻滞剂和静脉药物为主的降压和镇痛治疗方案，以降低主动脉夹层破裂的风险，为后续治疗赢得时间', '2', '1', '0', null, null, null, null, '0', '2_55');
+INSERT INTO `renzheng` VALUES ('113', '', '0', '2.56制订了针对不同类型主动脉夹层的诊治流程图', '2', '1', '0', null, null, null, null, '0', '2_56');
+INSERT INTO `renzheng` VALUES ('114', '', '0', '2.57制订了急性肺动脉栓塞的诊断筛查流程图', '2', '1', '0', null, null, null, null, '0', '2_57');
+INSERT INTO `renzheng` VALUES ('115', '', '0', '2.58制订了急性肺动脉栓塞的标准治疗方案', '2', '1', '0', null, null, null, null, '0', '2_58');
+INSERT INTO `renzheng` VALUES ('116', '', '0', '2.59急诊接诊医师熟悉急性主动脉夹层、肺动脉栓塞的临床表现、诊断方法和治疗手段', '2', '0', '0', null, null, null, null, '0', '2_59');
+INSERT INTO `renzheng` VALUES ('117', '', '0', '3.10医院应围绕急性胸痛救治与本地区120签署正式的合作协议', '3', '0', '0', null, null, null, null, '0', '3_10');
+INSERT INTO `renzheng` VALUES ('118', '胸痛中心制订了针对急性胸痛的急救常识、高危患者的识别、ACS及心肺复苏指南等对120相关人员进行培训的计划，并有实施记录；申请认证时应提交：', '1', '3.11培训计划', '3', '1', '0', null, null, null, null, '0', '3_11');
+INSERT INTO `renzheng` VALUES ('119', '胸痛中心制订了针对急性胸痛的急救常识、高危患者的识别、ACS及心肺复苏指南等对120相关人员进行培训的计划，并有实施记录；申请认证时应提交：', '1', '3.12讲稿', '3', '1', '0', null, null, null, null, '0', '3_12');
+INSERT INTO `renzheng` VALUES ('120', '胸痛中心制订了针对急性胸痛的急救常识、高危患者的识别、ACS及心肺复苏指南等对120相关人员进行培训的计划，并有实施记录；申请认证时应提交：', '1', '3.13签到表', '3', '1', '0', null, null, null, null, '0', '3_13');
+INSERT INTO `renzheng` VALUES ('121', '胸痛中心制订了针对急性胸痛的急救常识、高危患者的识别、ACS及心肺复苏指南等对120相关人员进行培训的计划，并有实施记录；申请认证时应提交：', '1', '3.14培训现场照片或视频资料', '3', '1', '0', null, null, null, null, '0', '3_14');
+INSERT INTO `renzheng` VALUES ('122', '胸痛中心与120共同制订从胸痛呼救到从发病现场将急性胸痛患者转送至胸痛中心的急救预案、流程图以及联络机制，并进行联合演练；申请认证时应提交：', '2', '3.15演练方案', '3', '1', '0', null, null, null, null, '0', '3_15');
+INSERT INTO `renzheng` VALUES ('123', '胸痛中心与120共同制订从胸痛呼救到从发病现场将急性胸痛患者转送至胸痛中心的急救预案、流程图以及联络机制，并进行联合演练；申请认证时应提交：', '2', '3.16演练现场照片或视频资料', '3', '1', '0', null, null, null, null, '0', '3_16');
+INSERT INTO `renzheng` VALUES ('124', '院前急救人员参与胸痛中心的联合例会和典型病例讨论会，至少每半年参加一次上述会议，共同分析实际工作中存在的问题、制订改进措施；申请认证时应提交：', '3', '3.17会议记录', '3', '1', '0', null, null, null, null, '0', '3_17');
+INSERT INTO `renzheng` VALUES ('125', '院前急救人员参与胸痛中心的联合例会和典型病例讨论会，至少每半年参加一次上述会议，共同分析实际工作中存在的问题、制订改进措施；申请认证时应提交：', '3', '3.18签到表', '3', '1', '0', null, null, null, null, '0', '3_18');
+INSERT INTO `renzheng` VALUES ('126', '院前急救人员参与胸痛中心的联合例会和典型病例讨论会，至少每半年参加一次上述会议，共同分析实际工作中存在的问题、制订改进措施；申请认证时应提交：', '3', '3.19现场照片或视频资料', '3', '1', '0', null, null, null, null, '0', '3_19');
+INSERT INTO `renzheng` VALUES ('127', '', '0', '3.20转运急性胸痛患者的院前救护车应具备基本的监护和抢救条件，必备设备包括心电图机、多功能（心电、血压、血氧饱和度等）监护仪、便携式除颤器、移动式供氧装置、人工气道建立设备和各类急救药品等，有条件时尽可能配备便携式呼吸机、吸引器、具有远程实时传输功能的监护设备、心脏临时起搏器、心肺复苏机', '3', '0', '0', null, null, null, null, '0', '3_20');
+INSERT INTO `renzheng` VALUES ('128', '', '0', '3.21120调度人员能够熟练掌握胸痛急救常识，能优先调度急性胸痛救护并指导呼救者进行正确的现场自救', '3', '0', '0', null, null, null, null, '0', '3_21');
+INSERT INTO `renzheng` VALUES ('129', '', '0', '3.22从接受120指令到出车时间不超过3分钟', '3', '0', '0', null, null, null, null, '0', '3_22');
+INSERT INTO `renzheng` VALUES ('130', '', '0', '3.23院前急救人员能在首次医疗接触后10分钟内完成12导联（怀疑右室、后壁心肌梗死患者18导联）心电图记录', '3', '0', '0', null, null, null, null, '0', '3_23');
+INSERT INTO `renzheng` VALUES ('131', '', '0', '3.24院前急救人员能识别ST段抬高心肌梗死的典型心电图表现', '3', '0', '0', null, null, null, null, '0', '3_24');
+INSERT INTO `renzheng` VALUES ('132', '', '0', '3.25院前急救人员熟悉胸痛中心院内绿色通道及一键启动电话，能在完成首份心电图后10分钟内将心电图传输到胸痛中心信息共享平台（远程实施传输系统或微信平台），并通知具有决策能力的值班医生；对于从首次医疗接触到进入医院大门时间大于15分钟的急性胸痛患者，传输院前心电图的比例不低于50%', '3', '0', '0', null, null, null, null, '0', '3_25');
+INSERT INTO `renzheng` VALUES ('133', '', '0', '3.26院前急救人员熟练掌握了高危急性胸痛患者的识别要点', '3', '0', '0', null, null, null, null, '0', '3_26');
+INSERT INTO `renzheng` VALUES ('134', '', '0', '3.27院前急救人员熟练掌握了初级心肺复苏技能', '3', '0', '0', null, null, null, null, '0', '3_27');
+INSERT INTO `renzheng` VALUES ('135', '', '0', '3.28对于急性胸痛的救治，120与胸痛中心采用相同的时间节点定义，院前急救人员熟悉各个时间节点定义', '3', '0', '0', null, null, null, null, '0', '3_28');
+INSERT INTO `renzheng` VALUES ('136', '', '0', '3.29对于急性胸痛患者，实现了从救护车首次医疗接触时开始记录时间管理表或开始填报云平台数据库', '3', '0', '0', null, null, null, null, '0', '3_29');
+INSERT INTO `renzheng` VALUES ('137', '', '0', '3.30对于首份心电图诊断为STEMI的患者，院前急救系统能实施绕行急诊将患者直接送到导管室，且绕行急诊的比例不低于30%，如果当前无法达到，则应制订确实可行的措施确保在通过认证后6个月内达到', '3', '0', '0', null, null, null, null, '0', '3_30');
+INSERT INTO `renzheng` VALUES ('138', '针对医院领导、医疗管理、行政管理人员的培训，应在胸痛中心成立之前或最晚成立之后1个月以内至少进行一次。培训内容应包括：区域协同救治体系胸痛中心的基本概念、在胸痛中心建设和流程优化过程中需要医院解决的主要问题等。申请时应提交：', '1', '4.10培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', '4_10');
+INSERT INTO `renzheng` VALUES ('139', '针对医院领导、医疗管理、行政管理人员的培训，应在胸痛中心成立之前或最晚成立之后1个月以内至少进行一次。培训内容应包括：区域协同救治体系胸痛中心的基本概念、在胸痛中心建设和流程优化过程中需要医院解决的主要问题等。申请时应提交：', '1', '4.11讲稿', '4', '1', '0', null, null, null, null, '0', '4_11');
+INSERT INTO `renzheng` VALUES ('140', '针对医院领导、医疗管理、行政管理人员的培训，应在胸痛中心成立之前或最晚成立之后1个月以内至少进行一次。培训内容应包括：区域协同救治体系胸痛中心的基本概念、在胸痛中心建设和流程优化过程中需要医院解决的主要问题等。申请时应提交：', '1', '4.12培训记录', '4', '1', '0', null, null, null, null, '0', '4_11');
+INSERT INTO `renzheng` VALUES ('141', '针对医院领导、医疗管理、行政管理人员的培训，应在胸痛中心成立之前或最晚成立之后1个月以内至少进行一次。培训内容应包括：区域协同救治体系胸痛中心的基本概念、在胸痛中心建设和流程优化过程中需要医院解决的主要问题等。申请时应提交：', '1', '4.13签到表', '4', '1', '0', null, null, null, null, '0', '4_12');
+INSERT INTO `renzheng` VALUES ('142', '针对医院领导、医疗管理、行政管理人员的培训，应在胸痛中心成立之前或最晚成立之后1个月以内至少进行一次。培训内容应包括：区域协同救治体系胸痛中心的基本概念、在胸痛中心建设和流程优化过程中需要医院解决的主要问题等。申请时应提交：', '1', '4.14能显示授课时间、包括授课人及第一张幻灯片在内的照片以及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', '4_13');
+INSERT INTO `renzheng` VALUES ('143', '针对胸痛中心核心科室专业医师和护士的培训，必须满足以下全部项目： 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '2', '4.15培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', '4_14');
+INSERT INTO `renzheng` VALUES ('144', '针对胸痛中心核心科室专业医师和护士的培训，必须满足以下全部项目： 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '2', '4.16讲稿', '4', '1', '0', null, null, null, null, '0', '4_15');
+INSERT INTO `renzheng` VALUES ('145', '针对胸痛中心核心科室专业医师和护士的培训，必须满足以下全部项目： 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '2', '4.17培训记录', '4', '1', '0', null, null, null, null, '0', '4_16');
+INSERT INTO `renzheng` VALUES ('146', '针对胸痛中心核心科室专业医师和护士的培训，必须满足以下全部项目： 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '2', '4.18签到表', '4', '1', '0', null, null, null, null, '0', '4_17');
+INSERT INTO `renzheng` VALUES ('147', '针对胸痛中心核心科室专业医师和护士的培训，必须满足以下全部项目： 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '2', '4.19能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', '4_18');
+INSERT INTO `renzheng` VALUES ('148', '胸痛中心的时钟统一、时间节点的定义及时间节点管理要求，申请时应提交：', '3', '4.20培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', '4_19');
+INSERT INTO `renzheng` VALUES ('149', '胸痛中心的时钟统一、时间节点的定义及时间节点管理要求，申请时应提交：', '3', '4.21讲稿', '4', '1', '0', null, null, null, null, '0', '4_20');
+INSERT INTO `renzheng` VALUES ('150', '胸痛中心的时钟统一、时间节点的定义及时间节点管理要求，申请时应提交：', '3', '4.22培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('151', '胸痛中心的时钟统一、时间节点的定义及时间节点管理要求，申请时应提交：', '3', '4.23签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('152', '胸痛中心的时钟统一、时间节点的定义及时间节点管理要求，申请时应提交：', '3', '4.24能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('153', '各项管理制度，申请时应提交：', '4', '4.25培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('154', '各项管理制度，申请时应提交：', '4', '4.26讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('155', '各项管理制度，申请时应提交：', '4', '4.27培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('156', '各项管理制度，申请时应提交：', '4', '4.28签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('157', '各项管理制度，申请时应提交：', '4', '4.29能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('158', 'ACS发病机制、临床表现、最新的STEMI、NSTEMI/UA诊治指南；急性主动脉夹层、肺动脉栓塞的诊断及治疗指南，申请时应提交：', '5', '满足 4.30培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('159', 'ACS发病机制、临床表现、最新的STEMI、NSTEMI/UA诊治指南；急性主动脉夹层、肺动脉栓塞的诊断及治疗指南，申请时应提交：', '5', '4.31讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('160', 'ACS发病机制、临床表现、最新的STEMI、NSTEMI/UA诊治指南；急性主动脉夹层、肺动脉栓塞的诊断及治疗指南，申请时应提交：', '5', '4.32培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('161', 'ACS发病机制、临床表现、最新的STEMI、NSTEMI/UA诊治指南；急性主动脉夹层、肺动脉栓塞的诊断及治疗指南，申请时应提交：', '5', '4.33签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('162', 'ACS发病机制、临床表现、最新的STEMI、NSTEMI/UA诊治指南；急性主动脉夹层、肺动脉栓塞的诊断及治疗指南，申请时应提交：', '5', '4.34能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('163', '本院胸痛中心的救治流程图，其中分诊流程、急性胸痛的诊断与鉴别诊断流程、STEMI从首次医疗接触至球囊扩张/溶栓、NSTEMI/UA的危险分层及治疗流程图是重点。申请时应提交：', '6', '4.35培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('164', '本院胸痛中心的救治流程图，其中分诊流程、急性胸痛的诊断与鉴别诊断流程、STEMI从首次医疗接触至球囊扩张/溶栓、NSTEMI/UA的危险分层及治疗流程图是重点。申请时应提交：', '6', '4.36讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('165', '本院胸痛中心的救治流程图，其中分诊流程、急性胸痛的诊断与鉴别诊断流程、STEMI从首次医疗接触至球囊扩张/溶栓、NSTEMI/UA的危险分层及治疗流程图是重点。申请时应提交：', '6', '4.37培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('166', '本院胸痛中心的救治流程图，其中分诊流程、急性胸痛的诊断与鉴别诊断流程、STEMI从首次医疗接触至球囊扩张/溶栓、NSTEMI/UA的危险分层及治疗流程图是重点。申请时应提交：', '6', '4.38签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('167', '本院胸痛中心的救治流程图，其中分诊流程、急性胸痛的诊断与鉴别诊断流程、STEMI从首次医疗接触至球囊扩张/溶栓、NSTEMI/UA的危险分层及治疗流程图是重点。申请时应提交：', '6', '4.39能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('168', '若本院的再灌注流程图中包括了溶栓治疗，则培训计划中必须包括溶栓治疗的标准操作规程（筛查表、溶栓流程图、结果判断、并发症处理）及转运至PCI医院的联络机制，申请时应提交：', '7', '4.40培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('169', '若本院的再灌注流程图中包括了溶栓治疗，则培训计划中必须包括溶栓治疗的标准操作规程（筛查表、溶栓流程图、结果判断、并发症处理）及转运至PCI医院的联络机制，申请时应提交：', '7', '4.41讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('170', '若本院的再灌注流程图中包括了溶栓治疗，则培训计划中必须包括溶栓治疗的标准操作规程（筛查表、溶栓流程图、结果判断、并发症处理）及转运至PCI医院的联络机制，申请时应提交：', '7', '4.42培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('171', '若本院的再灌注流程图中包括了溶栓治疗，则培训计划中必须包括溶栓治疗的标准操作规程（筛查表、溶栓流程图、结果判断、并发症处理）及转运至PCI医院的联络机制，申请时应提交：', '7', '4.43签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('172', '若本院的再灌注流程图中包括了溶栓治疗，则培训计划中必须包括溶栓治疗的标准操作规程（筛查表、溶栓流程图、结果判断、并发症处理）及转运至PCI医院的联络机制，申请时应提交：', '7', '4.44能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('173', '急性心肌梗死、常见心律失常的心电图诊断，申请时应提交：', '8', '4.45培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('174', '急性心肌梗死、常见心律失常的心电图诊断，申请时应提交：', '8', '4.46讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('175', '急性心肌梗死、常见心律失常的心电图诊断，申请时应提交：', '8', '4.47培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('176', '急性心肌梗死、常见心律失常的心电图诊断，申请时应提交：', '8', '4.48签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('177', '急性心肌梗死、常见心律失常的心电图诊断，申请时应提交：', '8', '4.49能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('178', '心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '9', '4.50培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('179', '心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '9', '4.51讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('180', '心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '9', '4.52培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('181', '心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '9', '4.53签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('182', '心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '9', '4.54能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('183', '胸痛诊疗过程中的数据采集及胸痛中心认证云平台数据库填报，申请时应提交：', '10', '4.55培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('184', '胸痛诊疗过程中的数据采集及胸痛中心认证云平台数据库填报，申请时应提交：', '10', '4.56讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('185', '胸痛诊疗过程中的数据采集及胸痛中心认证云平台数据库填报，申请时应提交：', '10', '4.57培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('186', '胸痛诊疗过程中的数据采集及胸痛中心认证云平台数据库填报，申请时应提交：', '10', '4.58签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('187', '胸痛诊疗过程中的数据采集及胸痛中心认证云平台数据库填报，申请时应提交：', '10', '4.59能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('188', '全院医、药、护、技人员培训 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '11', '4.60培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('189', '全院医、药、护、技人员培训 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '11', '4.61讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('190', '全院医、药、护、技人员培训 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '11', '4.62培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('191', '全院医、药、护、技人员培训 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '11', '4.63签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('192', '全院医、药、护、技人员培训 基于区域协同救治体系胸痛中心的基本概念，申请时应提交：', '11', '4.64能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('193', '胸痛中心的时间节点管理要求，申请时应提交：', '12', '4.65培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('194', '胸痛中心的时间节点管理要求，申请时应提交：', '12', '4.66讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('195', '胸痛中心的时间节点管理要求，申请时应提交：', '12', '4.67培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('196', '胸痛中心的时间节点管理要求，申请时应提交：', '12', '4.68签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('197', '胸痛中心的时间节点管理要求，申请时应提交：', '12', '4.69能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('198', '院内发生ACS或心脏骤停的处理流程，申请时应提交：', '13', '4.70培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('199', '院内发生ACS或心脏骤停的处理流程，申请时应提交：', '13', '4.71讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('200', '院内发生ACS或心脏骤停的处理流程，申请时应提交：', '13', '4.72培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('201', '院内发生ACS或心脏骤停的处理流程，申请时应提交：', '13', '4.73签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('202', '院内发生ACS或心脏骤停的处理流程，申请时应提交：', '13', '4.74能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('203', '初级心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '14', '4.75培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('204', '初级心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '14', '4.76讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('205', '初级心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '14', '4.77培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('206', '初级心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '14', '4.78签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('207', '初级心肺复苏技能，此项培训应包括讲课、演示及模拟操作，申请时应提交：', '14', '4.79能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('208', '全院医疗辅助人员及后勤管理人员的培训 已制定针对医疗辅助人员和后勤管理人员的培训计划，该计划必须包括以下内容：胸痛中心的基本概念、院内紧急呼救电话、心脏按压的基本要领，且应在成立胸痛中心后1个月内完成培训，以后每年进行一轮以确保新增人员得到及时培训。申请时应提交：', '15', '4.80培训计划（包括预计培训时间、授课人、参加培训人员、课时等内容）', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('209', '全院医疗辅助人员及后勤管理人员的培训 已制定针对医疗辅助人员和后勤管理人员的培训计划，该计划必须包括以下内容：胸痛中心的基本概念、院内紧急呼救电话、心脏按压的基本要领，且应在成立胸痛中心后1个月内完成培训，以后每年进行一轮以确保新增人员得到及时培训。申请时应提交：', '15', '4.81讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('210', '全院医疗辅助人员及后勤管理人员的培训 已制定针对医疗辅助人员和后勤管理人员的培训计划，该计划必须包括以下内容：胸痛中心的基本概念、院内紧急呼救电话、心脏按压的基本要领，且应在成立胸痛中心后1个月内完成培训，以后每年进行一轮以确保新增人员得到及时培训。申请时应提交：', '15', '4.82培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('211', '全院医疗辅助人员及后勤管理人员的培训 已制定针对医疗辅助人员和后勤管理人员的培训计划，该计划必须包括以下内容：胸痛中心的基本概念、院内紧急呼救电话、心脏按压的基本要领，且应在成立胸痛中心后1个月内完成培训，以后每年进行一轮以确保新增人员得到及时培训。申请时应提交：', '15', '4.83签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('212', '全院医疗辅助人员及后勤管理人员的培训 已制定针对医疗辅助人员和后勤管理人员的培训计划，该计划必须包括以下内容：胸痛中心的基本概念、院内紧急呼救电话、心脏按压的基本要领，且应在成立胸痛中心后1个月内完成培训，以后每年进行一轮以确保新增人员得到及时培训。申请时应提交：', '15', '4.84能显示授课时间、包括授课人及第一张幻灯片在内的照片及包括听众在内的授课场景照片或视频', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('213', '全员培训效果检验', '16', '4.85急诊及心血管专业人员访谈', '4', '0', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('214', '全员培训效果检验', '16', '4.86非急诊及心血管专业的医护人员', '4', '0', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('215', '全员培训效果检验', '16', '4.87医疗辅助人员', '4', '0', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('216', '已制定针对其它基层医疗机构的培训计划，该计划必须包括以下内容：基于区域协同救治体系胸痛中心的基本概念、急性胸痛快速转诊机制及联络方式、高危急性胸痛及ACS早期症状识别、急性心肌梗死和常见心律失常的心电图诊断、初级心肺复苏技能，应在成立胸痛中心后2个月内完成上述全部培训计划，以后每年进行一轮。申请时应提交：', '17', '4.88培训计划：包括预计授课时间、内容、授课人、课时等', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('217', '已制定针对其它基层医疗机构的培训计划，该计划必须包括以下内容：基于区域协同救治体系胸痛中心的基本概念、急性胸痛快速转诊机制及联络方式、高危急性胸痛及ACS早期症状识别、急性心肌梗死和常见心律失常的心电图诊断、初级心肺复苏技能，应在成立胸痛中心后2个月内完成上述全部培训计划，以后每年进行一轮。申请时应提交：', '17', '4.89讲稿', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('218', '已经在至少5家以上的本地区其它基层医疗机构实施上述培训计划，申请认证时应提交实施上述培训计划的客观依据，包括但不限于：培训记录、签到表、能显示时间和内容的培训现场照片、培训后考核试卷及考试成绩表； 第一家', '18', '4.900培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('219', '已经在至少5家以上的本地区其它基层医疗机构实施上述培训计划，申请认证时应提交实施上述培训计划的客观依据，包括但不限于：培训记录、签到表、能显示时间和内容的培训现场照片、培训后考核试卷及考试成绩表； 第一家', '18', '4.901签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('220', '已经在至少5家以上的本地区其它基层医疗机构实施上述培训计划，申请认证时应提交实施上述培训计划的客观依据，包括但不限于：培训记录、签到表、能显示时间和内容的培训现场照片、培训后考核试卷及考试成绩表； 第一家', '18', '4.902照片', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('221', '已经在至少5家以上的本地区其它基层医疗机构实施上述培训计划，申请认证时应提交实施上述培训计划的客观依据，包括但不限于：培训记录、签到表、能显示时间和内容的培训现场照片、培训后考核试卷及考试成绩表； 第一家', '18', '4.903试卷及成绩表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('222', '第二家', '19', '4.904培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('223', '第二家', '19', '4.905签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('224', '第二家', '19', '4.906照片', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('225', '第二家', '19', '4.907试卷及成绩表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('226', '第三家', '20', '4.908培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('227', '第三家', '20', '4.909签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('228', '第三家', '20', '4.910照片', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('229', '第三家', '20', '4.911试卷及成绩表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('230', '第四家', '21', '4.912培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('231', '第四家', '21', '4.913签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('232', '第四家', '21', '4.914照片', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('233', '第四家', '21', '4.915试卷及成绩表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('234', '第五家', '22', '4.916培训记录', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('235', '第五家', '22', '4.917签到表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('236', '第五家', '22', '4.918照片', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('237', '第五家', '22', '4.919试卷及成绩表', '4', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('238', '', '0', '4.920其它基层医疗机构熟悉区域协同救治体系的概念及与胸痛中心的联络机制', '4', '0', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('239', '', '0', '5.10胸痛中心应根据当前的实际情况确定本中心关键监控指标及质量改进计划', '5', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('240', '', '0', '5.11制订了流程改进流程图', '5', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('241', '', '0', '5.12关键流程图的改进记录，至少提交三个以上改进前后的关键流程图及改进说明', '5', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('242', '制订了促进胸痛中心质量改进的重要管理制度并付诸实施，主要包括：', '1', '5.13联合例会制度', '5', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('243', '制订了促进胸痛中心质量改进的重要管理制度并付诸实施，主要包括：', '1', '5.14质量分析会制度', '5', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('244', '制订了促进胸痛中心质量改进的重要管理制度并付诸实施，主要包括：', '1', '5.15典型病例讨论会制度', '5', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('245', '制订了促进胸痛中心质量改进的重要管理制度并付诸实施，主要包括：', '1', '5.16其他制度', '5', '1', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('246', '', '0', '5.17对于自行来院或拨打本地120经救护车入院的所有急性胸痛患者，缩短了从首次医疗接触到首份心电图时间，且要求月平均小于10分钟', '5', '0', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('247', '', '0', '5.18对于STEMI患者，缩短了从首份心电图至确诊的时间，且要求月平均小于10分钟', '5', '0', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('248', '', '0', '5.19经救护车（包括呼叫本地120入院及由非PCI医院转诊患者）入院的STEMI患者，从急救现场或救护车远程传输心电图至胸痛中心（实时传输或微信等形式传输，但必须在云平台有客观记录）的比例不低于30%且在过去6个月内呈现增加趋势', '5', '0', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('249', '', '0', '5.20建立了床旁快速检测肌钙蛋白方法，从抽血到获取报告时间不超过20分钟', '5', '0', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('250', '', '0', '5.21对于接受PPCI治疗的STEMI患者，月平均门-球时间不超过90分钟，且达标率不低于75%；若当前无法达到，则应呈现改进趋势，且应制订促进持续改进的措施，确保在通过认证后1年内逐步达到上述要求', '5', '0', '0', null, null, null, null, '0', null);
+INSERT INTO `renzheng` VALUES ('251', '', '0', '5.22导管室激活时间小于30分钟', '5', '0', '0', null, null, null, null, '0', null);
+
+-- ----------------------------
+-- Table structure for rz_details
+-- ----------------------------
+DROP TABLE IF EXISTS `rz_details`;
+CREATE TABLE `rz_details` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rz_id` int(11) DEFAULT NULL,
+  `uid` int(11) DEFAULT NULL,
+  `zj1_id` int(11) DEFAULT NULL,
+  `zj2_id` int(11) DEFAULT NULL,
+  `zj3_id` int(11) DEFAULT NULL,
+  `zj1_res` tinyint(1) DEFAULT NULL,
+  `zj2_res` tinyint(1) DEFAULT NULL,
+  `zj3_res` tinyint(1) DEFAULT NULL,
+  `res` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of rz_details
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for rz_upload
@@ -374,7 +417,7 @@ INSERT INTO `renzheng` VALUES ('251', '', '0', '5.22导管室激活时间小于3
 DROP TABLE IF EXISTS `rz_upload`;
 CREATE TABLE `rz_upload` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `rz_id` int(11) DEFAULT NULL COMMENT '对应认证表id',
+  `uid` int(11) DEFAULT NULL COMMENT '对应认证表id',
   `path` varchar(255) DEFAULT NULL COMMENT '资料保存位置',
   `up_time` varchar(255) DEFAULT NULL COMMENT '上传时间',
   `is_del` tinyint(1) DEFAULT '0' COMMENT '是否被删除0表示删除',
@@ -407,21 +450,20 @@ CREATE TABLE `user` (
   `contPhone` varchar(45) DEFAULT NULL,
   `account` varchar(45) DEFAULT NULL,
   `pssd` varchar(45) DEFAULT NULL,
-  `created_at` datetime(6) DEFAULT NULL,
-  `group` tinyint(1) DEFAULT '0' COMMENT '0:普通会员1：机构2：管理员3讲师',
-  `last_time` varchar(255) DEFAULT NULL COMMENT '最后登录时间',
-  `login_ct` int(11) DEFAULT '0' COMMENT '登陆次数',
-  `status` tinyint(1) DEFAULT '0' COMMENT '0：正常1：禁用不能登陆',
-  `is_del` tinyint(1) DEFAULT '0' COMMENT '0：正常，1：已经删除',
-   'type' tinyint(1) COMMENT '0：机构会员, 1:个人会员',
+  `created_at` varchar(255) DEFAULT NULL,
+  `group` tinyint(1) DEFAULT '0' ,
+  `last_time` varchar(255) DEFAULT NULL ,
+  `login_ct` int(11) DEFAULT '0' ,
+  `status` tinyint(1) DEFAULT '0' ,
+  `is_del` tinyint(1) DEFAULT '0' ,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'dddd', 'dddd', '-1', null, 'bbbbb', '2016-08-11', null, 'dfsdfs', 'sdfsddfsd', null, 'dsfsdfs@163.com', 'dfasdf', 'dfasdf', 'user', '872be7378d2e5c4b747f2547144c6dc5', null, '0', null, '0', '0', '0');
-INSERT INTO `user` VALUES ('2', 'dfsdfsdf', 'dfsdfsd', 'New Delhi', null, 'dsfsdfs', '2016-08-10', null, 'dfsdfsdf', 'adfsdf', null, 'dddddddd@qq.com', 'dddddddd@qq.com', 'dddddddd@qq.com', 'user001', null, null, '0', null, '0', '0', '0');
+INSERT INTO `user` VALUES ('1', 'dddd', 'dddd', '-1', null, 'bbbbb', '2016-08-11', null, 'dfsdfs', 'sdfsddfsd', null, 'dsfsdfs@163.com', 'dfasdf', 'dfasdf', '测试', '872be7378d2e5c4b747f2547144c6dc5', null, '0', null, '0', '1', '0');
+INSERT INTO `user` VALUES ('2', 'dfsdfsdf', 'dfsdfsd', 'New Delhi', null, 'dsfsdfs', '2016-08-10', null, 'dfsdfsdf', 'adfsdf', null, 'dddddddd@qq.com', 'dddddddd@qq.com', 'dddddddd@qq.com', 'user001', null, null, '0', null, '0', '1', '0');
 INSERT INTO `user` VALUES ('3', 'QWE', 'qwewqr', 'New Delhi', 'JS', null, '2016-08-10', 'qwer', 'wqerqwr', 'qwer', null, 'qwe@qq.com', 'qwe', 'qwe', 'user', '5bacd9f25613659b2fbd2f3a58822e5c', null, '0', null, '0', '0', '0');
 INSERT INTO `user` VALUES ('4', 'dasdas', 'asdf', '-1', '-1', null, '2016-08-12', 'asd', 'asd', '', null, 'qwe@qq.com', 'asd', 'asd', 'admin', 'e45d37b96e04014bdd286bb60cdc0f8a', null, '0', null, '0', '0', '0');
 INSERT INTO `user` VALUES ('5', 'qwer', 'qweqqer', '-1', '-1', null, '', 'qwerq', 'qwer', '', null, 'aq@qq.com', '', '', 'user', 'b23cf2d0fb74b0ffa0cf4c70e6e04926', null, '0', null, '0', '0', '0');

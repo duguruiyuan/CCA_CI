@@ -25,23 +25,28 @@ class MY_Controller extends CI_Controller {
 
 	public function is_login(){
 		 
-		 $account = $this->session->userdata('account');
+		 // $account = $this->session->userdata('account');
 
-		 if(empty($account)){
-		 	return FALSE;
-		 }else{
-		 	return TRUE;
-		 }
+		 // if(empty($account)){
+		 // 	return FALSE;
+		 // }else{
+		 // 	return TRUE;
+		 // }
+
 	}
 
-	public function login($account){
-		$this->session->set_userdata('uac',$account);
+	public function login($account,$uid){
+
+		$_SESSION['uac'] = $account;
+		
+		$_SESSION['uid'] = $uid;
 
 		return TRUE;
 	}
 
 	public function logout(){
-		$this->session->unset_userdata('uac');
+		
+		unset($_SESSION['uac']);
 		redirect(base_url('/'));
 	}
 	

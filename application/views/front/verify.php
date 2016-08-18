@@ -36,8 +36,13 @@
         <li><a href="/home/guanLiZhiDu" target="content">监督管理制度</a></li>
         <hr>
         <li><a href="/login/reg" target="content">在线机构注册</a></li>
-        <li><a href="/home/tiaoJianPingGu">认证资质基本条件评估</a></li>
-      </ul>
+	<?php if(!isset($_SESSION['uac'])){?>
+          <li><a href="javascript:alert('请先登陆，然后查看！');window.location.href='/'">认证资质基本条件评估</a></li>
+        <?php }else{ ?>
+          <li><a href="/home/tiaoJianPingGu">认证资质基本条件评估</a></li>
+        <?php } ?>      
+
+</ul>
     </div>
     <div class="about-right">
       <div class="title-wrap">

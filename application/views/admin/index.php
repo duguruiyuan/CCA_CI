@@ -66,15 +66,15 @@ $(function() {
 		<div class="top-right-boxr">
 			<div class="top-r-t">
 				<ol class="rnav">
-					<li class="list">您好 <a href="index.php/admin/home/pwd" id="mydata" target="main" title="编辑 admin" class="tui">admin</a></li>
+					<li class="list">您好 <a href="#" id="mydata" target="main" title="编辑 admin" class="tui"><?php echo $_SESSION['admin']?></a></li>
 					<li class="line">|</li>
-					<li class="list"><a target="_top" onclick="{if(confirm('确定退出吗?')){window.location='index.php/admin/login/loginout';return true;}return false;}" href="javascript:;" id="outhome" title="退出" class="tui">退出</a></li>
+					<li class="list"><a target="_top" onclick="{if(confirm('确定退出吗?')){window.location='/admin/home/logout';return true;}return false;}" href="javascript:;" id="outhome" title="退出" class="tui">退出</a></li>
 					<li class="line">|</li>
 					<li class="list"><a href="javascript:;" id="kzqie" title="切换到宽版">宽版</a></li>
                     <li id="langcig" class="list langli">
-					    <a id="cache" href="#">清理缓存</a>
+					    <a id="cache" href="javascript:alert('缓存清理成功！')">清理缓存</a>
 						<span>|</span>
-						<a href="index.php/admin/api_login/qq_login" target="_blank">绑定邮箱</a>						<div class="langlist" style="display:none;"></div>
+						<a href="javascript:alert('暂时无法绑定邮箱！')" target="_blank">绑定邮箱</a>						<div class="langlist" style="display:none;"></div>
 					</li>
 					
 

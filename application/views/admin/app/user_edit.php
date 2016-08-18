@@ -142,9 +142,9 @@ $("html",parent.document).find('.returnover').remove();
 <div class="v52fmbx">
 		<div class="v52fmbx_dlbox">
 		<dl>
-			<dt>用户名：</dt>
+			<dt>登陆账户名：</dt>
 			<dd>
-				<input id='username' name="username" type="text" autocomplete="off" class="text nonull">
+				<input id='username' name="username" value="<?php echo $user['account']; ?>" type="text" autocomplete="off" class="text nonull">
 			    <span class="red"></span>
 			</dd>
 		</dl>
@@ -153,89 +153,118 @@ $("html",parent.document).find('.returnover').remove();
 		<dl>
 			<dt>登录密码：</dt>
 			<dd>
-				<input name="userpwd" type="password" autocomplete="off" class="text nonull"><span id='userpwd'></span>
+				<input name="userpwd" value="<?php echo $user['pssd']?>"type="password" autocomplete="off" class="text nonull"><span id='userpwd'></span>
+			</dd>
+		</dl>
+		</div>
+
+		<div class="v52fmbx_dlbox">
+		<dl>
+			<dt>机构名称：</dt>
+			<dd>
+				<input name="name" type="text" class="text" value="<?php echo $user['orgName']; ?>">
 			</dd>
 		</dl>
 		</div>
 		<div class="v52fmbx_dlbox">
 		<dl>
-			<dt>密码确认：</dt>
+			<dt>法人：</dt>
 			<dd>
-				<input name="userpwd2" type="password" autocomplete="off" class="text nonull"><span id='userpwd2'></span>
+				<input class="text" type="text" value="<?php echo $user['artificialPersonaName']; ?>" >
 			</dd>
 		</dl>
 		</div>
 		<div class="v52fmbx_dlbox">
 		<dl>
-			<dt>姓名：</dt>
+			<dt>等级：</dt>
 			<dd>
-				<input name="name" type="text" class="text">
+				<input name="level" type="text" value="<?php echo $user['orgLevel']; ?>" class="text">
 			</dd>
 		</dl>
 		</div>
 		<div class="v52fmbx_dlbox">
 		<dl>
-			<dt>性别：</dt>
+			<dt>胸痛中心运行时间:</dt>
 			<dd>
-				<input name="sex" type="radio" value="1" class="radio" checked="checked">&nbsp;先生&nbsp;&nbsp;
-				<input name="sex" type="radio" value="2">&nbsp;女士
+				<input name="run_duration" type="text" value="<?php echo $user['runDuration'];?>" class="text">
 			</dd>
 		</dl>
 		</div>
+
+		<div class="v52fmbx_dlbox">
+		<dl>
+			<dt>认证负责人:</dt>
+			<dd>
+				<input name="level" type="text" value="<?php echo $user['respPerson'];?>" class="text">
+				
+			</dd>
+		</dl>
+		</div>
+
+		<div class="v52fmbx_dlbox">
+		<dl>
+			<dt>认证负责人职务:</dt>
+			<dd>
+				<input name="level" type="text" value="<?php echo $user['respTitle'];?>" class="text">
+				
+			</dd>
+		</dl>
+		</div>
+
+
 		<div class="v52fmbx_dlbox">
 		<dl>
 			<dt>联系电话：</dt>
 			<dd>
-				<input name="tel" type="text" class="text">
+				<input name="tel" type="text" class="text" value="<?php echo $user['respTele'];?>">
 			</dd>
 		</dl>
 		</div>
 		<div class="v52fmbx_dlbox">
 		<dl>
-			<dt>手机：</dt>
+			<dt>负责人邮箱：</dt>
 			<dd>
-				<input name="mobile" type="text" class="text">
+				<input name="mobile" type="text" class="text nonull" value="<?php echo $user['respEmail']?>">
 			</dd>
 		</dl>
 		</div>
 		<div class="v52fmbx_dlbox">
 		<dl>
-			<dt>Email：</dt>
+			<dt>联络人姓名</dt>
 			<dd>
-				<input name="email" type="text" class="text nonull">
+				<input name="name" type="text" class="text nonull" value="<?php echo $user['contPersonName'];?>">
 			</dd>
 		</dl>
 		</div>
 		<div class="v52fmbx_dlbox">
 		<dl>
-			<dt>QQ：</dt>
+			<dt>联络人职务</dt>
 			<dd>
-				<input name="qq" type="text" class="text">
+				<input name="qq" type="text" class="text" value="<?php echo $user['cont_title']?>">
 			</dd>
 		</dl>
 		</div>
-		
-		
-		
+		<div class="v52fmbx_dlbox">
+		<dl>
+			<dt>联络人电话</dt>
+			<dd>
+				<input name="qq" type="text" class="text" class="<?php echo $user['contPhone']?>">
+			</dd>
+		</dl>
+		</div>
 		<div class="v52fmbx_dlbox">
 		<dl>
 			<dt>会员类型：</dt>
 			<dd>
-				<select name="gid" id="usertype" >
-				  <option value='' >选择类型</option>
-				  				  <option value='1' >新手上路</option>
-				  			  </select>
+			  <select name="gid" id="usertype" >
+				  <option value='-1'>选择类型</option>
+  				  <option value='0' selected="<?php $user['type']==0?"true":"false"?>">机构</option>
+  				  <option value="1" selected="<?php $user['type']==1?"true":"false"?>个人</option>
+  			  </select>
 			</dd>
 		</dl>
 		</div>
-		<div class="v52fmbx_dlbox">
-		<dl>
-			<dt>是否激活：</dt>
-			<dd>
-				<input name="status" type="checkbox" class="checkbox" value="1" checked="checked">
-			</dd>
-		</dl>
-		</div>
+
 		<div class="v52fmbx_dlbox v52fmbx_mo">
 		<dl>
 			<dt></dt>

@@ -3,20 +3,6 @@
 
 <div class="header-top">
 
-    <div class="top-right">
-        <div class="top-link">
-          <a href="/home/about" style="padding-left:1px;text-decoration:underline">关于我们</a>
-          &nbsp; 
-           <a href="/home" style="text-decoration:underline">返回首页</a>
-           &nbsp;
-           <a id="bookmarkme" href="#" title="bookmark this page" rel="sidebar" style="text-decoration:underline">反馈意见</a>
-        </div>
-        <div class="QRCode">
-        <img id="first" src="/assets/img/sina.png" alt="">
-         <img id="sec" src="/assets/img/wechat.jpg" alt="">
-        <img id="third" src="/assets/img/weixin.png" alt="">
-        </div>
-    </div>
     <div class="logo"><a href="/home"><img src="/assets/img/logo.png" width="100%" height="100%"/></a>
     </div>
     <div class="title">

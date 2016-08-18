@@ -70,7 +70,7 @@ function metreturn(url){
               <tr>
 				<td class="centle" colspan="7" style=" height:20px; line-height:30px; font-weight:normal; padding-left:10px;">
 					<div style="float:left;">
-					<a href="/admin/home/user_add">+新增</a>
+					<a href="/admin/home/user_add/">+新增</a>
 					</div>
 					<div class="formright">	
 					<a href="index.php/admin/user/index"><font color="red">显示所有</font></a>

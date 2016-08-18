@@ -10,14 +10,18 @@ class Home extends CI_Controller {
 		$this->load->model('ly_model');
 		$this->load->model('recycle_model');
 		$this->load->model('article_model');
-		
+		$this->load->model('admin_model');
 			
 	}
 
 
 	public function index(){
 		
-		$this->load->view('admin/index');
+		if(!isset( $_SESSION['admin'])){
+			$this->load->view('admin/login');
+		}else{
+			$this->load->view('admin/index');
+		}
 
 	}
 
@@ -26,11 +30,47 @@ class Home extends CI_Controller {
 	//    ================================================================================
 
 
+	public function login(){
 
+		$post = $this->input->post();
+
+		if(empty($post)){
+			$this->load->view('admin/login');
+		}else{
+
+			$username = $post['user'];
+			$passwd = md5($post['pwd']);
+
+			$admin_user = $this->admin_model->get(array('username'=>$username,'passwd'=>$passwd));
+
+			if(!empty($admin_user)){
+
+				$_SESSION['admin'] = $admin_user['username'];
+
+				redirect(base_url('/admin/home'));
+				
+			}else{
+
+				die('<script>alert("用户名或密码错误！");history.back(-1);</script>');
+
+			}
+
+		}
+
+		
+	}
+
+
+	public function logout(){
+
+		unset($_SESSION['admin']);
+
+		redirect(base_url('/admin/home/'));
+
+	}
 
 	// 网站首页系统信息	
 	public function main(){
-
 
 		$this->load->view('admin/main');
 	}
@@ -588,6 +628,9 @@ class Home extends CI_Controller {
 	}
 	public function user_add() {
 
+		
+
+
 		$this->load->view('admin/app/user_add');
 	}
 	// 会员组设置
@@ -595,9 +638,12 @@ class Home extends CI_Controller {
 		$this->load->view('admin/app/user_group');
 	}
 	//会员编辑
-	public function user_edit() {
+	public function user_edit($user_id = '') {
 
-		$this->load->view('admin/app/user_edit');
+		$user = $this->user_model->get(array('id'=>$user_id));
+
+		$this->load->view('admin/app/user_edit', array('user'=>$user));
+
 	}
 	public function user_del($user_id = '') {
 

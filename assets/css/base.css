@@ -7,7 +7,7 @@ h1,h2,h3,h4,h5{margin:0;padding:0;font-weight:normal}
 img{border:none}
 /*a:hover{text-decoration:underline}*/
 /* wrapper */
-#wrapper{width:100%;max-width:1440px;height:auto;overflow:hidden}
+#wrapper{width:100%;max-width:1440px;height:auto;overflow:hidden;margin:0 auto; position:relative}
 .homebg{background:url(../images/content_bg.png) no-repeat center 355px}
 /* header */
 #header{width:1100px;height:auto;margin:0 auto;overflow:hidden}
